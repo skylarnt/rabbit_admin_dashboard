@@ -1,0 +1,130 @@
+.remove_padding {
+    padding-top: 30px !important;
+}
+body {
+    font-family: 'Roboto', sans-serif !important;
+
+}
+
+.modal_content .modal_header {
+    display: flex;
+    justify-content: space-between;
+    height: 30px !important;
+
+
+}
+img {
+    display: inline !important;
+}
+.primary_color {
+    color: #00AF52;
+}
+
+.primary_color_bg {
+    background-color: #00AF52;
+}
+
+.wrapper {
+    padding-top: 80px !important;
+}
+
+.modal_content label {
+    font-weight: 500;
+    font-size: 14px;
+    color: #374151;
+}
+
+.header h4 {
+    font-weight: bold !important;
+    color: #101828 !important;
+}
+
+.header p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* identical to box height, or 24px */
+
+
+    /* gray/600 */
+
+    color: #4B5563;
+}
+
+.header_container {
+    padding-top: 2rem;
+}
+.style_cs {
+    background-color: inherit !important;
+}
+.hold_input4 {
+    position: relative !important;
+
+}
+
+.hold_input4 img {
+    position: absolute;
+    top: 29%;
+    left: 3%;
+}
+
+.hold_input4 input {
+    background: #FFFFFF !important;
+    /* Gray/300 */
+
+    border: 1px solid #D0D5DD !important;
+    /* Shadow/xs */
+
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05) !important;
+    border-radius: 8px !important;
+}
+
+@media screen and (min-width: 1200px) {
+    .style_c {
+        padding: 0px 22px !important;
+
+    }
+}
+
+@media screen and (max-width:700px) {
+    .mobile_modal_size {
+        width: 100% !important;
+        max-height: 90% !important;
+        outline: none !important;
+        left: 50%;
+    }
+
+    .absolute {
+        position: absolute;
+        width: 40%;
+        top: 50%;
+        right: 0;
+    }
+
+    .control_text h4 {
+        font-size: 16px !important;
+    }
+
+    .wrapper {
+        padding-top: 100px !important;
+    }
+
+    .table-responsive-sm table {
+        width: 200% !important;
+    }
+
+    .hold_input4 {
+        width: 100% !important;
+    }
+
+    .wrapper {
+        padding-top: 10px !important;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .table-responsive-sm table {
+        width: 200% !important;
+
+    }
+}
