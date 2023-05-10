@@ -79,6 +79,21 @@ img {
     border-radius: 8px !important;
 }
 
+.form-group .border-secondary,
+.form-group .border-secondary:focus,
+.form-group .border-secondary:valid
+ {
+    border: 1px solid #aaa !important;
+    min-height: 43px;
+    padding-left: 5px !important;
+    font-size: 13px;
+    color: #4B5563;
+}
+
+.css-15v22id-MuiAccordionDetails-root {
+    padding: 8px;
+}
+
 @media screen and (min-width: 1200px) {
     .style_c {
         padding: 0px 22px !important;

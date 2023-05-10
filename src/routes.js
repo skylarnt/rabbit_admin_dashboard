@@ -5,7 +5,12 @@ import SimpleLayout from './layouts/simple';
 //
 import BlogPage from './pages/BlogPage';
 import UserPage from './pages/UserPage';
-import LoginPage from './pages/LoginPage';
+import LoginPage from './pages/Auth/auth/LoginPage';
+import SignupPage from './pages/Auth/auth/SignupPage';
+import ForgotPassword from './pages/Auth/ForgotPassword';
+import ResetPassword from './pages/Auth/ResetPassword';
+import BusinessInfo from './pages/Auth/BusinessInfo';
+import VerifyEmail from './pages/Auth/EmailVerification';
 import Page404 from './pages/Page404';
 import ProductsPage from './pages/ProductsPage';
 import DashboardAppPage from './pages/Dashboard/DashboardAppPage';
@@ -28,6 +33,26 @@ export default function Router() {
     {
       path: 'login',
       element: <LoginPage />,
+    },
+    {
+      path: 'signup',
+      element: <SignupPage />,
+    },
+    {
+      path: 'verify-email',
+      element: <VerifyEmail />,
+    },
+    {
+      path: 'forgot-password',
+      element: <ForgotPassword />,
+    },
+    {
+      path: 'reset-password',
+      element: <ResetPassword />,
+    },
+    {
+      path: 'business-info',
+      element: <BusinessInfo />,
     },
     {
       element: <SimpleLayout />,
