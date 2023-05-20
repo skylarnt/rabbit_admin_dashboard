@@ -1,10 +1,6 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 // @mui
-import { Link, Stack, IconButton, InputAdornment, TextField, Checkbox, Container, Typography, Button } from '@mui/material';
-import { LoadingButton } from '@mui/lab';
+import { Link, Stack, TextField, Container, Typography, Button } from '@mui/material';
 // components
-import Iconify from '../../components/iconify';
 // Module styles
 import Styles from './CSSModules/BusinessInfo.module.css'
 import { Helmet } from 'react-helmet-async';
@@ -14,11 +10,8 @@ import { styled } from '@mui/material/styles';
 import useResponsive from '../../hooks/useResponsive';
 // components
 import Logo from '../../components/logo';
-import { green, pink } from '@mui/material/colors';
 import Avatar from '@mui/material/Avatar';
 import FolderIcon from '@mui/icons-material/Folder';
-import PageviewIcon from '@mui/icons-material/Pageview';
-import AssignmentIcon from '@mui/icons-material/Assignment';
 
 // sections
 // import { LoginForm } from '../sections/auth/login';
@@ -75,7 +68,6 @@ const StyledContent = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function BusinessInfo() {
-    const navigate = useNavigate();
     const mdUp = useResponsive('up', 'md');
     const imageUrl = '/assets/img/signup-img.jpeg';
 
@@ -94,10 +86,10 @@ export default function BusinessInfo() {
                             <Typography variant="h1">
                                 Welcome, Let's get to know more about your business
                             </Typography>
-                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' /><span>Your business becomes public to wholesalers and retailers</span></p>
-                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' /><span>Businesses with completed profiles are 3x more likely to be seen by customers</span></p>
-                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' /><span>Robust dashboard including real time data for making sales decisions</span></p>
-                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' /><span>Unlimited access to all the features on your dashboard</span></p>
+                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' alt='' /><span>Your business becomes public to wholesalers and retailers</span></p>
+                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' alt='' /><span>Businesses with completed profiles are 3x more likely to be seen by customers</span></p>
+                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' alt='' /><span>Robust dashboard including real time data for making sales decisions</span></p>
+                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' alt='' /><span>Unlimited access to all the features on your dashboard</span></p>
                         </div>
 
                         {/* <img src="/assets/illustrations/illustration_login.png" alt="login" /> */}
@@ -113,7 +105,7 @@ export default function BusinessInfo() {
 
                             <div className={`${Styles.signin_form_wrap}`}>
                                 <div style={{ width: 'fit-content', margin: 'auto', paddingTop: '10px' }}>
-                                    <img src='/assets/icons/Featured-icon.png' />
+                                    <img src='/assets/icons/Featured-icon.png'  alt=''/>
                                 </div>
                                 <Typography variant='h3' className='text-center mb-0'>
                                     Business Information

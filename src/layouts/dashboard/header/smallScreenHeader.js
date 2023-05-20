@@ -102,7 +102,7 @@ export default function smallScreenHeader({ onOpenNav }) {
           {/* <LanguagePopover /> */}
           <NotificationsPopover />
           <div className="dropleft ">
-            <PowerSettingsNewIcon style={{width:'75%'}} id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style={{color:'gray', cursor:'pointer'}} />
+            <PowerSettingsNewIcon   id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style={{color:'gray', cursor:'pointer', width:'75%'}} />
                 
                 
             

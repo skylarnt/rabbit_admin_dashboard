@@ -52,27 +52,27 @@ export default function Header({ onOpenNav, pathName }) {
     const pathNameWithoutTrailingSlash = pathName.replace(/\/+$/, '');
     const pathNameWithoutParameter = pathNameWithoutTrailingSlash.replace(/\/\d+$/, '');
     switch (pathNameWithoutParameter) {
-      case '/app/customers':
+      case '/dashboard/customers':
         setPageHeader('Customers')
         setPageText('Manage and monitor all customers')
 
         break;
-      case '/app/wallets':
+      case '/dashboard/wallets':
         setPageHeader('Wallet')
         setPageText('Manage all your cash transactions.')
 
         break;
-      case '/app/administration':
+      case '/dashboard/administration':
         setPageHeader('Administration')
         setPageText('Assign roles to your staff here ')
 
         break;
-      case '/app/data_insight':
+      case '/dashboard/data_insight':
         setPageHeader('Data Insight')
         setPageText('An overview of your store orders and performance metrics.')
 
         break;
-      case '/app/settings':
+      case '/dashboard/settings':
       default:
         break;
     }

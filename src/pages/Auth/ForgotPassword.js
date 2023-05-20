@@ -1,10 +1,6 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 // @mui
-import { Link, Stack, IconButton, InputAdornment, TextField, Checkbox, Container, Typography, Button } from '@mui/material';
-import { LoadingButton } from '@mui/lab';
+import { Link, Stack, TextField, Container, Typography, Button } from '@mui/material';
 // components
-import Iconify from '../../components/iconify';
 // Module styles
 import Styles from './CSSModules/ForgotPassword.module.css'
 import { Helmet } from 'react-helmet-async';
@@ -65,7 +61,6 @@ const StyledContent = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function ForgotPassword() {
-  const navigate = useNavigate();
   const mdUp = useResponsive('up', 'md');
   const imageUrl = '/assets/img/signup-img.jpeg';
 
@@ -82,7 +77,7 @@ export default function ForgotPassword() {
           <StyledSection className={`${Styles.wrapper_before}`} imageUrl={imageUrl}>
             <div className={`${Styles.text_wrap}`}>
               <div>
-                <img src='/assets/icons/Stars.svg' />
+                <img src='/assets/icons/Stars.svg' alt='' />
               </div>
               <Typography variant="h1">
                 Track and monitor your customers on a single dashboard

@@ -2,12 +2,11 @@ import { Helmet } from 'react-helmet-async';
 // @mui
 import { styled } from '@mui/material/styles';
 
-import { Link, Container, Typography, Divider, Stack, Button } from '@mui/material';
+import { Link, Container, Typography, Stack, Button } from '@mui/material';
 // hooks
 import useResponsive from '../../../hooks/useResponsive';
 // components
 import Logo from '../../../components/logo';
-import Iconify from '../../../components/iconify';
 // Module styles
 import Styles from '../CSSModules/LoginPage.module.css'
 
@@ -21,7 +20,6 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import FormControl from '@mui/material/FormControl';
 import IconButton from '@mui/material/IconButton';
 import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
 
 // ----------------------------------------------------------------------
@@ -93,7 +91,7 @@ export default function LoginPage() {
           <StyledSection className={`${Styles.wrapper_before}`} imageUrl={imageUrl}>
             <div className={`${Styles.text_wrap}`}>
               <div>
-                <img src='/assets/icons/Stars.svg' />
+                <img src='/assets/icons/Stars.svg' alt='' />
               </div>
               <Typography variant="h1">
                 Track and monitor your customers on a single dashboard
@@ -168,7 +166,7 @@ export default function LoginPage() {
               </div>
               <div>
                 <Stack spacing={2} direction="row">
-                  <Button className={`${Styles.google_btn}`}><img src='/assets/icons/google_icon.png' /> Sign in with Google</Button>
+                  <Button className={`${Styles.google_btn}`}><img src='/assets/icons/google_icon.png' alt='' /> Sign in with Google</Button>
                 </Stack>
               </div>
               <div className={`${Styles.signup_switch}`}>Don't have an account? <Link href='/signup'>Sign up</Link></div>

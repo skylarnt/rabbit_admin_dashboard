@@ -13,6 +13,7 @@ import BusinessInfo from './pages/Auth/BusinessInfo';
 import VerifyEmail from './pages/Auth/EmailVerification';
 import Page404 from './pages/Page404';
 import ProductsPage from './pages/ProductsPage';
+import CustomerPage from './pages/Customers/Index';
 import DashboardAppPage from './pages/Dashboard/DashboardAppPage';
 
 // ----------------------------------------------------------------------
@@ -26,6 +27,7 @@ export default function Router() {
         { element: <Navigate to="/dashboard/app" />, index: true },
         { path: 'app', element: <DashboardAppPage /> },
         { path: 'user', element: <UserPage /> },
+        { path: 'customers', element: <CustomerPage /> },
         { path: 'products', element: <ProductsPage /> },
         { path: 'blog', element: <BlogPage /> },
       ],

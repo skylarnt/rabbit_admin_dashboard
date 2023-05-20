@@ -17,9 +17,12 @@ img {
     display: inline !important;
 }
 .primary_color {
-    color: #00AF52;
+    color: #00AF52 !important;
 }
+.MuiTabs-indicator {
+    background-color: #00AF52 !important;
 
+}
 .primary_color_bg {
     background-color: #00AF52;
 }

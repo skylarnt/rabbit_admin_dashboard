@@ -2,12 +2,11 @@ import { Helmet } from 'react-helmet-async';
 // @mui
 import { styled } from '@mui/material/styles';
 
-import { Link, Container, Typography, Divider, Stack, Button } from '@mui/material';
+import { Link, Container, Typography, Stack, Button } from '@mui/material';
 // hooks
 import useResponsive from '../../hooks/useResponsive';
 // components
 import Logo from '../../components/logo';
-import Iconify from '../../components/iconify';
 // Module styles
 import Styles from './CSSModules/EmailVerification.module.css'
 

@@ -2,28 +2,23 @@ import { Helmet } from 'react-helmet-async';
 // @mui
 import { styled } from '@mui/material/styles';
 
-import { Link, Container, Typography, Divider, Stack, Button } from '@mui/material';
+import { Link, Container, Typography, Stack, Button } from '@mui/material';
 // hooks
 import useResponsive from '../../hooks/useResponsive';
 // components
 import Logo from '../../components/logo';
-import Iconify from '../../components/iconify';
 // Module styles
 import Styles from './CSSModules/ResetPassword.module.css'
 
 // sections
 // import { LoginForm } from '../sections/auth/login';
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import FormControl from '@mui/material/FormControl';
 import IconButton from '@mui/material/IconButton';
 import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
-import Checkbox from '@mui/material/Checkbox';
 
 
 // ----------------------------------------------------------------------
@@ -77,7 +72,6 @@ export default function ResetPassword() {
   const [showPassword, setShowPassword] = React.useState(false);
   const [showPassword_two, setShowPassword_two] = React.useState(false);
 
-  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -103,7 +97,7 @@ export default function ResetPassword() {
           <StyledSection className={`${Styles.wrapper_before}`} imageUrl={imageUrl}>
             <div className={`${Styles.text_wrap}`}>
               <div>
-                <img src='/assets/icons/Stars.svg' />
+                <img src='/assets/icons/Stars.svg' alt='' />
               </div>
               <Typography variant="h1">
                 Track and monitor your customers on a single dashboard

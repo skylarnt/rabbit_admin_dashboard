@@ -1,0 +1,337 @@
+
+.card {
+    background: #FFFFFF !important;
+    /* gray/200 */
+    
+    border: 1px solid #E5E7EB !important;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 5px !important;
+}
+.table_responsive{
+    display: block;
+    width: 120% !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling:touch;
+}
+body {
+    /* background-color: #fff !important; */
+}
+.product_selected{
+    /* width: 70px; */
+    height: 24px;
+    padding: 3px 4px 3px 3px;
+
+    /* Base/White */
+
+    background: #FFFFFF;
+    /* Gray/300 */
+
+    border: 1px solid #D0D5DD;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height, or 150% */
+
+    /* text-align: center; */
+
+    /* Gray/700 */
+
+    color: #344054;
+    display: inline-block;
+    margin-right: 4px;
+
+}
+.modal_content .modal_header {
+    display: flex;
+    justify-content: space-between;
+
+}
+.modal_content .modal_btn {
+    background: #2563EB;
+    /* Shadow/xs */
+
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    color: #FFFFFF;
+
+}
+img {
+    display: inline !important;
+}
+.sales_title{
+    display: flex;
+    align-items: center;
+}
+.numbers {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.numbers div span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: #2563EB !important;
+    /* or 36px */
+
+
+    /* blue/600 */
+
+    color: #2563EB;
+}
+div.percent {
+    background: #D1FAE5;
+    border-radius: 12px;
+    padding: 2px 10px;
+    display: inline-block;
+}
+div.percent small {
+    font-size: 10px;
+}
+.wallet {
+    background: linear-gradient(45deg, #2C4F81 0%, #0B6CF4 100%);
+    box-shadow: 7.87342px 9.84177px 15.7468px rgba(0, 0, 0, 0.05);
+    border-radius: 19.6835px;
+    padding: 13px;
+    color: #FFFFFF;
+}
+.pagination_button_container button {
+    background: #FFFFFF;
+    
+    border: 1px solid #D0D5DD;
+    
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 4px;
+}
+
+.acc_number {
+    font-weight: 600;
+font-size: 13px;
+line-height: 22px;
+/* identical to box height */
+
+
+/* Base/White */
+
+color: #FFFFFF;
+}
+.table {
+    /* color: #6B7280 !important; */
+    width: 100% !important;
+
+}
+
+.thead  th {
+    border-bottom: 1px solid #EAECF0 !important;
+    border-top: 1px solid #EAECF0 !important;
+    color: #6B7280 !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    padding: 14px !important;
+    padding-left: 23px !important;
+    padding-right: 9px !important;
+}
+.tr td{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    /* identical to box height, or 21px */
+    
+    
+    /* gray/500 */
+    
+    color: #6B7280;
+    padding-left: 23px;
+    padding-right: 9px;
+    
+}
+
+.tr {
+    height: 77px !important;
+    border-bottom: 1px solid #EAECF0;
+
+}
+.tr td{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    /* identical to box height, or 21px */
+    
+    
+    /* gray/500 */
+    
+    color: #6B7280;
+    
+}
+.hold_input {
+    position: relative !important;
+
+}
+
+.hold_input img {
+    position: absolute;
+    top: 28%;
+    left:7%;
+}
+.hold_input input {
+    background: #FFFFFF !important;
+    /* Gray/300 */
+
+    border: 1px solid #D0D5DD !important;
+    /* Shadow/xs */
+
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05) !important;
+    border-radius: 8px !important;
+}
+
+.export_btn {
+    height: 40px;
+
+    /* blue/600 */
+
+    background: #00AF52;
+    /* blue/600 */
+
+    border: 1px solid #00AF52;
+    /* Shadow/xs */
+
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+
+    /* Base/White */
+    padding-top: 0 !important;
+
+    color: #FFFFFF;
+
+
+}
+.filters button {
+    padding: 5px 16px;
+    gap: 8px;
+    
+    width: 108px;
+    height: 37px;
+
+/* White */
+
+background: #FFFFFF;
+/* Gray/300 */
+
+border: 1px solid #D0D5DD;
+/* Shadow/xs */
+
+box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+border-radius: 4px;
+}
+.export_btn:hover {
+    color: #FFFFFF;
+    font-weight: bold;
+
+
+}
+.abandoned {
+    padding: 2px 8px;
+
+    width: 78px;
+    height: 22px;
+
+    /* Gray/100 */
+
+    background: #F2F4F7;
+    border-radius: 16px;
+}
+.customer {
+    padding: 2px 8px;
+
+    width: 69px;
+    height: 22px;
+
+    /* Success/50 */
+
+    background: #ECFDF3;
+    border-radius: 16px;
+}
+@media screen and(max-width: 1280) {
+    .hold_input img {
+        position: absolute;
+        top: 28%;
+        left: 15% !important;
+        display: none;
+    }
+    
+}
+
+.summarytitles{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    color: #1F2937;
+}
+.summaryValues{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #374151;
+    margin-right:30px
+}
+.inline_block{
+    display: inline-block !important;
+}
+.margin_top{
+    margin-top: 150px;
+}
+
+@media only screen and (max-width : 480px) {
+    .margin_top{
+        margin-top: 20px;
+    }
+    .height{
+        height: auto !important;
+        /* display: none; */
+    }
+    .hold_input img {
+        position: absolute;
+        top: 28%;
+        left: 13% !important;
+    }
+    .tr p {
+        font-size: 10px !important;
+    }
+    .action_button {
+        display: inline-block;
+        margin-left: 10px !important;
+
+    }
+
+    .sub_total {
+        position: relative !important;
+    }
+
+    .tr td{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 150%;
+        /* identical to box height, or 21px */
+        
+        
+        /* gray/500 */
+        
+        color: #6B7280;
+        
+    }
+    .container_checkout {
+        /* height: 200px !important; */
+    }
+
+}
