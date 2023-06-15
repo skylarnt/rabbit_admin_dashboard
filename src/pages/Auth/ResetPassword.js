@@ -93,7 +93,7 @@ export default function ResetPassword() {
   return (
     <>
       <Helmet>
-        <title> Signup | Minimal UI </title>
+        <title> Reset Password | Minimal UI </title>
       </Helmet>
 
       <StyledRoot /* style={{ border: '2px solid blue' }} */>

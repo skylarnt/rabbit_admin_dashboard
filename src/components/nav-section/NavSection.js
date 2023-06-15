@@ -34,30 +34,30 @@ function NavItem({ item }) {
   
 
   return (
-    <StyledNavItem
-      component={RouterLink}
-      to={path}
-      sx={{
-        '&.active': {
-          color: '#00AF52',
-          bgcolor: '#00af521f',
-          fontWeight: 'fontWeightBold',
-        },
-      }}
-      style={{
-        paddingLeft: '10px',
-        marginBottom: '6px'
-      }}
-    >
-      {/* <StyledNavItemIcon>{icon && icon}</StyledNavItemIcon> */}
-      <p className='mb-0 ml-3'>
-        {path !== window.location.pathname && <img src={icon} alt="icon_active" />}
-        {path === window.location.pathname && <img src={iconActive} alt="icon_active" />}
+      <StyledNavItem
+        component={RouterLink}
+        to={path}
+        sx={{
+          '&.active': {
+            color: '#00AF52',
+            bgcolor: '#00af521f',
+            fontWeight: 'fontWeightBold',
+          },
+        }}
+        style={{
+          paddingLeft: '10px',
+          marginBottom: '6px'
+        }}
+      >
+        {/* <StyledNavItemIcon>{icon && icon}</StyledNavItemIcon> */}
+        <p className='mb-0 ml-3'>
+          {path !== window.location.pathname && <img src={icon} alt="icon_active" />}
+          {path === window.location.pathname && <img src={iconActive} alt="icon_active" />}
 
-      </p>
-      <ListItemText style={{ paddingLeft: '15px' }} disableTypography primary={title} />
+        </p>
+        <ListItemText style={{ paddingLeft: '15px' }} disableTypography primary={title} />
 
-      {info && info}
-    </StyledNavItem>
+        {info && info}
+      </StyledNavItem>
   );
 }

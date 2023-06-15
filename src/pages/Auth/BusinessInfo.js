@@ -3,8 +3,6 @@ import { useNavigate } from 'react-router-dom';
 // @mui
 import { Link, Stack, IconButton, InputAdornment, TextField, Checkbox, Container, Typography, Button } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
-// components
-import Iconify from '../../components/iconify';
 // Module styles
 import Styles from './CSSModules/BusinessInfo.module.css'
 import { Helmet } from 'react-helmet-async';
@@ -14,13 +12,9 @@ import { styled } from '@mui/material/styles';
 import useResponsive from '../../hooks/useResponsive';
 // components
 import Logo from '../../components/logo';
-import { green, pink } from '@mui/material/colors';
 import Avatar from '@mui/material/Avatar';
 import FolderIcon from '@mui/icons-material/Folder';
-import PageviewIcon from '@mui/icons-material/Pageview';
-import AssignmentIcon from '@mui/icons-material/Assignment';
 
-// sections
 // import { LoginForm } from '../sections/auth/login';
 import * as React from 'react';
 import Box from '@mui/material/Box';
@@ -69,7 +63,7 @@ const StyledContent = styled('div')(({ theme }) => ({
     alignItems: 'center',
     flexDirection: 'column',
     padding: theme.spacing(3, 0),
-    background: '#FFFEFE',
+    background: '#fff',
 }));
 
 // ----------------------------------------------------------------------
@@ -82,7 +76,7 @@ export default function BusinessInfo() {
     return (
         <>
             <Helmet>
-                <title> Forgot Password | Minimal UI </title>
+                <title> Business Information | Minimal UI </title>
             </Helmet>
 
             <StyledRoot /* style={{ border: '2px solid blue' }} */>
@@ -92,11 +86,12 @@ export default function BusinessInfo() {
                     <StyledSection className={`${Styles.wrapper_before}`} imageUrl={imageUrl}>
                         <div className={`${Styles.text_wrap}`}>
                             <Typography variant="h1">
-                                Welcome, Let's get to know more about your business
+                                {/* Welcome, Let's get to know more about your business */}
+                                Welcome! By entering your business information;
                             </Typography>
-                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' /><span>Your business becomes public to wholesalers and retailers</span></p>
                             <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' /><span>Businesses with completed profiles are 3x more likely to be seen by customers</span></p>
-                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' /><span>Robust dashboard including real time data for making sales decisions</span></p>
+                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' /><span>Access tools & resources to manage a successful digital business </span></p>
+                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' /><span>Robust dashboard including real time data for making operational decisions</span></p>
                             <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' /><span>Unlimited access to all the features on your dashboard</span></p>
                         </div>
 
@@ -104,8 +99,8 @@ export default function BusinessInfo() {
                     </StyledSection>
                 )}
 
-                <Container style={{ width: '100%', }}>
-                    <StyledContent className={`${Styles.StyledContent}`} style={{ paddingTop: '80px', paddingBottom: '0' }}>
+                <Container style={{ width: '100%', backgroundColor: '#fff', paddingRight: '0px' }}>
+                    <StyledContent className={`${Styles.StyledContent}`} style={{ paddingTop: '6em', paddingBottom: '0' }}>
                         <div className={`${Styles.logo_wrap}`}>
                             <Logo />
                         </div>
@@ -158,7 +153,7 @@ export default function BusinessInfo() {
                                             }}>
                                             <TextField fullWidth placeholder='Enter business name' id="fullWidth" />
                                         </Box> */}
-                                        <div className="form-group pl-2" style={{boxSizing: 'border-box'}}>
+                                        <div className="form-group" style={{boxSizing: 'border-box'}}>
                                             <select id="inputCountry" className="form-control border border-secondary" style={{boxShadow: 'none'}}>
                                                 <option selected>Nigeria</option>
                                                 <option>U.S.A</option>
@@ -173,7 +168,7 @@ export default function BusinessInfo() {
                                             }}>
                                             <TextField fullWidth placeholder='Enter business name' id="fullWidth" />
                                         </Box> */}
-                                        <div className="form-group pl-2" style={{boxSizing: 'border-box'}}>
+                                        <div className="form-group" style={{boxSizing: 'border-box'}}>
                                             <select id="inputState" className="form-control border border-secondary" style={{boxShadow: 'none'}}>
                                                 <option selected>Lagos</option>
                                                 <option>Kaduna</option>
@@ -192,9 +187,9 @@ export default function BusinessInfo() {
                                     </Box>
                                 </div>
 
-                                <p className='font-weight-bold text-dark'>Business Account Details*</p>
+                                <p className='font-weight-bold text-dark mt-4'>Business Account Details*</p>
 
-                                <div className='d-md-flex'>
+                                <div className='d-md-flex w-100'>
                                     <div className={`${Styles.input_box} pr-md-4`}>
                                         <label for='' className='font-weight-normal'>Bank Name*</label>
                                         <Box
@@ -234,7 +229,7 @@ export default function BusinessInfo() {
                                         }}>
                                         <TextField fullWidth placeholder='Select items' id="fullWidth" />
                                     </Box> */}
-                                    <div  style={{padding: '1px', background: '#aaa', borderRadius: '7px', fontSize: '11px'}}>
+                                    <div className={`${Styles.accordion_wrap}`} >
                                         <Accordion >
                                             <AccordionSummary
                                                 className={`${Styles.acc_summary}`}
@@ -245,61 +240,64 @@ export default function BusinessInfo() {
                                                 <Typography variant='p' style={{fontSize: '13px'}}>Select Items</Typography>
                                             </AccordionSummary>
                                             <AccordionDetails>
-                                                <div className='d-flex'>
-                                                    <span className='px-2 py-1 mx-1' style={{border: '1px solid #bbb', borderRadius: '5px'}}>Trips <span style={{cursor: 'pointer', marginLeft: '4px', padding: '4px 0 4px'}}>&times;</span></span>
-                                                    <span className='px-2 py-1 mx-1' style={{border: '1px solid #bbb', borderRadius: '5px'}}>Charter <span style={{cursor: 'pointer', marginLeft: '4px', padding: '4px 0 4px'}}>&times;</span></span>
-                                                    <span className='px-2 py-1 mx-1' style={{border: '1px solid #bbb', borderRadius: '5px'}}>Interstate <span style={{cursor: 'pointer', marginLeft: '4px', padding: '4px 0 4px'}}>&times;</span></span>
-                                                </div>
-                                                <div className='d-flex mt-4'>
-                                                    <div className='pr-2'>
-                                                        <Typography variant='p' style={{fontSize: '12px'}}>Transport</Typography>
-                                                        <span className='py-1 px-2 my-2' style={{whiteSpace: 'nowrap', border: '1px solid #bbb', borderRadius: '5px', display: 'block', width: 'fit-content'}}>
-                                                            <input id='trip' type='checkbox' style={{verticalAlign: "middle", height: '13px', width: '13px', marginRight: '4px'}} />
-                                                            <label for='trip' className='font-weight-normal m-0' style={{fontSize: '10px'}}>Trips</label>
-                                                        </span>
-                                                        <span className='py-1 px-2 mb-2' style={{whiteSpace: 'nowrap', border: '1px solid #bbb', borderRadius: '5px', display: 'block', width: 'fit-content'}}>
-                                                            <input id='char' type='checkbox' style={{verticalAlign: "middle", height: '13px', width: '13px', marginRight: '4px'}} />
-                                                            <label for='char' className='font-weight-normal m-0' style={{fontSize: '10px'}}>Charter</label>
-                                                        </span>
-                                                        <span className='py-1 px-2' style={{whiteSpace: 'nowrap', border: '1px solid #bbb', borderRadius: '5px', display: 'block', width: 'fit-content'}}>
-                                                            <input id='inter' type='checkbox' style={{verticalAlign: "middle", height: '13px', width: '13px', marginRight: '4px'}} />
-                                                            <label for='inter' className='font-weight-normal m-0' style={{fontSize: '10px'}}>Interstate</label>
-                                                        </span>
+                                                <div className='px-2 pb-2'>
+                                                    <div className='d-flex'>
+                                                        <span className={`${Styles.first_acc_opt} px-2 py-1 mr-1`} >Trips <span className={`${Styles.first_acc_opt_span}`} >&times;</span></span>
+                                                        <span className={`${Styles.first_acc_opt} px-2 py-1 mx-1`} >Charter <span className={`${Styles.first_acc_opt_span}`} >&times;</span></span>
+                                                        <span className={`${Styles.first_acc_opt} px-2 py-1 mx-1`} >Interstate <span className={`${Styles.first_acc_opt_span}`} >&times;</span></span>
                                                     </div>
-                                                    <div className='pr-2'>
-                                                        <Typography variant='p' style={{fontSize: '12px'}}>Logistics</Typography>
-                                                        <span className='py-1 px-2 my-2' style={{whiteSpace: 'nowrap', border: '1px solid #bbb', borderRadius: '5px', display: 'block', width: 'fit-content'}}>
-                                                            <input id='bus_log' type='checkbox' style={{verticalAlign: "middle", height: '13px', width: '13px', marginRight: '4px'}} />
-                                                            <label for='bus_log' className='font-weight-normal m-0' style={{fontSize: '10px'}}>Bus Logistics</label>
-                                                        </span>
-                                                        <span className='py-1 px-2 mb-2' style={{whiteSpace: 'nowrap', border: '1px solid #bbb', borderRadius: '5px', display: 'block', width: 'fit-content'}}>
-                                                            <input id='bike_log' type='checkbox' style={{verticalAlign: "middle", height: '13px', width: '13px', marginRight: '4px'}} />
-                                                            <label for='bike_log' className='font-weight-normal m-0' style={{fontSize: '10px'}}>Bike Logistics</label>
-                                                        </span>
-                                                        <span className='py-1 px-2' style={{whiteSpace: 'nowrap', border: '1px solid #bbb', borderRadius: '5px', display: 'block', width: 'fit-content'}}>
-                                                            <input id='int_log' type='checkbox' style={{verticalAlign: "middle", height: '13px', width: '13px', marginRight: '4px'}} />
-                                                            <label for='int_log' className='font-weight-normal m-0' style={{fontSize: '10px'}}>Interstate Logistics</label>
-                                                        </span>
-                                                    </div>
-                                                    <div className='d-md-flex'>  
+                                                    <div className='d-flex mt-3 w-100' style={{justifyContent:'space-between'}}>
                                                         <div className='pr-2'>
-                                                            <Typography variant='p' style={{fontSize: '12px'}}>Food</Typography>
-                                                            <span className='py-1 px-2 my-2' style={{whiteSpace: 'nowrap', border: '1px solid #bbb', borderRadius: '5px', display: 'block', width: 'fit-content'}}>
-                                                                <input id='food' type='checkbox' style={{verticalAlign: "middle", height: '13px', width: '13px', marginRight: '4px'}} />
-                                                                <label for='food' className='font-weight-normal m-0' style={{fontSize: '10px'}}>Food</label>
+                                                            <Typography variant='p' className={`${Styles.acc_details_header}`} >Transport</Typography>
+                                                            <span className={`${Styles.acc_details_span} py-1 px-2 my-2`} >
+                                                                <input id='trip' type='checkbox' className={`${Styles.acc_details_box}`} />
+                                                                <label for='trip' className='font-weight-normal m-0' style={{fontSize: '12px'}}>Trips</label>
+                                                            </span>
+                                                            <span className={`${Styles.acc_details_span} py-1 px-2 mb-2`} >
+                                                                <input id='char' type='checkbox' className={`${Styles.acc_details_box}`} />
+                                                                <label for='char' className='font-weight-normal m-0' style={{fontSize: '12px'}}>Charter</label>
+                                                            </span>
+                                                            <span className={`${Styles.acc_details_span} py-1 px-2`} >
+                                                                <input id='inter' type='checkbox' className={`${Styles.acc_details_box}`} />
+                                                                <label for='inter' className='font-weight-normal m-0' style={{fontSize: '12px'}}>Interstate</label>
                                                             </span>
                                                         </div>
-                                                        <div className=''>
-                                                            <Typography variant='p' style={{fontSize: '12px'}}>Buy Now Pay Later</Typography>
-                                                            <span className='py-1 px-2 my-2' style={{whiteSpace: 'nowrap', border: '1px solid #bbb', borderRadius: '5px', display: 'block', width: 'fit-content'}}>
-                                                                <input id='BNPL' type='checkbox' style={{verticalAlign: "middle", height: '13px', width: '13px', marginRight: '4px'}} />
-                                                                <label for='BNPL' className='font-weight-normal m-0' style={{fontSize: '10px'}}>BNPL</label>
+                                                        <div className='pr-2'>
+                                                            <Typography variant='p' className={`${Styles.acc_details_header}`} >Logistics</Typography>
+                                                            <span className={`${Styles.acc_details_span} py-1 px-2 my-2`} >
+                                                                <input id='bus_log' type='checkbox' className={`${Styles.acc_details_box}`} />
+                                                                <label for='bus_log' className='font-weight-normal m-0' style={{fontSize: '12px'}}>Bus Logistics</label>
                                                             </span>
+                                                            <span className={`${Styles.acc_details_span} py-1 px-2 mb-2`} >
+                                                                <input id='bike_log' type='checkbox' className={`${Styles.acc_details_box}`} />
+                                                                <label for='bike_log' className='font-weight-normal m-0' style={{fontSize: '12px'}}>Bike Logistics</label>
+                                                            </span>
+                                                            <span className={`${Styles.acc_details_span} py-1 px-2`} >
+                                                                <input id='int_log' type='checkbox' className={`${Styles.acc_details_box}`} />
+                                                                <label for='int_log' className='font-weight-normal m-0' style={{fontSize: '12px'}}>Interstate Logistics</label>
+                                                            </span>
+                                                        </div>
+                                                        <div className='d-sm-flex w-50' style={{justifyContent: 'flex-start', gap: '20px'}}>  
+                                                            <div className='pr-2'>
+                                                                <Typography variant='p' className={`${Styles.acc_details_header}`} >Food</Typography>
+                                                                <span className={`${Styles.acc_details_span} py-1 px-2 my-2`} >
+                                                                    <input id='food' type='checkbox' className={`${Styles.acc_details_box}`} />
+                                                                    <label for='food' className='font-weight-normal m-0' style={{fontSize: '12px'}}>Food</label>
+                                                                </span>
+                                                            </div>
+                                                            <div className=''>
+                                                                <Typography variant='p' className={`${Styles.acc_details_header}`} >Buy Now Pay Later</Typography>
+                                                                <span className={`${Styles.acc_details_span} py-1 px-2 my-2`} >
+                                                                    <input id='BNPL' type='checkbox' className={`${Styles.acc_details_box}`} />
+                                                                    <label for='BNPL' className='font-weight-normal m-0' style={{fontSize: '12px'}}>BNPL</label>
+                                                                </span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </AccordionDetails>
                                         </Accordion>
+                                        
                                     </div>
                                 </div>
 

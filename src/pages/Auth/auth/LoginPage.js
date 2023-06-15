@@ -134,6 +134,10 @@ export default function LoginPage() {
                 >
                   <TextField fullWidth placeholder='Enter your Email' id="fullWidth" />
                 </Box>
+                <p className='text-danger m-0 mt-2'>
+                <iconify-icon style={{fontSize: '23px', verticalAlign: 'middle', marginRight: '3px', fontWeight: 'lighter'}} icon="ic:round-warning-amber"></iconify-icon> 
+                  <small className='text-danger font-weight-normal' style={{fontSize: '14px'}}>Login ID is incorrect!</small>
+                </p>
               </div>
               <div className={`${Styles.input_box}`}>
                 <label>Password*</label>
@@ -159,7 +163,7 @@ export default function LoginPage() {
                 </FormControl>
               </div>
               <div className={`${Styles.forgot}`}>
-                <Link href=''>Forgot Password?</Link>
+                <Link href='/forgot-password'>Forgot Password?</Link>
               </div>
               <div>
                 <Stack spacing={2} direction="row">

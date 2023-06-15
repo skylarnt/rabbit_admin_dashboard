@@ -34,7 +34,7 @@
     font-style: normal;
     font-weight: 500;
     /* font-size: 64px; */
-    font-size: 4cqw;
+    font-size: 3.5cqw;
     line-height: 120%;
     color: #FFFFFF;
     padding: 0;
@@ -46,7 +46,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 19px;
     line-height: 1.5;
     color: #fff !important;
     margin-top: 1.5em;
@@ -70,12 +70,12 @@
 
 .logo_wrap {
     position: absolute;
-    top: 20px;
-    left: 10px;
+    top: 15px;
+    left: 40px;
 }
 
 .logo_wrap img {
-    width: 80px !important;
+    width: 110px !important;
 }
 
 .signin_form_wrap {
@@ -91,6 +91,10 @@
     margin-bottom: 20px;
 }
 
+.input_box:nth-of-type(3) {
+    margin-bottom: 0;
+}
+
 .input_box label {
     font-weight: 500;
     font-size: 14px;
@@ -101,11 +105,11 @@
 }
 
 .input_box input::placeholder {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .input_box small {
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .signin_form_wrap *, 
@@ -122,13 +126,15 @@ input:active ~ fieldset, input:focus ~ fieldset, input:valid ~ fieldset {
 }
 
 .forgot {
-    margin: 1em 0 2em;
+    margin: .5em 0 2em;
 }
 
 .forgot p {
     font-size: 14px;
     font-weight: 500;
-    vertical-align: top;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
 }
 
 .forgot a {

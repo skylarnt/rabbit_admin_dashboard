@@ -28,7 +28,7 @@ const navConfig = [
   },
   {
     title: 'vehicles',
-    path: '/dashboard/vehicles',
+    path: '/dashboard/buses_bikes',
     icon: '/assets/icons/vehicle.svg',
     iconActive: '/assets/icons/vehicles_active.svg'
 
@@ -55,11 +55,17 @@ const navConfig = [
 
   },
   {
+    title: 'wallet',
+    path: '/dashboard/wallet',
+    icon: '/assets/icons/operations.svg',
+    iconActive: '/assets/icons/operations_active.svg'
+
+  },
+  {
     title: 'administrations',
     path: '/dashboard/administrations',
     icon: '/assets/icons/adminicon.svg',
     iconActive: '/assets/icons/adminicon_active.svg'
-
   },
   {
     title: 'settings',
@@ -71,6 +77,13 @@ const navConfig = [
   {
     title: 'incremental insight',
     path: '/dashboard/incremental_insight',
+    icon: '/assets/icons/activity.svg',
+    iconActive: '/assets/icons/activity_active.svg'
+
+  },
+  {
+    title: 'subscription',
+    path: '/dashboard/subscription',
     icon: '/assets/icons/activity.svg',
     iconActive: '/assets/icons/activity_active.svg'
 

@@ -3,6 +3,7 @@ import { forwardRef } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 // @mui
 import { Box, Link } from '@mui/material';
+import { transform } from 'lodash';
 
 // ----------------------------------------------------------------------
 
@@ -13,10 +14,10 @@ const Logo = forwardRef(({ disabledLink = false, sx, }) => {
   const logo = (
     <Box
       component="img"
-      src="/assets/icons/rabbitLogo.svg"
+      src="/assets/images/rabbit_logo.png"
       style={{
         width: '50%',
-        height: '90%',
+        height: '100%',
       }}
       sx={{ width: 100, height: 100, cursor: 'pointer', ...sx }}
     />

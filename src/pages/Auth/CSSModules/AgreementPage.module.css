@@ -1,0 +1,267 @@
+.wrapper_before {
+    position: relative;
+    /* padding: 0 9em; */
+    font-size: 17px;
+}
+
+.wrapper_before::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: linear-gradient(209.36deg, rgba(0, 175, 82, 0.75) 0%, rgba(1, 11, 34, 0.75) 100%);
+}
+
+.wrapper_before .text_wrap {
+    position: relative;
+    z-index: 10;
+    /* border: 3px solid blue; */
+    width: 32em;
+    max-width: 95%;
+    height: fit-content;
+    padding: 0 0 8em;
+    /* border: 2px solid blueviolet; */
+}
+
+.wrapper_before h1 {
+    max-width: 100%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    /* font-size: 64px; */
+    font-size: 2.2em;
+    line-height: 1.5;
+    color: #FFFFFF;
+    padding: 0;
+}
+
+.wrapper_before p {
+    position: relative;
+    z-index: 10;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #fff !important;
+    margin-top: 1.5em;
+}
+
+.logo_wrap {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.logo_wrap img {
+    width: 110px !important;
+}
+
+.signin_form_wrap {
+    width: 50em;
+    max-width: 100%;
+}
+
+.signin_form_wrap h3 {
+    margin-bottom: 30px;
+}
+
+.signin_form_wrap>p {
+    font-size: 16px;
+    color: #666;
+}
+
+.biz_logo_wrap p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.input_box {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.input_box label {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.input_box input {
+    height: 10px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+}
+
+.input_box input::placeholder {
+    font-size: 14px;
+}
+
+.input_box small {
+    font-size: 14px;
+}
+
+.input_box option, .input_box select {
+    font-size: 14px;
+    height: 40px;
+}
+
+.signin_form_wrap *,
+.signin_form_wrap *:active,
+.signin_form_wrap *:focus {
+    border: none;
+    outline: none;
+}
+
+input:active~fieldset,
+input:focus~fieldset,
+input:valid~fieldset {
+    border: 1px solid #ddd !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.signin_btn {
+    background: #54B054;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    font-weight: normal !important;
+    margin-bottom: 20px;
+}
+
+.signin_btn:hover {
+    background: #33BF75;
+    color: whitesmoke;
+}
+
+.signup_footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.signup_footer p {
+    margin: 6px 0;
+    width: fit-content;
+}
+
+.signup_footer a {
+    color: #888;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.signup_footer a:hover {
+    color: #54B054;
+}
+
+.biz_logo {
+    width: fit-content;
+    border: 1px solid #ddd !important;
+    padding: 1em 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.biz_logo>div {
+    position: relative;
+    transform: scale(1.1);
+    overflow: visible !important;
+}
+
+.biz_logo>div span {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    color: #54B054;
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #54B054 !important;
+    z-index: 99 !important;
+    background: #EFF6FE;
+}
+
+.StyledContent_wrap {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.StyledContent_wrap::-webkit-scrollbar,
+.StyledContent_wrap::-webkit-scrollbar-track {
+    appearance: none;
+}
+
+.acc_summary {
+    min-height: 30px !important;
+}
+
+.accordion_wrap {
+    padding: 1px; 
+    background: #ccc; 
+    border-radius: 7px; 
+    font-size: 11px
+}
+
+.first_acc_opt {
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.first_acc_opt_span {
+    cursor: pointer; 
+    margin-left: 4px; 
+    padding: 4px 0 4px;
+}
+
+.acc_details_header {
+    font-size: 14px; 
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.acc_details_span {
+    white-space: nowrap; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    display: block; 
+    width: fit-content;
+}
+
+.acc_details_box {
+    vertical-align: middle; 
+    height: 13px; 
+    width: 13px; 
+    margin-right: 4px;
+}
+@media screen and (max-width:700px) {
+    .StyledContent {
+        min-height: 100vh !important;
+    }
+}

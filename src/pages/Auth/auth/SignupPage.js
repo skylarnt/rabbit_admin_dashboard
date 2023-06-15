@@ -106,9 +106,9 @@ export default function SignupPage() {
                 <img src='/assets/icons/Stars.svg' />
               </div>
               <Typography variant="h1">
-                Track and monitor your customers on a single dashboard
+              Control business operations and track customers on a single dashboard
               </Typography>
-              <p>Make informed sales decisions by monitoring consumer behaviours, brand acceptance and market performance.</p>
+              <p>Engage with customers, manage drivers, track income and make informed decisions based on valuable insights to improve efficiency and achieve business goals.</p>
               <div className={`${Styles.join_sect}`}>
                 <div>
                 <img src="/assets/icons/Avatar-group.svg" alt='' />
@@ -197,8 +197,9 @@ export default function SignupPage() {
               </div>
 
               <div className={`${Styles.forgot}`}>
-                <p className='d-flex' style={{justifyContent: 'flex-start', alignItems: 'flex-start'}}>
-                    <Checkbox {...label} id='agree' style={{verticalAlign: 'bottom'}} /> <label for='agree'>I agree with the <Link href=''>terms of the service and conditions</Link></label> 
+                <p className='d-flex m-0' style={{justifyContent: 'flex-start', alignItems: 'center'}}>
+                    <Checkbox {...label} id='agree' style={{verticalAlign: 'middle', margin: '0'}} /> 
+                    <label className='mt-2' for='agree'>I agree with the <Link href=''>terms of the service and conditions</Link></label> 
                 </p>
               </div>
               <div>
@@ -211,7 +212,7 @@ export default function SignupPage() {
                   <Button className={`${Styles.google_btn}`}><img src='/assets/icons/google_icon.png' /> Sign up with Google</Button>
                 </Stack>
               </div>
-              <div className={`${Styles.signup_switch}`}>Aready have an account? <Link href='/login'>Login</Link></div>
+              <div className={`${Styles.signup_switch}`}>Aready have an account? <Link href='/login'>Sign In</Link></div>
               <div></div>
             </div>
           <div className={`${Styles.signup_footer}`}>

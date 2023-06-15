@@ -126,7 +126,7 @@ export default function ForgotPassword() {
               </div>
               <div>
                 <Stack spacing={2} direction="row">
-                  <Button className={`${Styles.signin_btn}`}>Sign in</Button>
+                  <Button className={`${Styles.signin_btn}`}>Send</Button>
                 </Stack>
               </div>
             </div>
