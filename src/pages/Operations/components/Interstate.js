@@ -204,7 +204,7 @@ export default function TripsOpr() {
                                                 &nbsp;
                                                 <div className="initials">
                                                     {/* AM */}
-                                                    <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
+                                                    <img src="/assets/icons/to-fro.png" alt="" style={{ width: 'auto' }} />
                                                 </div>
                                             </div>
                                         </td>
@@ -327,7 +327,7 @@ export default function TripsOpr() {
                                                 &nbsp;
                                                 <div className="initials">
                                                     {/* AM */}
-                                                    <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
+                                                    <img src="/assets/icons/to-fro.png" alt="" style={{ width: 'auto' }} />
                                                 </div>
                                             </div>
                                         </td>
@@ -450,7 +450,7 @@ export default function TripsOpr() {
                                                 &nbsp;
                                                 <div className="initials">
                                                     {/* AM */}
-                                                    <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
+                                                    <img src="/assets/icons/to-fro.png" alt="" style={{ width: 'auto' }} />
                                                 </div>
                                             </div>
                                         </td>
@@ -573,7 +573,7 @@ export default function TripsOpr() {
                                                 &nbsp;
                                                 <div className="initials">
                                                     {/* AM */}
-                                                    <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
+                                                    <img src="/assets/icons/to-fro.png" alt="" style={{ width: 'auto' }} />
                                                 </div>
                                             </div>
                                         </td>
@@ -696,7 +696,7 @@ export default function TripsOpr() {
                                                 &nbsp;
                                                 <div className="initials">
                                                     {/* AM */}
-                                                    <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
+                                                    <img src="/assets/icons/to-fro.png" alt="" style={{ width: 'auto' }} />
                                                 </div>
                                             </div>
                                         </td>
@@ -819,7 +819,7 @@ export default function TripsOpr() {
                                                 &nbsp;
                                                 <div className="initials">
                                                     {/* AM */}
-                                                    <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
+                                                    <img src="/assets/icons/to-fro.png" alt="" style={{ width: 'auto' }} />
                                                 </div>
                                             </div>
                                         </td>

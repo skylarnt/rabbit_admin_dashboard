@@ -50,7 +50,7 @@ export default function CustomersReview() {
                                         <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '50px', height: '50px', borderRadius: '15px' }} alt="" />
                                     </div>
                                     <div className="ml-3">
-                                        <h5 className="">Jane Cooper
+                                        <h5 className="mb-2">Jane Cooper
                                             <sup className="text-muted ml-2" style={{ fontSize: '13px' }}>01:56 PM 09/03/2023</sup>
                                             <sup className="text-muted ml-2" style={{ fontSize: '10px', verticalAlign: 'middle' }}>
                                                 <img src="/assets/icons/rateStar.png" alt="" />
@@ -61,7 +61,7 @@ export default function CustomersReview() {
                                             </sup>
                                             <sup className="text-warning ml-2" style={{ fontSize: '13px' }}>4.0</sup>
                                         </h5>
-                                        <p className="mb-0"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
+                                        <p className="mb-0 mt-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
                                     </div>
                                 </div>
                             </AccordionSummary>
@@ -94,7 +94,7 @@ export default function CustomersReview() {
                                         <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '50px', height: '50px', borderRadius: '15px' }} alt="" />
                                     </div>
                                     <div className="ml-3">
-                                        <h5 className="">Jane Cooper
+                                        <h5 className="mb-2">Jane Cooper
                                             <sup className="text-muted ml-2" style={{ fontSize: '13px' }}>01:56 PM 09/03/2023</sup>
                                             <sup className="text-muted ml-2" style={{ fontSize: '10px', verticalAlign: 'middle' }}>
                                                 <img src="/assets/icons/rateStar.png" alt="" />
@@ -105,7 +105,7 @@ export default function CustomersReview() {
                                             </sup>
                                             <sup className="text-warning ml-2" style={{ fontSize: '13px' }}>4.0</sup>
                                         </h5>
-                                        <p className="mb-0"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
+                                        <p className="mb-0 mt-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
                                     </div>
                                 </div>
                             </AccordionSummary>
@@ -138,7 +138,7 @@ export default function CustomersReview() {
                                         <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '50px', height: '50px', borderRadius: '15px' }} alt="" />
                                     </div>
                                     <div className="ml-3">
-                                        <h5 className="">Jane Cooper
+                                        <h5 className="mb-2">Jane Cooper
                                             <sup className="text-muted ml-2" style={{ fontSize: '13px' }}>01:56 PM 09/03/2023</sup>
                                             <sup className="text-muted ml-2" style={{ fontSize: '10px', verticalAlign: 'middle' }}>
                                                 <img src="/assets/icons/rateStar.png" alt="" />
@@ -149,7 +149,7 @@ export default function CustomersReview() {
                                             </sup>
                                             <sup className="text-warning ml-2" style={{ fontSize: '13px' }}>4.0</sup>
                                         </h5>
-                                        <p className="mb-0"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
+                                        <p className="mb-0 mt-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
                                     </div>
                                 </div>
                             </AccordionSummary>
@@ -182,7 +182,7 @@ export default function CustomersReview() {
                                         <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '50px', height: '50px', borderRadius: '15px' }} alt="" />
                                     </div>
                                     <div className="ml-3">
-                                        <h5 className="">Jane Cooper
+                                        <h5 className="mb-2">Jane Cooper
                                             <sup className="text-muted ml-2" style={{ fontSize: '13px' }}>01:56 PM 09/03/2023</sup>
                                             <sup className="text-muted ml-2" style={{ fontSize: '10px', verticalAlign: 'middle' }}>
                                                 <img src="/assets/icons/rateStar.png" alt="" />
@@ -193,7 +193,7 @@ export default function CustomersReview() {
                                             </sup>
                                             <sup className="text-warning ml-2" style={{ fontSize: '13px' }}>4.0</sup>
                                         </h5>
-                                        <p className="mb-0"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
+                                        <p className="mb-0 mt-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
                                     </div>
                                 </div>
                             </AccordionSummary>
@@ -226,7 +226,7 @@ export default function CustomersReview() {
                                         <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '50px', height: '50px', borderRadius: '15px' }} alt="" />
                                     </div>
                                     <div className="ml-3">
-                                        <h5 className="">Jane Cooper
+                                        <h5 className="mb-2">Jane Cooper
                                             <sup className="text-muted ml-2" style={{ fontSize: '13px' }}>01:56 PM 09/03/2023</sup>
                                             <sup className="text-muted ml-2" style={{ fontSize: '10px', verticalAlign: 'middle' }}>
                                                 <img src="/assets/icons/rateStar.png" alt="" />
@@ -237,7 +237,7 @@ export default function CustomersReview() {
                                             </sup>
                                             <sup className="text-warning ml-2" style={{ fontSize: '13px' }}>4.0</sup>
                                         </h5>
-                                        <p className="mb-0"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
+                                        <p className="mb-0 mt-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
                                     </div>
                                 </div>
                             </AccordionSummary>

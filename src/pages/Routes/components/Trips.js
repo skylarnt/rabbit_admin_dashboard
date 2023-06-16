@@ -219,7 +219,7 @@ export default function TripsPage() {
                         &nbsp;
                         <div className="initials">
                           {/* AM */}
-                          <img src="/assets/icons/activity.png" alt="" />
+                          <img src="/assets/icons/to-fro.png" alt="" />
                         </div>
 
                       </div>
@@ -281,7 +281,7 @@ export default function TripsPage() {
                         &nbsp;
                         <div className="initials">
                           {/* AM */}
-                          <img src="/assets/icons/activity.png" alt="" />
+                          <img src="/assets/icons/to-fro.png" alt="" />
                         </div>
 
                       </div>
@@ -343,7 +343,7 @@ export default function TripsPage() {
                         &nbsp;
                         <div className="initials">
                           {/* AM */}
-                          <img src="/assets/icons/activity.png" alt="" />
+                          <img src="/assets/icons/to-fro.png" alt="" />
                         </div>
 
                       </div>
@@ -405,7 +405,7 @@ export default function TripsPage() {
                         &nbsp;
                         <div className="initials">
                           {/* AM */}
-                          <img src="/assets/icons/activity.png" alt="" />
+                          <img src="/assets/icons/to-fro.png" alt="" />
                         </div>
 
                       </div>
@@ -467,7 +467,7 @@ export default function TripsPage() {
                         &nbsp;
                         <div className="initials">
                           {/* AM */}
-                          <img src="/assets/icons/activity.png" alt="" />
+                          <img src="/assets/icons/to-fro.png" alt="" />
                         </div>
 
                       </div>
@@ -529,7 +529,7 @@ export default function TripsPage() {
                         &nbsp;
                         <div className="initials">
                           {/* AM */}
-                          <img src="/assets/icons/activity.png" alt="" />
+                          <img src="/assets/icons/to-fro.png" alt="" />
                         </div>
 
                       </div>

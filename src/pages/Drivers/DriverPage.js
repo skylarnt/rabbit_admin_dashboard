@@ -397,7 +397,7 @@ export default function DriverPage() {
                                                     &nbsp;
                                                     <div className="initials">
                                                         {/* AM */}
-                                                        <img src="/assets/icons/activity.png" alt="" style={{width: '25px'}} />
+                                                        <img src="/assets/icons/to-fro.png" alt="" style={{width: '25px'}} />
                                                     </div>
 
                                                 </div>
@@ -490,7 +490,7 @@ export default function DriverPage() {
                                                     &nbsp;
                                                     <div className="initials">
                                                         {/* AM */}
-                                                        <img src="/assets/icons/activity.png" alt="" style={{width: '25px'}} />
+                                                        <img src="/assets/icons/to-fro.png" alt="" style={{width: '25px'}} />
                                                     </div>
 
                                                 </div>
@@ -583,7 +583,7 @@ export default function DriverPage() {
                                                     &nbsp;
                                                     <div className="initials">
                                                         {/* AM */}
-                                                        <img src="/assets/icons/activity.png" alt="" style={{width: '25px'}} />
+                                                        <img src="/assets/icons/to-fro.png" alt="" style={{width: '25px'}} />
                                                     </div>
 
                                                 </div>
@@ -676,7 +676,7 @@ export default function DriverPage() {
                                                     &nbsp;
                                                     <div className="initials">
                                                         {/* AM */}
-                                                        <img src="/assets/icons/activity.png" alt="" style={{width: '25px'}} />
+                                                        <img src="/assets/icons/to-fro.png" alt="" style={{width: '25px'}} />
                                                     </div>
 
                                                 </div>
@@ -769,7 +769,7 @@ export default function DriverPage() {
                                                     &nbsp;
                                                     <div className="initials">
                                                         {/* AM */}
-                                                        <img src="/assets/icons/activity.png" alt="" style={{width: '25px'}} />
+                                                        <img src="/assets/icons/to-fro.png" alt="" style={{width: '25px'}} />
                                                     </div>
 
                                                 </div>

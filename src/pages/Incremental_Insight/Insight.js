@@ -353,7 +353,7 @@ export default function DashboardAppPage() {
                                                     </div>
                                                     <div className="initials ml-2">
                                                         {/* AM */}
-                                                        <img src="/assets/icons/activity.png" alt="" style={{ width: '25px' }} />
+                                                        <img src="/assets/icons/to-fro.png" alt="" style={{ width: 'auto' }} />
                                                     </div>
 
                                                 </div>
@@ -374,7 +374,7 @@ export default function DashboardAppPage() {
                                                     </div>
                                                     <div className="initials ml-2">
                                                         {/* AM */}
-                                                        <img src="/assets/icons/activity.png" alt="" style={{ width: '25px' }} />
+                                                        <img src="/assets/icons/to-fro.png" alt="" style={{ width: 'auto' }} />
                                                     </div>
 
                                                 </div>
@@ -395,7 +395,7 @@ export default function DashboardAppPage() {
                                                     </div>
                                                     <div className="initials ml-2">
                                                         {/* AM */}
-                                                        <img src="/assets/icons/activity.png" alt="" style={{ width: '25px' }} />
+                                                        <img src="/assets/icons/to-fro.png" alt="" style={{ width: 'auto' }} />
                                                     </div>
 
                                                 </div>
@@ -416,7 +416,7 @@ export default function DashboardAppPage() {
                                                     </div>
                                                     <div className="initials ml-2">
                                                         {/* AM */}
-                                                        <img src="/assets/icons/activity.png" alt="" style={{ width: '25px' }} />
+                                                        <img src="/assets/icons/to-fro.png" alt="" style={{ width: 'auto' }} />
                                                     </div>
 
                                                 </div>
