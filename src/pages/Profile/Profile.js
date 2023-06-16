@@ -45,7 +45,7 @@ export default function ProfilePage() {
                             </div>
                             <div className="col-md-5 p-0 ">
                                 <div className="logo mb-3">
-                                    <img style={{ width: '50px', borderRadius: '50%' }} src="/assets/illustrations/illustration_avatar.png" alt="" />
+                                    <img style={{ width: '50px', borderRadius: '50%' }} src="/assets/icons/Avatar.png" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -229,7 +229,7 @@ export default function ProfilePage() {
                                                             left: '15%',
                                                             transform: 'translate(-50%, -50%)'
                                                         }}>
-                                                        <img style={{ width: '30%' }} src="/assets/illustrations/illustration_avatar.png" alt="" />
+                                                        <img style={{ width: '20%' }} src="/assets/icons/Avatar.png" alt="" />
 
                                                     </div>
                                                     <p className="p-0 m-0 mt-3 mb-2">

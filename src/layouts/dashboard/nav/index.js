@@ -89,7 +89,7 @@ export default function Nav({ openNav, onCloseNav }) {
         className='px-3 py-5'
         onClick={ProfilePageClick}
       >
-        <img className='float-left' style={{ width: '42px', borderRadius: '50%' }} src={'/assets/illustrations/illustration_avatar.png'} alt="" />
+        <img className='float-left' style={{ width: '42px', borderRadius: '50%' }} src={'/assets/icons/Avatar.png'} alt="" />
         <div className='ml-2 pt-3'>
           <h6 className='mb-0' style={{ fontSize: '16px' }}>
             Rabbit WebApp

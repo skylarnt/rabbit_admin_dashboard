@@ -42,14 +42,31 @@ export default function ProfilePage() {
                                     />
 
                                     <p className="mb-1 mt-3" style={{fontSize: '14px'}}>Card Number</p>
-                                    <TextField
-                                        required
-                                        name="max_products"
-                                        type='number'
-                                        placeholder="1234 1234 1234 1234"
-                                        size="small"
-                                        fullWidth
-                                    />
+                                    <div className="position-relative">
+                                        <div 
+                                            className="float-left position-absolute"
+                                            style={{
+                                                top: '50%',
+                                                left: '7px',
+                                                transform: 'translate(0%, -50%)',
+                                                zIndex: '99',
+                                                overflow: 'hidden',
+                                                width: 'fit-content',
+                                                height: 'auto',
+                                            }} alt="" 
+                                        >
+                                            <img src="/assets/icons/Payment-method.png" style={{transform: 'scale(1.2)'}} />
+                                        </div>
+                                        <TextField
+                                            required
+                                            name="max_products"
+                                            type='number'
+                                            placeholder="1234 1234 1234 1234"
+                                            size="small"
+                                            fullWidth
+                                            className={`${styles.card_no_input}`}
+                                        />
+                                    </div>
                                 </div>
                                 <div className="col-md-3">
                                     <p className="mb-1 mt-3 mt-md-0" style={{fontSize: '14px'}}>Expiry</p>

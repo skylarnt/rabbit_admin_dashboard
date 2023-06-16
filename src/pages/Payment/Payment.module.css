@@ -15,3 +15,7 @@ form {
 input {
     background-color: white !important;
 }
+
+.card_no_input input {
+    text-indent: 30px;
+}
