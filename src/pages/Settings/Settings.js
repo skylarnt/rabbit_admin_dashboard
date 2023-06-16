@@ -155,7 +155,7 @@ export default function SettingsPage() {
                                     </div>
 
                                 } />
-                                <Tab className={`${value === 2 ? styles.active : styles.default_cl} ${styles.control_button}`} label={
+                                <Tab className={`${value === 3 ? styles.active : styles.default_cl} ${styles.control_button}`} label={
                                     <div className="d-flex" style={{ justifyContent: 'flex-start', alignItems: 'flex-start', gap: '6px' }}>
                                         <div>
                                             <HelpIcon style={{ color: '#000095' }} />
