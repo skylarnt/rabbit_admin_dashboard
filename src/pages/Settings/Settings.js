@@ -114,9 +114,10 @@ export default function SettingsPage() {
 
                             >
                                 <Tab className={`${value === 0 ? styles.active : styles.default_cl} ${styles.control_button}`} label={
-                                    <div className="d-flex" style={{ justifyContent: 'flex-start', alignItems: 'flex-start', gap: '6px' }}>
+                                    <div className="d-flex" style={{ justifyContent: 'flex-start', alignItems: 'flex-start', gap: '9px' }}>
                                         <div>
-                                            <LockIcon style={{ color: '#F53D3D' }} />
+                                            {/* <LockIcon style={{ color: '#F53D3D' }} /> */}
+                                            <img src="/assets/icons/lockbox.png" alt="" style={{ width: '40px' }} />
                                         </div>
                                         <div className="text-left m-0 p-0">
                                             <span className="d-block text-left m-0 p-0">Password</span>
@@ -128,9 +129,10 @@ export default function SettingsPage() {
                                     </div>
                                 } />
                                 <Tab style={{ maxWidth: '100% !important' }} className={`${value === 1 ? styles.active : styles.default_cl} ${styles.control_button}`} label={
-                                    <div className="d-flex" style={{ justifyContent: 'flex-start', alignItems: 'flex-start', gap: '6px' }}>
+                                    <div className="d-flex" style={{ justifyContent: 'flex-start', alignItems: 'flex-start', gap: '9px' }}>
                                         <div>
-                                            <HelpIcon style={{ color: '#7839EE' }} />
+                                            {/* <HelpIcon style={{ color: '#7839EE' }} /> */}
+                                            <img src="/assets/icons/helpCenter.png" alt="" style={{ width: '40px' }} />
                                         </div>
                                         <div className="text-left m-0 p-0">
                                             <span className="d-block text-left m-0 p-0">Help Center</span>
@@ -142,9 +144,10 @@ export default function SettingsPage() {
 
                                 } />
                                 <Tab className={`${value === 2 ? styles.active : styles.default_cl} ${styles.control_button}`} label={
-                                    <div className="d-flex" style={{ justifyContent: 'flex-start', alignItems: 'flex-start', gap: '6px' }}>
+                                    <div className="d-flex" style={{ justifyContent: 'flex-start', alignItems: 'flex-start', gap: '9px' }}>
                                         <div>
-                                            <DeleteIcon style={{ color: '#F97316' }} />
+                                            {/* <DeleteIcon style={{ color: '#F97316' }} /> */}
+                                            <img src="/assets/icons/deleteBox.png" alt="" style={{ width: '40px' }} />
                                         </div>
                                         <div className="text-left m-0 p-0">
                                             <span className="d-block text-left m-0 p-0">Delete  Account</span>
@@ -156,9 +159,10 @@ export default function SettingsPage() {
 
                                 } />
                                 <Tab className={`${value === 3 ? styles.active : styles.default_cl} ${styles.control_button}`} label={
-                                    <div className="d-flex" style={{ justifyContent: 'flex-start', alignItems: 'flex-start', gap: '6px' }}>
+                                    <div className="d-flex" style={{ justifyContent: 'flex-start', alignItems: 'flex-start', gap: '9px' }}>
                                         <div>
-                                            <HelpIcon style={{ color: '#000095' }} />
+                                            {/* <HelpIcon style={{ color: '#000095' }} /> */}
+                                            <img src="/assets/icons/pauseBox.png" alt="" style={{ width: '40px' }} />
                                         </div>
                                         <div className="text-left m-0 p-0">
                                             <span className="d-block text-left m-0 p-0">Pause Operation</span>
