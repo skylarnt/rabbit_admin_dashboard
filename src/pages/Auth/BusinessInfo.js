@@ -1,8 +1,14 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
 // @mui
-import { Link, Stack, IconButton, InputAdornment, TextField, Checkbox, Container, Typography, Button } from '@mui/material';
-import { LoadingButton } from '@mui/lab';
+import { 
+    Link, 
+    Stack, 
+    TextField, 
+    Container, 
+    Typography, 
+    Button } from '@mui/material';
+// import { LoadingButton } from '@mui/lab';
 // Module styles
 import Styles from './CSSModules/BusinessInfo.module.css'
 import { Helmet } from 'react-helmet-async';
@@ -14,7 +20,6 @@ import useResponsive from '../../hooks/useResponsive';
 import Logo from '../../components/logo';
 import Avatar from '@mui/material/Avatar';
 import FolderIcon from '@mui/icons-material/Folder';
-
 // import { LoginForm } from '../sections/auth/login';
 import * as React from 'react';
 import Box from '@mui/material/Box';
@@ -69,7 +74,7 @@ const StyledContent = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function BusinessInfo() {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const mdUp = useResponsive('up', 'md');
     const imageUrl = '/assets/img/signup-img.jpeg';
 
@@ -89,10 +94,10 @@ export default function BusinessInfo() {
                                 {/* Welcome, Let's get to know more about your business */}
                                 Welcome! By entering your business information;
                             </Typography>
-                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' /><span>Businesses with completed profiles are 3x more likely to be seen by customers</span></p>
-                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' /><span>Access tools & resources to manage a successful digital business </span></p>
-                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' /><span>Robust dashboard including real time data for making operational decisions</span></p>
-                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' /><span>Unlimited access to all the features on your dashboard</span></p>
+                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' alt='' /><span>Businesses with completed profiles are 3x more likely to be seen by customers</span></p>
+                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' alt='' /><span>Access tools & resources to manage a successful digital business </span></p>
+                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' alt='' /><span>Robust dashboard including real time data for making operational decisions</span></p>
+                            <p className='d-flex' style={{ alignItems: 'center' }}><img className='mr-3' src='/assets/icons/check-circle.png' alt='' /><span>Unlimited access to all the features on your dashboard</span></p>
                         </div>
 
                         {/* <img src="/assets/illustrations/illustration_login.png" alt="login" /> */}
@@ -108,7 +113,7 @@ export default function BusinessInfo() {
 
                             <div className={`${Styles.signin_form_wrap}`}>
                                 <div style={{ width: 'fit-content', margin: 'auto', paddingTop: '10px' }}>
-                                    <img src='/assets/icons/Featured-icon.png' />
+                                    <img src='/assets/icons/Featured-icon.png' alt='' />
                                 </div>
                                 <Typography variant='h3' className='text-center mb-0'>
                                     Business Information
