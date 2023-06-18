@@ -78,7 +78,7 @@ export default function DashboardLayout() {
         }
 
 
-      <Main  className='px-4 remove_padding'>
+      <Main  className='px-3 px-md-4 remove_padding'>
         
         <Outlet />
       </Main>

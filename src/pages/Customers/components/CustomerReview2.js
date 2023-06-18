@@ -21,7 +21,7 @@ export default function CustomersReview2() {
                     <div className="row">
                         <div className={`${styles.hold_input} col-6   `}>
                             <img src="/assets/icons/search.svg" alt="" />
-                            <input type="text" placeholder="Search" style={{ textIndent: '25px', width: '60%' }} className=" form-control" />
+                            <input type="text" placeholder="Search" style={{ textIndent: '25px', width: '240px' }} className=" form-control" />
 
                         </div>
                         <div className="col-6  text-right">

@@ -16,41 +16,35 @@ export default function CustomersReview() {
 
     return (
         <>
-            <div className="px-2">
-                <div className={`${styles.filters} mt-4`}>
-                    <div className="row">
-                        <div className={`${styles.hold_input} col-6   `}>
-                            <img src="/assets/icons/search.svg" alt="" />
-                            <input type="text" placeholder="Search" style={{ textIndent: '25px', width: '60%' }} className=" form-control" />
+            <div className="px-0 px-md-2">
+            <div className={`${styles.filters} mt-4`}>
+          <div className="d-flex justify-content-between" style={{gap: '10px'}}>
+            <div className={`${styles.hold_input}  `}>
+              <img src="/assets/icons/search.svg" alt="" />
+              <input type="text" name="search" placeholder="Search" style={{ textIndent: '25px', width: '240px',  }} className=" form-control" />
 
-                        </div>
-                        <div className="col-6  text-right">
+            </div>
 
-
-                        </div>
-
-                    </div>
+          </div>
+        </div>
 
 
-                </div>
-
-
-                <div className="pt-5">
+                <div className="pt-4">
 
                     <div className={`${styles.accordion_wrap} mb-3`} >
-                        <Accordion >
+                        <Accordion className="px-2 px-md-3">
                             <AccordionSummary
-                                className={`${styles.acc_summary}`}
+                                className={`${styles.acc_summary} p-0`}
                                 expandIcon={<ExpandMoreIcon />}
                                 aria-controls="panel1a-content"
                                 id="panel1a-header"
                             >
-                                <div className='d-flex'>
-                                    <div>
-                                        <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '50px', height: '50px', borderRadius: '15px' }} alt="" />
+                                <div className='d-flex' style={{ justifyContent: 'center', alignItems: 'center' }}>
+                                    <div style={{ width: '90px' }}>
+                                        <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '100%', borderRadius: '15px' }} alt="" />
                                     </div>
-                                    <div className="ml-3">
-                                        <h5 className="mb-2">Jane Cooper
+                                    <div className="ml-1">
+                                        <h5 className="mb-0 mb-md-2">Jane Cooper
                                             <sup className="text-muted ml-2" style={{ fontSize: '13px' }}>01:56 PM 09/03/2023</sup>
                                             <sup className="text-muted ml-2" style={{ fontSize: '10px', verticalAlign: 'middle' }}>
                                                 <img src="/assets/icons/rateStar.png" alt="" />
@@ -61,40 +55,39 @@ export default function CustomersReview() {
                                             </sup>
                                             <sup className="text-warning ml-2" style={{ fontSize: '13px' }}>4.0</sup>
                                         </h5>
-                                        <p className="mb-0 mt-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
+                                        <p className="mb-0 mt-0 mt-md-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
                                     </div>
                                 </div>
                             </AccordionSummary>
                             <AccordionDetails>
-                                <div className='px-2 pb-2 pl-5'>
-                                    <div className="pl-4">
-                                        <p style={{fontSize: '14px'}} className="m-0 font-weight-bold">
+                                <div className='px-2 pb-2 pl-md-5'>
+                                    <div className="pl-md-4">
+                                        <p style={{ fontSize: '14px' }} className="m-0 font-weight-bold">
                                             Route: <span>Sabo Yaba - Victoria Island</span>
                                         </p>
-                                        <p style={{fontSize: '14px'}} className="m-0 font-weight-bold mt-2">
+                                        <p style={{ fontSize: '14px' }} className="m-0 font-weight-bold mt-2">
                                             Driver ID: <span>3344t6</span>
                                         </p>
-                                   </div>
+                                    </div>
                                 </div>
                             </AccordionDetails>
                         </Accordion>
-
                     </div>
-                    
+
                     <div className={`${styles.accordion_wrap} mb-3`} >
-                        <Accordion >
+                        <Accordion className="px-2 px-md-3">
                             <AccordionSummary
-                                className={`${styles.acc_summary}`}
+                                className={`${styles.acc_summary} p-0`}
                                 expandIcon={<ExpandMoreIcon />}
                                 aria-controls="panel1a-content"
                                 id="panel1a-header"
                             >
-                                <div className='d-flex'>
-                                    <div>
-                                        <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '50px', height: '50px', borderRadius: '15px' }} alt="" />
+                                <div className='d-flex' style={{ justifyContent: 'center', alignItems: 'center' }}>
+                                    <div style={{ width: '90px' }}>
+                                        <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '100%', borderRadius: '15px' }} alt="" />
                                     </div>
-                                    <div className="ml-3">
-                                        <h5 className="mb-2">Jane Cooper
+                                    <div className="ml-1">
+                                        <h5 className="mb-0 mb-md-2">Jane Cooper
                                             <sup className="text-muted ml-2" style={{ fontSize: '13px' }}>01:56 PM 09/03/2023</sup>
                                             <sup className="text-muted ml-2" style={{ fontSize: '10px', verticalAlign: 'middle' }}>
                                                 <img src="/assets/icons/rateStar.png" alt="" />
@@ -105,40 +98,39 @@ export default function CustomersReview() {
                                             </sup>
                                             <sup className="text-warning ml-2" style={{ fontSize: '13px' }}>4.0</sup>
                                         </h5>
-                                        <p className="mb-0 mt-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
+                                        <p className="mb-0 mt-0 mt-md-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
                                     </div>
                                 </div>
                             </AccordionSummary>
                             <AccordionDetails>
-                                <div className='px-2 pb-2 pl-5'>
-                                    <div className="pl-4">
-                                        <p style={{fontSize: '14px'}} className="m-0 font-weight-bold">
+                                <div className='px-2 pb-2 pl-md-5'>
+                                    <div className="pl-md-4">
+                                        <p style={{ fontSize: '14px' }} className="m-0 font-weight-bold">
                                             Route: <span>Sabo Yaba - Victoria Island</span>
                                         </p>
-                                        <p style={{fontSize: '14px'}} className="m-0 font-weight-bold mt-2">
+                                        <p style={{ fontSize: '14px' }} className="m-0 font-weight-bold mt-2">
                                             Driver ID: <span>3344t6</span>
                                         </p>
-                                   </div>
+                                    </div>
                                 </div>
                             </AccordionDetails>
                         </Accordion>
-
                     </div>
-                    
+
                     <div className={`${styles.accordion_wrap} mb-3`} >
-                        <Accordion >
+                        <Accordion className="px-2 px-md-3">
                             <AccordionSummary
-                                className={`${styles.acc_summary}`}
+                                className={`${styles.acc_summary} p-0`}
                                 expandIcon={<ExpandMoreIcon />}
                                 aria-controls="panel1a-content"
                                 id="panel1a-header"
                             >
-                                <div className='d-flex'>
-                                    <div>
-                                        <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '50px', height: '50px', borderRadius: '15px' }} alt="" />
+                                <div className='d-flex' style={{ justifyContent: 'center', alignItems: 'center' }}>
+                                    <div style={{ width: '90px' }}>
+                                        <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '100%', borderRadius: '15px' }} alt="" />
                                     </div>
-                                    <div className="ml-3">
-                                        <h5 className="mb-2">Jane Cooper
+                                    <div className="ml-1">
+                                        <h5 className="mb-0 mb-md-2">Jane Cooper
                                             <sup className="text-muted ml-2" style={{ fontSize: '13px' }}>01:56 PM 09/03/2023</sup>
                                             <sup className="text-muted ml-2" style={{ fontSize: '10px', verticalAlign: 'middle' }}>
                                                 <img src="/assets/icons/rateStar.png" alt="" />
@@ -149,40 +141,39 @@ export default function CustomersReview() {
                                             </sup>
                                             <sup className="text-warning ml-2" style={{ fontSize: '13px' }}>4.0</sup>
                                         </h5>
-                                        <p className="mb-0 mt-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
+                                        <p className="mb-0 mt-0 mt-md-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
                                     </div>
                                 </div>
                             </AccordionSummary>
                             <AccordionDetails>
-                                <div className='px-2 pb-2 pl-5'>
-                                    <div className="pl-4">
-                                        <p style={{fontSize: '14px'}} className="m-0 font-weight-bold">
+                                <div className='px-2 pb-2 pl-md-5'>
+                                    <div className="pl-md-4">
+                                        <p style={{ fontSize: '14px' }} className="m-0 font-weight-bold">
                                             Route: <span>Sabo Yaba - Victoria Island</span>
                                         </p>
-                                        <p style={{fontSize: '14px'}} className="m-0 font-weight-bold mt-2">
+                                        <p style={{ fontSize: '14px' }} className="m-0 font-weight-bold mt-2">
                                             Driver ID: <span>3344t6</span>
                                         </p>
-                                   </div>
+                                    </div>
                                 </div>
                             </AccordionDetails>
                         </Accordion>
-
                     </div>
-                    
+
                     <div className={`${styles.accordion_wrap} mb-3`} >
-                        <Accordion >
+                        <Accordion className="px-2 px-md-3">
                             <AccordionSummary
-                                className={`${styles.acc_summary}`}
+                                className={`${styles.acc_summary} p-0`}
                                 expandIcon={<ExpandMoreIcon />}
                                 aria-controls="panel1a-content"
                                 id="panel1a-header"
                             >
-                                <div className='d-flex'>
-                                    <div>
-                                        <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '50px', height: '50px', borderRadius: '15px' }} alt="" />
+                                <div className='d-flex' style={{ justifyContent: 'center', alignItems: 'center' }}>
+                                    <div style={{ width: '90px' }}>
+                                        <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '100%', borderRadius: '15px' }} alt="" />
                                     </div>
-                                    <div className="ml-3">
-                                        <h5 className="mb-2">Jane Cooper
+                                    <div className="ml-1">
+                                        <h5 className="mb-0 mb-md-2">Jane Cooper
                                             <sup className="text-muted ml-2" style={{ fontSize: '13px' }}>01:56 PM 09/03/2023</sup>
                                             <sup className="text-muted ml-2" style={{ fontSize: '10px', verticalAlign: 'middle' }}>
                                                 <img src="/assets/icons/rateStar.png" alt="" />
@@ -193,40 +184,39 @@ export default function CustomersReview() {
                                             </sup>
                                             <sup className="text-warning ml-2" style={{ fontSize: '13px' }}>4.0</sup>
                                         </h5>
-                                        <p className="mb-0 mt-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
+                                        <p className="mb-0 mt-0 mt-md-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
                                     </div>
                                 </div>
                             </AccordionSummary>
                             <AccordionDetails>
-                                <div className='px-2 pb-2 pl-5'>
-                                    <div className="pl-4">
-                                        <p style={{fontSize: '14px'}} className="m-0 font-weight-bold">
+                                <div className='px-2 pb-2 pl-md-5'>
+                                    <div className="pl-md-4">
+                                        <p style={{ fontSize: '14px' }} className="m-0 font-weight-bold">
                                             Route: <span>Sabo Yaba - Victoria Island</span>
                                         </p>
-                                        <p style={{fontSize: '14px'}} className="m-0 font-weight-bold mt-2">
+                                        <p style={{ fontSize: '14px' }} className="m-0 font-weight-bold mt-2">
                                             Driver ID: <span>3344t6</span>
                                         </p>
-                                   </div>
+                                    </div>
                                 </div>
                             </AccordionDetails>
                         </Accordion>
-
                     </div>
-                    
+
                     <div className={`${styles.accordion_wrap} mb-3`} >
-                        <Accordion >
+                        <Accordion className="px-2 px-md-3">
                             <AccordionSummary
-                                className={`${styles.acc_summary}`}
+                                className={`${styles.acc_summary} p-0`}
                                 expandIcon={<ExpandMoreIcon />}
                                 aria-controls="panel1a-content"
                                 id="panel1a-header"
                             >
-                                <div className='d-flex'>
-                                    <div>
-                                        <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '50px', height: '50px', borderRadius: '15px' }} alt="" />
+                                <div className='d-flex' style={{ justifyContent: 'center', alignItems: 'center' }}>
+                                    <div style={{ width: '90px' }}>
+                                        <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '100%', borderRadius: '15px' }} alt="" />
                                     </div>
-                                    <div className="ml-3">
-                                        <h5 className="mb-2">Jane Cooper
+                                    <div className="ml-1">
+                                        <h5 className="mb-0 mb-md-2">Jane Cooper
                                             <sup className="text-muted ml-2" style={{ fontSize: '13px' }}>01:56 PM 09/03/2023</sup>
                                             <sup className="text-muted ml-2" style={{ fontSize: '10px', verticalAlign: 'middle' }}>
                                                 <img src="/assets/icons/rateStar.png" alt="" />
@@ -237,37 +227,50 @@ export default function CustomersReview() {
                                             </sup>
                                             <sup className="text-warning ml-2" style={{ fontSize: '13px' }}>4.0</sup>
                                         </h5>
-                                        <p className="mb-0 mt-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
+                                        <p className="mb-0 mt-0 mt-md-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
                                     </div>
                                 </div>
                             </AccordionSummary>
                             <AccordionDetails>
-                                <div className='px-2 pb-2 pl-5'>
-                                    <div className="pl-4">
-                                        <p style={{fontSize: '14px'}} className="m-0 font-weight-bold">
+                                <div className='px-2 pb-2 pl-md-5'>
+                                    <div className="pl-md-4">
+                                        <p style={{ fontSize: '14px' }} className="m-0 font-weight-bold">
                                             Route: <span>Sabo Yaba - Victoria Island</span>
                                         </p>
-                                        <p style={{fontSize: '14px'}} className="m-0 font-weight-bold mt-2">
+                                        <p style={{ fontSize: '14px' }} className="m-0 font-weight-bold mt-2">
                                             Driver ID: <span>3344t6</span>
                                         </p>
-                                   </div>
+                                    </div>
                                 </div>
                             </AccordionDetails>
                         </Accordion>
-
                     </div>
 
-                    <div className="card border-0 p-0 m-0" style={{background: 'transparent'}}>
+                    <div className="card border-0 p-0 m-0" style={{ background: 'transparent' }}>
                         <div className="card-body pt-0 mt-0">
                             <div className="d-flex justify-content-between">
-                                <div className="d-flex align-item-center pt-2">
+                                <div className=" pt-2">
                                     Page 1 of <b className="pl-1"> 10</b>
                                 </div>
                                 <div className={`${styles.pagination_button_container}`}>
-                                    <button className="btn bg-light" >Previous</button>
+                                    <button className="btn" >
+                                        <span className="d-none d-sm-block">
+                                            Previous
+                                        </span>
+                                        <span>
+                                            <i className="bi bi-chevron-left d-block d-sm-none"></i>
+                                        </span>
+                                    </button>
                                     &nbsp;
                                     &nbsp;
-                                    <button className="btn bg-light" >Next</button>
+                                    <button className="btn" >
+                                        <span className="d-none d-sm-block">
+                                            Next
+                                        </span>
+                                        <span>
+                                            <i className="bi bi-chevron-right d-block d-sm-none"></i>
+                                        </span>
+                                    </button>
                                 </div>
                             </div>
 

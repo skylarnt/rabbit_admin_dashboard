@@ -39,16 +39,16 @@ export default function CustomerDetails() {
 
   return (
     <>
-      <div className=" px-2">
+      <div className=" px-0 px-md-2">
 
         <div className={`${styles.filters} mt-4`}>
-          <div className="row">
-            <div className={`${styles.hold_input} col-6   `}>
+          <div className="d-flex justify-content-between" style={{gap: '10px'}}>
+            <div className={`${styles.hold_input}  `}>
               <img src="/assets/icons/search.svg" alt="" />
-              <input type="text" name="search" placeholder="Search" style={{ textIndent: '25px', width: '60%' }} className=" form-control" />
+              <input type="text" name="search" placeholder="Search" style={{ textIndent: '25px', width: '240px',  }} className=" form-control" />
 
             </div>
-            <div className="col-6  text-right">
+            <div className="text-right">
               <button
                 onClick={() => setFilterModalOpen(true)}
                 className="btn  border"
@@ -56,9 +56,10 @@ export default function CustomerDetails() {
                   backgroundColor: '#fff',
                   border: '1px solid #D0D5DD',
                   boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
-                  borderRadius: '4px'
+                  borderRadius: '4px',
+                  height: '40px'
                 }}>
-                <img className="" style={{ display: 'inline', width: '28%' }} src="/assets/icons/filterlines.svg" alt="" />
+                <img className="" style={{ display: 'inline', width: '20px' }} src="/assets/icons/filterlines.svg" alt="" />
                 &nbsp;
                 <small className="d-none d-md-inline-block">
                   Filters
@@ -70,21 +71,23 @@ export default function CustomerDetails() {
           </div>
         </div>
         <Card style={{ marginTop: '50px', borderRadius: '10px' }} className='p-0'>
-          <div className='p-4 border-bottom'>
+          <div className='py-4 px-3 px-md-4 border-bottom'>
 
-            <div className="d-md-flex justify-content-between" >
+            <div className="d-sm-flex justify-content-between" >
               <div className="pb-3 pb-md-0">
-                <h5 className="table_desc_header">
+                <h5 className="table_desc_header mb-2">
                   Customers Activities
                 </h5>
-                <small style={{ fontWeight: '200', fontSize: '14px' }}>
-                  View customers profile and transaction history
-                </small>
+                <p className="m-0">
+                  <small  style={{ fontWeight: 'normal', fontSize: '14px' }}>
+                    View customers profile and transaction history
+                  </small>
+                </p>
 
               </div>
               <div className="pt-md-2">
-                <div className="dropleft ">
-                  <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className={`${styles.export_btn} pt-2 btn m-0`}>
+                <div className="dropleft">
+                  <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className={`${styles.export_btn} pt-2 btn m-0 ml-auto`}>
                     <span style={{
                       paddingTop: '8px',
                     }}>
@@ -136,7 +139,6 @@ export default function CustomerDetails() {
                     </th>
                     <th className="text-muted">
                       Phone Number
-                      <img className="pl-2" src="/assets/icons/down.svg" alt="" />
 
                     </th>
                     <th className="text-muted">
@@ -185,13 +187,10 @@ export default function CustomerDetails() {
                   <tr className={`${styles.tr} `}>
                     <td>
                       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                        <div className="initials">
+                        <div className="initials" style={{width: '50px'}}>
                           {/* AM */}
                           <img src="/assets/illustrations/illustration_avatar.png" alt="" />
                         </div>
-                        &nbsp;
-                        &nbsp;
-                        &nbsp;
                         <div className=" ">
                           <p className="mb-0" style={{ fontSize: '14px' }}>
                             <strong>
@@ -209,9 +208,9 @@ export default function CustomerDetails() {
                     </td>
 
                     <td>
-                      <p>
+                      <span>
                         (704) 555-0127
-                      </p>
+                      </span>
                     </td>
                     <td>
                       example@gmail.com
@@ -248,13 +247,10 @@ export default function CustomerDetails() {
                   <tr className={`${styles.tr} `}>
                     <td>
                       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                        <div className="initials">
+                        <div className="initials" style={{width: '50px'}}>
                           {/* AM */}
                           <img src="/assets/illustrations/illustration_avatar.png" alt="" />
                         </div>
-                        &nbsp;
-                        &nbsp;
-                        &nbsp;
                         <div className=" ">
                           <p className="mb-0" style={{ fontSize: '14px' }}>
                             <strong>
@@ -272,9 +268,9 @@ export default function CustomerDetails() {
                     </td>
 
                     <td>
-                      <p>
+                      <span>
                         (704) 555-0127
-                      </p>
+                      </span>
                     </td>
                     <td>
                       example@gmail.com
@@ -311,13 +307,10 @@ export default function CustomerDetails() {
                   <tr className={`${styles.tr} `}>
                     <td>
                       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                        <div className="initials">
+                        <div className="initials" style={{width: '50px'}}>
                           {/* AM */}
                           <img src="/assets/illustrations/illustration_avatar.png" alt="" />
                         </div>
-                        &nbsp;
-                        &nbsp;
-                        &nbsp;
                         <div className=" ">
                           <p className="mb-0" style={{ fontSize: '14px' }}>
                             <strong>
@@ -335,9 +328,9 @@ export default function CustomerDetails() {
                     </td>
 
                     <td>
-                      <p>
+                      <span>
                         (704) 555-0127
-                      </p>
+                      </span>
                     </td>
                     <td>
                       example@gmail.com
@@ -374,13 +367,10 @@ export default function CustomerDetails() {
                   <tr className={`${styles.tr} `}>
                     <td>
                       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                        <div className="initials">
+                        <div className="initials" style={{width: '50px'}}>
                           {/* AM */}
                           <img src="/assets/illustrations/illustration_avatar.png" alt="" />
                         </div>
-                        &nbsp;
-                        &nbsp;
-                        &nbsp;
                         <div className=" ">
                           <p className="mb-0" style={{ fontSize: '14px' }}>
                             <strong>
@@ -398,9 +388,9 @@ export default function CustomerDetails() {
                     </td>
 
                     <td>
-                      <p>
+                      <span>
                         (704) 555-0127
-                      </p>
+                      </span>
                     </td>
                     <td>
                       example@gmail.com
@@ -437,13 +427,10 @@ export default function CustomerDetails() {
                   <tr className={`${styles.tr} `}>
                     <td>
                       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                        <div className="initials">
+                        <div className="initials" style={{width: '50px'}}>
                           {/* AM */}
                           <img src="/assets/illustrations/illustration_avatar.png" alt="" />
                         </div>
-                        &nbsp;
-                        &nbsp;
-                        &nbsp;
                         <div className=" ">
                           <p className="mb-0" style={{ fontSize: '14px' }}>
                             <strong>
@@ -461,9 +448,9 @@ export default function CustomerDetails() {
                     </td>
 
                     <td>
-                      <p>
+                      <span>
                         (704) 555-0127
-                      </p>
+                      </span>
                     </td>
                     <td>
                       example@gmail.com
@@ -500,13 +487,10 @@ export default function CustomerDetails() {
                   <tr className={`${styles.tr} `}>
                     <td>
                       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                        <div className="initials">
+                        <div className="initials" style={{width: '50px'}}>
                           {/* AM */}
                           <img src="/assets/illustrations/illustration_avatar.png" alt="" />
                         </div>
-                        &nbsp;
-                        &nbsp;
-                        &nbsp;
                         <div className=" ">
                           <p className="mb-0" style={{ fontSize: '14px' }}>
                             <strong>
@@ -524,9 +508,9 @@ export default function CustomerDetails() {
                     </td>
 
                     <td>
-                      <p>
+                      <span>
                         (704) 555-0127
-                      </p>
+                      </span>
                     </td>
                     <td>
                       example@gmail.com
@@ -577,14 +561,28 @@ export default function CustomerDetails() {
           <div className="card border-0 p-0 m-0">
             <div className="card-body pt-0 mt-0">
               <div className="d-flex justify-content-between">
-                <div className="d-flex align-item-center pt-2">
+                <div className=" pt-2">
                   Page 1 of <b className="pl-1"> 10</b>
                 </div>
                 <div className={`${styles.pagination_button_container}`}>
-                  <button className="btn" >Previous</button>
+                  <button className="btn" >
+                    <span className="d-none d-sm-block">
+                      Previous
+                    </span>
+                    <span>
+                      <i className="bi bi-chevron-left d-block d-sm-none"></i>
+                    </span>
+                  </button>
                   &nbsp;
                   &nbsp;
-                  <button className="btn" >Next</button>
+                  <button className="btn" >
+                    <span className="d-none d-sm-block">
+                      Next
+                    </span>
+                    <span>
+                      <i className="bi bi-chevron-right d-block d-sm-none"></i>
+                    </span>
+                  </button>
                 </div>
               </div>
 
@@ -605,20 +603,23 @@ export default function CustomerDetails() {
         transform='translate(-50%, -50%)'
         width='540px !important'
         height='670px !important'
-        overflowY='scroll'
+        overflow='hidden'
         bgcolor='#FFFF'
         border='1px solid #F5F5F5'
         borderRadius='5px'
         boxShadow='24'
         p='25px'
       >
-        <div className={`${styles.modal_content}`}>
+        <div className={`${styles.modal_content}`} style={{height: '84vh'}}>
           <div className={`${styles.modal_header} mb-0`}>
-            <h5 style={{
-              fontSize: '19px',
-              fontWeight: '700',
+            <h5 
+              className="mb-1"
+              style={{
+                fontSize: '19px',
+                fontWeight: '700',
 
-            }}>Customer Info</h5>
+              }}
+            >Customer Info</h5>
 
             <span onClick={handleCloseAddDriver} style={{ cursor: 'pointer' }}>
               <img src="/assets/icons/x.svg" alt="" />

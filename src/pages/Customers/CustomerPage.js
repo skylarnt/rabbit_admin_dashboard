@@ -67,35 +67,14 @@ export default function CustomerPage() {
       <Helmet>
         <title> Customers </title>
       </Helmet>
-      
-    {/* <StyledRoot  className='header_container style_cs'>
-      <StyledToolbar  className='px-0 style_c'>
-        <IconButton
-        //   onClick={onOpenNav}
-          sx={{
-            mr: 1,
-            color: 'text.primary',
-            display: { lg: 'none' },
-          }}
-        >
-          <Iconify icon="eva:menu-2-fill" />
-        </IconButton>
-        <div   className={` header d-none d-md-block`}>
-          <h4 className={`mb-1 pb-0`}>Customers</h4>
-          <p style={{fontSize: '14px'}} className={`mb-0 pb-0`}>
-            {'Complete customer record and feedback log'}
-          </p>
-        </div>
-      </StyledToolbar>
-    </StyledRoot> */}
 
     <div className="wrapper">
-        <div   className="header d-block d-md-none mb-4 mt-5 pt-3 ">
+        <div   className="header d-block d-md-none mb-4 mt-2 pt-3 ">
           <div className={`${styles.product_actions} d-md-flex justify-content-between`}>
             <div className=" ">
               <h4 className={`mb-0 pb-0`}>Customers</h4>
               <p style={{fontSize: '14px'}} className={`mb-0 mt-2 pb-0`}>
-                Manage and monitor your Stores and stocks here.
+                Complete customer record and feedback log
               </p>
 
             </div>

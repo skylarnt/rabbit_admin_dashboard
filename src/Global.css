@@ -2,8 +2,7 @@
     padding-top: 30px !important;
 }
 body {
-    font-family: 'Roboto', sans-serif !important;
-
+    font-family: Roboto, sans-serif !important;
 }
 
 .modal_content .modal_header {
@@ -219,6 +218,10 @@ img {
     appearance: none !important;
     display: none !important;
     overflow: hidden !important;
+}
+
+.MuiTabPanel-root {
+    padding: 0 !important;
 }
 
 @media screen and (min-width: 1200px) {

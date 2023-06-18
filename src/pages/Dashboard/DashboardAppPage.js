@@ -17,10 +17,14 @@ import {
   // TextField, 
   // Checkbox, 
   // Container, 
-  // Typography, 
+  Typography, 
   // Button 
 } from '@mui/material';
 
+//Carousel
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { useState } from "react";
 import GlobalModal from "../../Modals/GlobalModal";
 import styles from './Page.module.css'
@@ -79,22 +83,61 @@ export default function DashboardAppPage() {
     }]
   );
 
+  // for carousel
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 2000,
+    fade: true,
+    scrollBar:false
+  };
+
+
   return (
     <>
       <Helmet>
         <title> Dashboard </title>
       </Helmet>
-      <div className='wrapper mt-md-3 mt-4'>
-        <div className={`${styles.header} d-block d-md-none mb-4 mt-5`}>
+      <div className='wrapper mt-md-3'>
+        <div className={`${styles.header} d-block d-md-none mb-4 mt-3 pt-2`}>
           <h4 className={`mb-0 pb-0`}>Dashboard</h4>
           <p style={{ fontSize: '14px' }} className={`mb-0 pb-0`}>
             An overview of your business performance
           </p>
 
         </div>
-        <div className={styles.landing} />
+
+        
+        {/* Banner */}
+        <div style={{ overflow: 'hidden' }}>
+          {/* <Slider {...settings}> */}
+            <div>
+              <Typography variant="h3" className={`${styles.banner} border`}>
+                  <div>
+                      <h2 className='text-white font-weight-bold'>Welcome to Rabbit</h2>
+                      <h5 className='text-white font-weight-bold pl-md-4 mb-0'>Stress free . Commute . Delivery</h5>
+                  </div>
+                  <div className={`${styles.banner_img}`}>
+                    <img src='/assets/dashboard_img.png' alt='' />
+                  </div>
+                  {/* <img src="/assets/icons/bannerImageOne.png" className={`${styles.banner_img1}`} alt="" /> */}
+              </Typography>
+            </div>
+            {/* <div>
+              <Typography variant="h3" className={`${styles.banner}`}>
+                <img src="/assets/icons/bannerImageTwo.png" alt="logo" className={`${styles.banner_img1}`}/>
+              </Typography>
+            </div> */}
+          {/* </Slider> */}
+        </div>
+
+        {/* <div className={styles.landing} /> */}
         <div className="row mt-4">
-          <div className="col-md-8 mb-2">
+          <div className="col-md-7 mb-2">
             <Filter1 width='100%' />
 
             <div className="row">
@@ -238,7 +281,7 @@ export default function DashboardAppPage() {
             </div>
 
           </div>
-          <div className="col-md-4 mb-2">
+          <div className="col-md-5 mb-2">
             {/* <div className="card">
               <div className="card-body">
                 <div className={`${styles.card2} card primary_color_bg    `} style={{ padding: '' }}>
@@ -312,44 +355,46 @@ export default function DashboardAppPage() {
 
                 </div> */}
                 <div className={`${styles.wallet} h-100`}  >
-                  <img className={`${styles.img} ${styles.img1}`} src="/assets/crc.png" alt="" />
-                  <div className={`${styles.content}`}>
-                    <div className={`${styles.content_header}`}>
-                      <div>
-                        ₦‎ 26,500,853
-                      </div>
-                      <div>
-                        <img src="/assets/icons/Vector.svg" alt="" />
-                      </div>
-
-                    </div>
-                    <p className={`${styles.sub_text}`}>
-                      Your Balance
-                    </p>
-                    <div className={`${styles.content_body} ${styles.content_body2}`}>
-                      <p className={`${styles.sub_text} m-0 mb-1`}>
-                        Account Details
-                      </p>
-
-                      <div className={`${styles.bank_info}`}>
-                        <div >
-                          <p className={`${styles.name} m-0`}>
-                            NESTLE INTERNATIONAL PLC.
-
-                          </p>
-                          <p className={`${styles.account_number} m-0`}>
-                            0231609769
-                          </p>
-
+                  <div className='mx-auto' style={{position: 'relative', width: '24em', maxWidth: '100%'}}>
+                    <img className={`${styles.img} ${styles.img1}`} style={{position: 'absolute', inset: '0', top: '0', left: '0', right: '0', bottom: '0'}} src="/assets/crc.png" alt="" />
+                    <div className={`${styles.content}`}>
+                      <div className={`${styles.content_header}`}>
+                        <div>
+                          ₦‎ 26,500,853
                         </div>
-                        <img className="" src="/assets/logo.svg" alt="" />
-                        {/* <span style={{
-                            fontSize:'14px', 
-                            fontWeight:'700', 
-                            color:'#FFFFFF'
-                          }}>
-                            {dashboardData?.wallet_info?.brand_id?.bank_name}
-                        </span> */}
+                        <div>
+                          <img src="/assets/icons/Vector.svg" alt="" />
+                        </div>
+
+                      </div>
+                      <p className={`${styles.sub_text}`}>
+                        Your Balance
+                      </p>
+                      <div className={`${styles.content_body} ${styles.content_body2}`}>
+                        <p className={`${styles.sub_text} m-0 mb-1`}>
+                          Account Details
+                        </p>
+
+                        <div className={`${styles.bank_info} `}>
+                          <div >
+                            <p className={`${styles.name} m-0`}>
+                              NESTLE INTERNATIONAL PLC.
+
+                            </p>
+                            <p className={`${styles.account_number} m-0`}>
+                              0231609769
+                            </p>
+
+                          </div>
+                          <img className="" src="/assets/logo.svg" alt="" />
+                          {/* <span style={{
+                              fontSize:'14px', 
+                              fontWeight:'700', 
+                              color:'#FFFFFF'
+                            }}>
+                              {dashboardData?.wallet_info?.brand_id?.bank_name}
+                          </span> */}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -459,13 +504,13 @@ export default function DashboardAppPage() {
                           <div className="card p-0" style={{minWidth: '17em', height: '40px'}}  >
                             <div className="card-body d-flex justify-content-around  py-1" style={{whiteSpace: 'nowrap'}}>
                               <label htmlFor="ov1">
-                                <input className="mt-2 mr-2" type="radio" name="insight_depletion" id="ov1" /> Overall
+                                <input className="mt-2 mr-1" type="radio" name="insight_depletion" id="ov1" /> Overall
                               </label>
                               <label htmlFor="year1">
-                                <input className="mt-2 mr-2" type="radio" name="insight_depletion" id="year1" /> Yearly
+                                <input className="mt-2 mr-1" type="radio" name="insight_depletion" id="year1" /> Yearly
                               </label>
                               <label htmlFor="month1">
-                                <input className="mt-2 mr-2" type="radio" name="insight_depletion" id="month1" /> Montly
+                                <input className="mt-2 mr-1" type="radio" name="insight_depletion" id="month1" /> Monthly
                               </label>
                             </div>
 

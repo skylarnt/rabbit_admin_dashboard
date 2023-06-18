@@ -45,6 +45,7 @@ Nav.propTypes = {
 
 export default function Nav({ openNav, onCloseNav }) {
   const [openSwitchDialog, setOpenSwitchDialog] = useState(false);
+  const [openLogoutDialog, setOpenLogoutDialog] = useState(false);
 
   const { pathname } = useLocation();
   const navigate = useNavigate();
@@ -92,7 +93,7 @@ export default function Nav({ openNav, onCloseNav }) {
               fontWeight: 'fontWeightBold',
             },
           }}
-          onClick={handleLogoutClick}
+          onClick={() => setOpenLogoutDialog(true)}
         >
           {/* <StyledNavItemIcon>{icon && icon}</StyledNavItemIcon> */}
           <p className='mb-0'>
@@ -222,6 +223,63 @@ export default function Nav({ openNav, onCloseNav }) {
           </Box>
         </Fade>
       </Modal>
+
+
+<Modal
+  aria-labelledby="transition-modal-title"
+  aria-describedby="transition-modal-description"
+  open={openLogoutDialog}
+  onClose={() => setOpenLogoutDialog(false)}
+  closeAfterTransition
+  BackdropComponent={Backdrop}
+  BackdropProps={{
+    timeout: 500,
+  }}
+  disableEnforceFocus
+  className='modal_bg'
+>
+  <Fade in={openLogoutDialog} className='modal_bg'>
+    <Box className={`mobile_modal_size modal_bg`} sx={style1}>
+      <div className={`text-center add_to_cart_content py-3`}>
+              {/* <div className={`d-flex justify-content-between`}>
+                  <span className='m-0'></span>
+                  <span className='p-2' onClick={() => setOpenLogoutDialog(false)} style={{ cursor: 'pointer' }}>
+                      <img src="/assets/icons/x.svg" alt="" />
+
+                  </span>
+
+              </div> */}
+        <img src="/assets/RABBIT1.png" alt="" />
+        {/* <h4 className="mt-3" style={{ fontWeight: 'bold' }}>Switch Dashboard</h4> */}
+        <p className='text-center font-weight-normal my-3' style={{ textAlign: 'center !important', fontSize: '1.3em' }}>
+          Do you want to Logout?
+        </p>
+        <div className="d-flex px-4">
+          <button 
+            onClick={() => setOpenLogoutDialog(false)} 
+            className={`modal_btn d-block w-100 hover btn border py-2 bg-light text-dark mr-2`}
+            style={{
+              boxShadow: '0 5px 5px #bbb'
+            }}
+          >
+            Cancel
+          </button>
+
+          <button 
+            // onClick={() => setOpenLogoutDialog(false)} 
+            className={`modal_btn d-block w-100 hover btn border py-2 bg-light text-dark ml-2`}
+            style={{
+              boxShadow: '0 5px 5px #bbb'
+            }}
+            onClick={handleLogoutClick}
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+    </Box>
+  </Fade>
+</Modal>
 
     </>
   );
