@@ -212,6 +212,15 @@ img {
     padding: 8px;
 }
 
+.modal_bg::-webkit-scrollbar,
+.modal_bg::-webkit-scrollbar-track,
+.mobile_modal_size::-webkit-scrollbar,
+.mobile_modal_size::-webkit-scrollbar-track {
+    appearance: none !important;
+    display: none !important;
+    overflow: hidden !important;
+}
+
 @media screen and (min-width: 1200px) {
     .style_c {
         padding: 0px 22px !important;

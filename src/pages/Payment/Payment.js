@@ -55,7 +55,7 @@ export default function ProfilePage() {
                                                 height: 'auto',
                                             }} alt="" 
                                         >
-                                            <img src="/assets/icons/Payment-method.png" style={{transform: 'scale(1.2)'}} />
+                                            <img src="/assets/icons/Payment-method.png" alt="Mastercard" style={{transform: 'scale(1.2)'}} />
                                         </div>
                                         <TextField
                                             required

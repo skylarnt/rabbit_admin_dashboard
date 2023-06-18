@@ -1,10 +1,20 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
 // @mui
-import { Link, Stack, IconButton, InputAdornment, TextField, Checkbox, Container, Typography, Button } from '@mui/material';
-import { LoadingButton } from '@mui/lab';
+import { 
+  Link, 
+  Stack, 
+  TextField, 
+  Container, 
+  Typography, 
+  Button 
+  // IconButton, 
+  // InputAdornment, 
+  // Checkbox, 
+} from '@mui/material';
+// import { LoadingButton } from '@mui/lab';
 // components
-import Iconify from '../../components/iconify';
+// import Iconify from '../../components/iconify';
 // Module styles
 import Styles from './CSSModules/ForgotPassword.module.css'
 import { Helmet } from 'react-helmet-async';
@@ -43,7 +53,7 @@ const StyledSection = styled('div')(({ theme, imageUrl }) => ({
   backgroundImage: `url(${imageUrl})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  minHeight: '48em',
+  minHeight: '60em',
   overflowX: 'hidden',
 }));
 
@@ -54,7 +64,7 @@ const StyledContent = styled('div')(({ theme }) => ({
   width: '100%',
   maxWidth: '100%',
   margin: '0',
-  minHeight: '48em',
+  minHeight: '60em',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -65,7 +75,7 @@ const StyledContent = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function ForgotPassword() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const mdUp = useResponsive('up', 'md');
   const imageUrl = '/assets/img/signup-img.jpeg';
 
@@ -82,7 +92,7 @@ export default function ForgotPassword() {
           <StyledSection className={`${Styles.wrapper_before}`} imageUrl={imageUrl}>
             <div className={`${Styles.text_wrap}`}>
               <div>
-                <img src='/assets/icons/Stars.svg' />
+                <img src='/assets/icons/Stars.svg' alt='' />
               </div>
               <Typography variant="h1">
                 Track and monitor your customers on a single dashboard

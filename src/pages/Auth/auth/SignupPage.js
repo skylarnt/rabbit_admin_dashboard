@@ -2,12 +2,18 @@ import { Helmet } from 'react-helmet-async';
 // @mui
 import { styled } from '@mui/material/styles';
 
-import { Link, Container, Typography, Divider, Stack, Button } from '@mui/material';
+import { 
+  Link, 
+  Container, 
+  Typography, 
+  // Divider, 
+  Stack, 
+  Button } from '@mui/material';
 // hooks
 import useResponsive from '../../../hooks/useResponsive';
 // components
 import Logo from '../../../components/logo';
-import Iconify from '../../../components/iconify';
+// import Iconify from '../../../components/iconify';
 // Module styles
 import Styles from '../CSSModules/SignupPage.module.css'
 
@@ -21,7 +27,7 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import FormControl from '@mui/material/FormControl';
 import IconButton from '@mui/material/IconButton';
 import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
+// import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
 import Checkbox from '@mui/material/Checkbox';
 
@@ -49,7 +55,8 @@ const StyledSection = styled('div')(({ theme, imageUrl }) => ({
   backgroundImage: `url(${imageUrl})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  minHeight: '60em',
+  // height: '100%',
+  minHeight: '65em',
   overflowX: 'hidden',
 }));
 
@@ -60,7 +67,7 @@ const StyledContent = styled('div')(({ theme }) => ({
   width: '100%',
   maxWidth: '100%',
   margin: '0',
-  minHeight: '60em',
+  minHeight: '65em',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -96,14 +103,14 @@ export default function SignupPage() {
         <title> Signup | Minimal UI </title>
       </Helmet>
 
-      <StyledRoot /* style={{ border: '2px solid blue' }} */>
+      <StyledRoot >
 
 
         {mdUp && (
           <StyledSection className={`${Styles.wrapper_before}`} imageUrl={imageUrl}>
             <div className={`${Styles.text_wrap}`}>
               <div>
-                <img src='/assets/icons/Stars.svg' />
+                <img src='/assets/icons/Stars.svg' alt='' />
               </div>
               <Typography variant="h1">
               Control business operations and track customers on a single dashboard
@@ -209,7 +216,7 @@ export default function SignupPage() {
               </div>
               <div>
                 <Stack spacing={2} direction="row">
-                  <Button className={`${Styles.google_btn}`}><img src='/assets/icons/google_icon.png' /> Sign up with Google</Button>
+                  <Button className={`${Styles.google_btn}`}><img src='/assets/icons/google_icon.png' alt='' /> Sign up with Google</Button>
                 </Stack>
               </div>
               <div className={`${Styles.signup_switch}`}>Aready have an account? <Link href='/login'>Sign In</Link></div>

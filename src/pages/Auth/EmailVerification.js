@@ -2,18 +2,19 @@ import { Helmet } from 'react-helmet-async';
 // @mui
 import { styled } from '@mui/material/styles';
 
-import { Link, Container, Typography, Divider, Stack, Button } from '@mui/material';
+import { Link, Container, Typography, Stack, Button } from '@mui/material';
 // hooks
 import useResponsive from '../../hooks/useResponsive';
 // components
 import Logo from '../../components/logo';
-import Iconify from '../../components/iconify';
+// import Iconify from '../../components/iconify';
 // Module styles
 import Styles from './CSSModules/EmailVerification.module.css'
 
 // sections
 // import { LoginForm } from '../sections/auth/login';
 import * as React from 'react';
+import { useRef } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
@@ -40,7 +41,7 @@ const StyledSection = styled('div')(({ theme, imageUrl }) => ({
   backgroundImage: `url(${imageUrl})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  minHeight: '50em',
+  minHeight: '60em',
   overflowX: 'hidden',
 }));
 
@@ -51,9 +52,9 @@ const StyledContent = styled('div')(({ theme }) => ({
   width: '100%',
   maxWidth: '100%',
   margin: '0',
-  minHeight: '50em',
+  minHeight: '60em',
   display: 'flex',
-  justifyContent: 'flex-end',
+  justifyContent: 'center',
   alignItems: 'center',
   flexDirection: 'column',
   padding: theme.spacing(3, 0),
@@ -65,6 +66,27 @@ export default function VerifyEmail() {
   const mdUp = useResponsive('up', 'md');
   const imageUrl = '/assets/img/signup-img.jpeg';
 
+  const inputRefs = [
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null)
+  ];
+
+  const handleKeyUp = (index, event) => {
+    const input = event.target;
+    const value = input.value.trim();
+  
+    if (event.key === 'Backspace' && value === '') {
+      if (index > 0) {
+        inputRefs[index - 1].current.focus();
+      }
+    } else if (value && index < inputRefs.length - 1) {
+      inputRefs[index + 1].current.focus();
+    }
+  };
+  
+
   return (
     <>
       <Helmet>
@@ -72,7 +94,6 @@ export default function VerifyEmail() {
       </Helmet>
 
       <StyledRoot /* style={{ border: '2px solid blue' }} */>
-
 
         {mdUp && (
           <StyledSection className={`${Styles.wrapper_before}`} imageUrl={imageUrl}>
@@ -111,26 +132,13 @@ export default function VerifyEmail() {
               </Typography>
               <p className={`${Styles.forgot} font-weight-bold text-muted mb-2 text-left`} >Enter the OTP sent to <span>joe@shoprite.com</span></p>
               <div className={`${Styles.input_box_wrap}`}>
+              {inputRefs.map((ref, index) => (
                 <div className={`${Styles.input_box}`}>
                   <Box>
-                    <TextField type="number" />
+                  <TextField type="number" inputRef={ref} onKeyUp={(event) => handleKeyUp(index, event)} />
                   </Box>
                 </div>
-                <div className={`${Styles.input_box}`}>
-                  <Box>
-                    <TextField type="number" />
-                  </Box>
-                </div>
-                <div className={`${Styles.input_box}`}>
-                  <Box>
-                    <TextField type="number" />
-                  </Box>
-                </div>
-                <div className={`${Styles.input_box}`}>
-                  <Box>
-                    <TextField type="number" />
-                  </Box>
-                </div>
+              ))}
               </div>
               
               <div className={`${Styles.forgot} mt-4`}>

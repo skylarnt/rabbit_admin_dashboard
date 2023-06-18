@@ -337,7 +337,7 @@ export default function ProfilePage() {
                                         />
                                     </div>
                                 </div>
-                            </div>
+                            </div><div></div>
                             <div className={`${styles.row} row`}>
                                 <div className="col-md-3 p-0">
                                     <p>Country</p>
