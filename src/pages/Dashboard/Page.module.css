@@ -14,12 +14,32 @@
 .card2 p {
     /* font-weight: bold; */
 }
+.modal_content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 82vh;
+}
+.modal_content::-webkit-scrollbar,
+.modal_content::-webkit-scrollbar-track {
+    appearance: none;
+}
 .wrapper .header h4 {
     font-weight: bold !important;
 }
 .banner {
     position: relative;
     background-color: #54B054;
+    height: 200px;
+    border-radius: 13px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner_sec {
+    position: relative;
+    background: url('../../../public/assets/rabbit_whitebg.png') no-repeat center;
+    background-size: cover;
     height: 200px;
     border-radius: 13px;
     overflow: hidden;

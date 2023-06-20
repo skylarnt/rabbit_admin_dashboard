@@ -18,10 +18,10 @@ import DashboardAppPage from './pages/Dashboard/DashboardAppPage';
 import AdminDashboardAppPage from './pages/Dashboard/AdminDashboard';
 import CustomerPage from './pages/Customers/CustomerPage';
 // import CustomerPage2 from './pages/Customers/CustomerPage2';
-// import DriverPage from './pages/Drivers/DriverPage';
-import DriversRidersPage from './pages/Drivers/Drivers_Riders/DriversRiders';
-// import VehiclesPage from './pages/Vehicles/VehiclesPage';
-import VehiclesPage2 from './pages/Vehicles/VehiclesPage2';
+import DriverPage from './pages/Drivers/DriverPage';
+// import DriversRidersPage from './pages/Drivers/Drivers_Riders/DriversRiders';
+import VehiclesPage from './pages/Vehicles/VehiclesPage';
+// import VehiclesPage2 from './pages/Vehicles/VehiclesPage2';
 import RoutesPage from './pages/Routes/RoutesPage';
 import CharterPage from './pages/Charter/Charter';
 import OperationsPage from './pages/Operations/Operations';
@@ -46,10 +46,10 @@ export default function Router() {
         { path: 'admin', element: <AdminDashboardAppPage /> },
         { path: 'customers', element: <CustomerPage /> },
         // { path: 'customers', element: <CustomerPage2 /> },
-        // { path: 'drivers', element: <DriverPage /> },
-        { path: 'drivers', element: <DriversRidersPage /> },
-        // { path: 'vehicles', element: <VehiclesPage /> },
-        { path: 'buses_bikes', element: <VehiclesPage2 /> },
+        { path: 'driver', element: <DriverPage /> },
+        // { path: 'driver_rider', element: <DriversRidersPage /> },
+        { path: 'vehicles', element: <VehiclesPage /> },
+        // { path: 'buses_bikes', element: <VehiclesPage2 /> },
         { path: 'route', element: <RoutesPage /> },
         { path: 'charter', element: <CharterPage /> },
         { path: 'operations', element: <OperationsPage /> },

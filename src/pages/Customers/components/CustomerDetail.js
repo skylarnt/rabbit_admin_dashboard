@@ -46,7 +46,6 @@ export default function CustomerDetails() {
             <div className={`${styles.hold_input}  `}>
               <img src="/assets/icons/search.svg" alt="" />
               <input type="text" name="search" placeholder="Search" style={{ textIndent: '25px', width: '240px',  }} className=" form-control" />
-
             </div>
             <div className="text-right">
               <button
@@ -126,7 +125,7 @@ export default function CustomerDetails() {
 
           </div>
           <Scrollbar>
-            <div className={`${styles.overflow_table} table-responsive  pt-3 pb-3 pl-0 pr-0`}  >
+            <div className={`${styles.overflow_table} table-responsive pb-3 pl-0 pr-0`}  >
               <table className={`${styles.table} table-hover table-striped`}>
                 <thead className={`${styles.thead}`}>
 
@@ -564,6 +563,7 @@ export default function CustomerDetails() {
                 <div className=" pt-2">
                   Page 1 of <b className="pl-1"> 10</b>
                 </div>
+
                 <div className={`${styles.pagination_button_container}`}>
                   <button className="btn" >
                     <span className="d-none d-sm-block">

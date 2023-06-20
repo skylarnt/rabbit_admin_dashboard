@@ -8,6 +8,9 @@ import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 import Iconify from '../../../components/iconify';
 //
 import NotificationsPopover from './NotificationsPopover';
+import bus from "src/bus"
+import { bgBlur } from '../../../utils/cssStyles';
+
 // ----------------------------------------------------------------------
 
 const NAV_WIDTH = 280;
@@ -17,6 +20,7 @@ const HEADER_MOBILE = 64;
 const HEADER_DESKTOP = 50;
 
 const StyledRoot = styled(AppBar)(({ theme }) => ({
+  ...bgBlur({ color: theme.palette.background.default }),
   boxShadow: 'none',
   [theme.breakpoints.up('lg')]: {
     width: `calc(100% - ${NAV_WIDTH + 1}px)`,
@@ -41,30 +45,16 @@ smallScreenHeader.propTypes = {
 
 export default function smallScreenHeader({ onOpenNav }) {
 
-
-    const LogoutUser=()=>{
-      localStorage.removeItem('auth');
-
-
-    
-    
-      
-      setTimeout(() => {
+    // const LogoutUser=()=>{
+    //   localStorage.removeItem('auth');
+    //   setTimeout(() => {
+    //   }, 1000);
+    // }
 
 
-        
-      }, 1000);
-
-    
-
-    
-      
-    
-      
-    }
-  return (
+    return (
     <StyledRoot  className='pt-md-5 style_cs'>
-      <StyledToolbar  className='px-0 style_c'>
+      <StyledToolbar  className='px-3 style_c'>
         <IconButton
           onClick={onOpenNav}
           sx={{
@@ -102,12 +92,16 @@ export default function smallScreenHeader({ onOpenNav }) {
           {/* <LanguagePopover /> */}
           <NotificationsPopover />
           <div className="dropleft ">
-            <PowerSettingsNewIcon id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style={{color:'gray', cursor:'pointer', width:'75%'}} />
+            <PowerSettingsNewIcon id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style={{color:'gray', cursor:'pointer', width:'30px'}} />
                 
                 
             
             <div className="dropdown-menu drop-left" aria-labelledby="dropdownMenuButton">
-              <button type="button" onClick={LogoutUser} className="rss dropdown-item btn border-0">Logout</button>
+              <button 
+                type="button" 
+                // onClick={LogoutUser} 
+                onClick={() => bus.emit("open-logout-modal")}
+                className="rss dropdown-item btn border-0">Logout</button>
             
             
             </div>

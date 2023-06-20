@@ -41,7 +41,7 @@ export default function AdministrationPage() {
 
 
     useEffect(() => {
-        bus.on("open-modal", () => {
+        bus.on("open-invite-modal", () => {
             setTopupModalOpen(true);
         });
     }, []);

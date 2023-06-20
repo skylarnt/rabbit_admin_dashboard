@@ -47,7 +47,7 @@ export default function RidersDetails() {
 
   return (
     <>
-      <div className=" px-2">
+      <div className="px-0 px-md-2">
 
         <div className={`${styles.filters} mt-4`}>
           <div className="row">

@@ -50,7 +50,7 @@ const style2 = {
 
 export default function InterStatePage() {
   // eslint-disable-next-line no-unused-vars
-    const [editRoute, seteditRoute] = useState(false);
+  const [editRoute, seteditRoute] = useState(false);
   const [filterModalOpen, setFilterModalOpen] = useState(false);
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
@@ -59,42 +59,53 @@ export default function InterStatePage() {
     setFilterModalOpen(false);
   };
 
-    const handleCloseEditRoute = () => {
-      seteditRoute(false);
-    };
+  const handleCloseEditRoute = () => {
+    seteditRoute(false);
+  };
 
 
 
   return (
     <>
-      <div className=" px-2">
+      <div className=" px-0 px-md-2">
 
         <div className={`${styles.filters} mt-4`}>
-          <div className="row">
-            <div className={`${styles.hold_input} col-6   `}>
+          <div
+            className="d-flex justify-content-between"
+            style={{ gap: "10px" }}
+          >
+            <div className={`${styles.hold_input}  `}>
               <img src="/assets/icons/search.svg" alt="" />
-              <input type="text" name="search" placeholder="Search" style={{ textIndent: '25px', width: '240px' }} className=" form-control" />
-
+              <input
+                type="text"
+                name="search"
+                placeholder="Search"
+                style={{ textIndent: "25px", width: "240px" }}
+                className=" form-control"
+              />
             </div>
-            <div className="col-6  text-right">
+            <div className="text-right">
               <button
                 onClick={() => setFilterModalOpen(true)}
                 className="btn  border"
                 style={{
-                  backgroundColor: '#fff',
-                  border: '1px solid #D0D5DD',
-                  boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
-                  borderRadius: '4px'
-                }}>
-                <img className="" style={{ display: 'inline', width: '28%' }} src="/assets/icons/filterlines.svg" alt="" />
+                  backgroundColor: "#fff",
+                  border: "1px solid #D0D5DD",
+                  boxShadow: "0px 1px 2px rgba(16, 24, 40, 0.05)",
+                  borderRadius: "4px",
+                  height: "40px",
+                }}
+              >
+                <img
+                  className=""
+                  style={{ display: "inline", width: "20px" }}
+                  src="/assets/icons/filterlines.svg"
+                  alt=""
+                />
                 &nbsp;
-                <small className="d-none d-md-inline-block">
-                  Filters
-                </small>
+                <small className="d-none d-md-inline-block">Filters</small>
               </button>
-
             </div>
-
           </div>
         </div>
         <Card style={{ marginTop: '50px', borderRadius: '10px' }} className='p-0'>
@@ -102,17 +113,17 @@ export default function InterStatePage() {
 
             <div className="d-md-flex justify-content-between" >
               <div className="pb-3 pb-md-0">
-                <h5 className="table_desc_header">
+                <h5 className="table_desc_header mb-2">
                   All Routes
                 </h5>
-                <small style={{ fontWeight: '200', fontSize: '14px' }}>
+                <small style={{ fontWeight: 'normal', fontSize: '14px' }}>
                   Create time slots, assign drivers and set prices
                 </small>
 
               </div>
               <div className="pt-md-2">
                 <div className="dropleft ">
-                  <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className={`${styles.export_btn} pt-2 btn m-0`}>
+                  <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className={`${styles.export_btn} pt-2 btn m-0 ml-auto`}>
                     <span style={{
                       paddingTop: '8px',
                     }}>
@@ -151,7 +162,7 @@ export default function InterStatePage() {
 
           </div>
           <Scrollbar>
-            <div className={`${styles.overflow_table} table-responsive  pt-3 pb-3 pl-0 pr-0`}  >
+            <div className={`${styles.overflow_table} table-responsive pb-3 pl-0 pr-0`}  >
               <table className={`${styles.table} table-hover table-striped`}>
                 <thead className={`${styles.thead}`}>
                   <tr>
@@ -161,7 +172,6 @@ export default function InterStatePage() {
                     </th>
                     <th className="text-muted text-center">
                       No of Assigned Drivers
-                      <img className="pl-2" src="/assets/icons/down.svg" alt="" />
                     </th>
                     <th className="text-muted">
                       Date
@@ -182,7 +192,7 @@ export default function InterStatePage() {
 
                   <tr className={`${styles.tr} `}>
                     <td>
-                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', width: '8em' }}>
                         <div className=" ">
                           <p className="mb-0 font-weight-bold" style={{ fontSize: '14px' }}>
                             Sabo Yaba
@@ -244,7 +254,7 @@ export default function InterStatePage() {
 
                   <tr className={`${styles.tr} `}>
                     <td>
-                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', width: '8em' }}>
                         <div className=" ">
                           <p className="mb-0 font-weight-bold" style={{ fontSize: '14px' }}>
                             Sabo Yaba
@@ -306,7 +316,7 @@ export default function InterStatePage() {
 
                   <tr className={`${styles.tr} `}>
                     <td>
-                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', width: '8em' }}>
                         <div className=" ">
                           <p className="mb-0 font-weight-bold" style={{ fontSize: '14px' }}>
                             Sabo Yaba
@@ -368,7 +378,7 @@ export default function InterStatePage() {
 
                   <tr className={`${styles.tr} `}>
                     <td>
-                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', width: '8em' }}>
                         <div className=" ">
                           <p className="mb-0 font-weight-bold" style={{ fontSize: '14px' }}>
                             Sabo Yaba
@@ -430,7 +440,7 @@ export default function InterStatePage() {
 
                   <tr className={`${styles.tr} `}>
                     <td>
-                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', width: '8em' }}>
                         <div className=" ">
                           <p className="mb-0 font-weight-bold" style={{ fontSize: '14px' }}>
                             Sabo Yaba
@@ -492,7 +502,7 @@ export default function InterStatePage() {
 
                   <tr className={`${styles.tr} `}>
                     <td>
-                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', width: '8em' }}>
                         <div className=" ">
                           <p className="mb-0 font-weight-bold" style={{ fontSize: '14px' }}>
                             Sabo Yaba
@@ -568,18 +578,30 @@ export default function InterStatePage() {
           <div className="card border-0 p-0 m-0">
             <div className="card-body pt-0 mt-0">
               <div className="d-flex justify-content-between">
-                <div className="d-flex align-item-center pt-2">
+                <div className=" pt-2">
                   Page 1 of <b className="pl-1"> 10</b>
                 </div>
                 <div className={`${styles.pagination_button_container}`}>
-                  <button className="btn" >Previous</button>
+                  <button className="btn border" >
+                    <span className="d-none d-sm-block">
+                      Previous
+                    </span>
+                    <span>
+                      <i className="bi bi-chevron-left d-block d-sm-none"></i>
+                    </span>
+                  </button>
                   &nbsp;
                   &nbsp;
-                  <button className="btn" >Next</button>
+                  <button className="btn border" >
+                    <span className="d-none d-sm-block">
+                      Next
+                    </span>
+                    <span>
+                      <i className="bi bi-chevron-right d-block d-sm-none"></i>
+                    </span>
+                  </button>
                 </div>
               </div>
-
-
             </div>
           </div>
 
@@ -779,7 +801,7 @@ export default function InterStatePage() {
 
               </div>
             </div>
-            <div className="mb-4">
+            <div className="mt-4">
               <button type="button" className={`${styles.modal_btn} btn btn-block`}>
                 Proceed
               </button>
@@ -805,7 +827,7 @@ export default function InterStatePage() {
         style={{ maxWidth: '100%' }}
       >
         <Fade in={editRoute} style={{ maxWidth: '95%' }}>
-          <Box sx={style2} className={`mobile_modal_size bg-white`} style={{ maxWidth: '95%' }}>
+          <Box sx={style2} className={`mobile_modal_size bg-white p-3 p-md-5`} style={{ maxWidth: '95%' }}>
             <div className={`modal_content bg-transparent`}
               style={{ overflowY: 'scroll', minHeight: '29em' }}
             >
@@ -1122,7 +1144,7 @@ export default function InterStatePage() {
                 </div>
               </div>
 
-              <div className='d-block w-100 mt-4 pt-3 pb-0 mb-0'><button className='d-block w-100 btn py-2 text-white pb-0 mb-0' onClick={handleCloseEditRoute} style={{ background: '#00AF52' }}>Close</button></div>
+              <div className='d-block w-100 mt-4 pt-3 pb-0 mb-0'><button className='d-block w-100 btn py-2 text-white pb-0 mb-0' onClick={handleCloseEditRoute} style={{ background: '#00AF52' }}>Save</button></div>
 
             </div>
           </Box>

@@ -19,7 +19,7 @@ export default function AvailableBuses() {
 
     return (
         <>
-            <div className=" px-2">
+            <div className="px-0 px-md-2">
 
                 <div className={`${styles.filters} mt-4`}>
                     <div className="row">
@@ -36,17 +36,17 @@ export default function AvailableBuses() {
 
                         <div className="d-md-flex justify-content-between" >
                             <div className="pb-3 pb-md-0">
-                                <h5 className="table_desc_header">
+                                <h5 className="table_desc_header mb-2">
                                     Available Buses
                                 </h5>
-                                <small style={{ fontWeight: '200', fontSize: '14px' }}>
+                                <small style={{ fontWeight: 'normal', fontSize: '14px' }}>
                                     View Buses and create pricing for your orders
                                 </small>
 
                             </div>
                             <div className="pt-md-2">
                                 <div className="dropleft ">
-                                    <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className={`${styles.export_btn} pt-2 btn m-0`}>
+                                    <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className={`${styles.export_btn} pt-2 btn m-0 ml-auto`}>
                                         <span style={{
                                             paddingTop: '8px',
                                         }}>
@@ -85,17 +85,15 @@ export default function AvailableBuses() {
 
                     </div>
                     <Scrollbar>
-                        <div className={`${styles.overflow_table} table-responsive  pt-3 pb-3 pl-0 pr-0`}  >
+                        <div className={`${styles.overflow_table} table-responsive pb-3 pl-0 pr-0`}  >
                             <table className={`${styles.table} table-hover table-striped`}>
                                 <thead className={`${styles.thead}`}>
                                     <tr>
                                         <th className="text-muted" style={{ width: "16%" }}>
                                             Bus ID
-                                            <img className="pl-2" src="/assets/icons/down.svg" alt="" />
                                         </th>
                                         <th className="text-muted text-center">
                                             Plate Number
-                                            <img className="pl-2" src="/assets/icons/down.svg" alt="" />
                                         </th>
                                         <th className="text-muted">
                                             No of Seat
@@ -364,14 +362,28 @@ export default function AvailableBuses() {
                     <div className="card border-0 p-0 m-0">
                         <div className="card-body pt-0 mt-0">
                             <div className="d-flex justify-content-between">
-                                <div className="d-flex align-item-center pt-2">
+                                <div className=" pt-2">
                                     Page 1 of <b className="pl-1"> 10</b>
                                 </div>
                                 <div className={`${styles.pagination_button_container}`}>
-                                    <button className="btn" >Previous</button>
+                                    <button className="btn border" >
+                                        <span className="d-none d-sm-block">
+                                            Previous
+                                        </span>
+                                        <span>
+                                            <i className="bi bi-chevron-left d-block d-sm-none"></i>
+                                        </span>
+                                    </button>
                                     &nbsp;
                                     &nbsp;
-                                    <button className="btn" >Next</button>
+                                    <button className="btn border" >
+                                        <span className="d-none d-sm-block">
+                                            Next
+                                        </span>
+                                        <span>
+                                            <i className="bi bi-chevron-right d-block d-sm-none"></i>
+                                        </span>
+                                    </button>
                                 </div>
                             </div>
 

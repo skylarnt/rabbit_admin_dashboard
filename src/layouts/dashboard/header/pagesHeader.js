@@ -63,11 +63,11 @@ export default function Header({ onOpenNav, pathName }) {
         setPageText("Manage all your cash transactions.");
 
         break;
-      case "/dashboard/drivers":
-        // setPageHeader("Drivers");
-        // setPageText("Add, assign and manage drivers here.");
-        setPageHeader("Drivers/Riders");
-        setPageText("Manage and assign your Drivers/Riders here.");
+      case "/dashboard/driver":
+        setPageHeader("Drivers");
+        setPageText("Add, assign and manage drivers here.");
+        // setPageHeader("Drivers/Riders");
+        // setPageText("Manage and assign your Drivers/Riders here.");
 
         break;
       case "/dashboard/vehicles":
@@ -168,11 +168,11 @@ export default function Header({ onOpenNav, pathName }) {
           </button>
         )}
 
-        {pathName === "/dashboard/drivers" && (
+        {pathName === "/dashboard/driver" && (
           <div className="d-flex text-right">
             <button
               className={`export_btn pt-2 btn m-0 mx-3`}
-              onClick={() => bus.emit("open-modal")}
+              onClick={() => bus.emit("open-driverinfo-modal")}
               style={{
                 verticalAlign: "middle",
               }}
@@ -201,7 +201,7 @@ export default function Header({ onOpenNav, pathName }) {
           <div className="d-flex text-right">
             <button
               className={`export_btn pt-2 btn m-0 mx-3`}
-              onClick={() => bus.emit("open-modal")}
+              onClick={() => bus.emit("open-addvehicle-modal")}
               style={{
                 verticalAlign: "middle",
               }}
@@ -230,7 +230,7 @@ export default function Header({ onOpenNav, pathName }) {
           <div className="d-flex text-right">
             <button
               className={`export_btn pt-2 btn m-0 mx-3`}
-              onClick={() => bus.emit("open-modal")}
+              onClick={() => bus.emit("open-addbus-modal")}
               style={{
                 verticalAlign: "middle",
               }}
@@ -242,7 +242,7 @@ export default function Header({ onOpenNav, pathName }) {
             </button>
             <button
               className={`export_btn pt-2 btn m-0 mx-3`}
-              onClick={() => bus.emit("open-modal2")}
+              onClick={() => bus.emit("open-addbike-modal")}
               style={{
                 verticalAlign: "middle",
               }}
@@ -271,7 +271,7 @@ export default function Header({ onOpenNav, pathName }) {
           <div className="d-flex text-right">
             <button
               className={`export_btn pt-2 btn m-0 mx-3`}
-              onClick={() => bus.emit("open-modal")}
+              onClick={() => bus.emit("open-createroute-modal")}
               style={{
                 verticalAlign: "middle",
               }}
@@ -300,7 +300,7 @@ export default function Header({ onOpenNav, pathName }) {
           <div className="d-flex text-right">
             <button
               className={`export_btn pt-2 btn m-0 mx-3`}
-              onClick={() => bus.emit("open-modal")}
+              onClick={() => bus.emit("open-charter-modal")}
               style={{
                 verticalAlign: "middle",
               }}
@@ -329,7 +329,7 @@ export default function Header({ onOpenNav, pathName }) {
           <div className="d-flex text-right">
             <button
               className={`export_btn pt-2 btn m-0 mx-3 rounded`}
-              onClick={() => bus.emit("open-modal")}
+              onClick={() => bus.emit("open-topup-modal")}
               style={{
                 verticalAlign: "middle",
               }}
@@ -341,7 +341,7 @@ export default function Header({ onOpenNav, pathName }) {
             </button>
             
             <button
-              onClick={() => bus.emit("open-modal2")}
+              onClick={() => bus.emit("open-withdraw-modal")}
               className="btn border px-4"
               style={{
                 backgroundColor: "#fff",
@@ -362,7 +362,7 @@ export default function Header({ onOpenNav, pathName }) {
           <div className="d-flex text-right">
             <button
               className={`export_btn pt-2 btn m-0 rounded`}
-              onClick={() => bus.emit("open-modal")}
+              onClick={() => bus.emit("open-invite-modal")}
               style={{
                 verticalAlign: "middle",
               }}

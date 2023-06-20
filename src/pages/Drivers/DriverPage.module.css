@@ -359,6 +359,15 @@ div.percent2 small {
 .modal_body .span label input:checked ~ span {
     transform: rotateX(180deg);
 }
+.modal_content {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+.modal_content::-webkit-scrollbar,
+.modal_content::-webkit-scrollbar-track {
+    appearance: none;
+    display: none;
+}
 
 .modal_content h3 {
     font-weight: 600;
@@ -424,8 +433,8 @@ div.percent2 small {
 
 .hold_input img {
     position: absolute;
-    top: 20%;
-    left: 25px !important;
+    top: 25%;
+    left: 12px !important;
 }
 .hold_input1 img {
     position: absolute;

@@ -46,7 +46,7 @@ export default function CharterRequest() {
 
     return (
         <>
-            <div className=" px-2">
+            <div className="px-0 px-md-2">
 
                 <div className={`${styles.filters} mt-4`}>
                     <div className="row">
@@ -63,17 +63,17 @@ export default function CharterRequest() {
 
                         <div className="d-md-flex justify-content-between" >
                             <div className="pb-3 pb-md-0">
-                                <h5 className="table_desc_header">
+                                <h5 className="table_desc_header mb-2">
                                     Charter Request
                                 </h5>
-                                <small style={{ fontWeight: '200', fontSize: '14px' }}>
+                                <small style={{ fontWeight: 'normal', fontSize: '14px' }}>
                                     View all history of charters
                                 </small>
 
                             </div>
                             <div className="pt-md-2">
                                 <div className="dropleft ">
-                                    <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className={`${styles.export_btn} pt-2 btn m-0`}>
+                                    <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className={`${styles.export_btn} pt-2 btn m-0 ml-auto`}>
                                         <span style={{
                                             paddingTop: '8px',
                                         }}>
@@ -112,7 +112,7 @@ export default function CharterRequest() {
 
                     </div>
                     <Scrollbar>
-                        <div className={`${styles.overflow_table} table-responsive  pt-3 pb-3 pl-0 pr-0`}  >
+                        <div className={`${styles.overflow_table} table-responsive pb-3 pl-0 pr-0`}  >
                             <table className={`${styles.table} table-hover table-striped`} style={{ minWidth: '95em' }}>
                                 <thead className={`${styles.thead}`}>
                                     <tr>
@@ -128,7 +128,6 @@ export default function CharterRequest() {
                                         </th>
                                         <th className="text-muted">
                                             Region
-                                            <img className="pl-2" src="/assets/icons/down.svg" alt="" />
                                         </th>
                                         <th className="text-muted">
                                             Charter Type

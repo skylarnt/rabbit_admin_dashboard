@@ -57,7 +57,6 @@ const style2 = {
   border: '1px solid #F5F5F5',
   borderRadius: '5px',
   boxShadow: 24,
-  p: 5,
 };
 
 
@@ -90,16 +89,15 @@ export default function TripsPage() {
 
   return (
     <>
-      <div className=" px-2">
+      <div className="px-0 px-md-2">
 
         <div className={`${styles.filters} mt-4`}>
-          <div className="row">
-            <div className={`${styles.hold_input} col-6   `}>
+          <div className="d-flex justify-content-between" style={{ gap: '10px' }}>
+            <div className={`${styles.hold_input}  `}>
               <img src="/assets/icons/search.svg" alt="" />
-              <input type="text" name="search" placeholder="Search" style={{ textIndent: '25px', width: '240px' }} className=" form-control" />
-
+              <input type="text" name="search" placeholder="Search" style={{ textIndent: '25px', width: '240px', }} className=" form-control" />
             </div>
-            <div className="col-6  text-right">
+            <div className="text-right">
               <button
                 onClick={() => setFilterModalOpen(true)}
                 className="btn  border"
@@ -107,9 +105,10 @@ export default function TripsPage() {
                   backgroundColor: '#fff',
                   border: '1px solid #D0D5DD',
                   boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
-                  borderRadius: '4px'
+                  borderRadius: '4px',
+                  height: '40px'
                 }}>
-                <img className="" style={{ display: 'inline', width: '28%' }} src="/assets/icons/filterlines.svg" alt="" />
+                <img className="" style={{ display: 'inline', width: '20px' }} src="/assets/icons/filterlines.svg" alt="" />
                 &nbsp;
                 <small className="d-none d-md-inline-block">
                   Filters
@@ -125,17 +124,17 @@ export default function TripsPage() {
 
             <div className="d-md-flex justify-content-between" >
               <div className="pb-3 pb-md-0">
-                <h5 className="table_desc_header">
+                <h5 className="table_desc_header mb-2">
                   All Routes
                 </h5>
-                <small style={{ fontWeight: '200', fontSize: '14px' }}>
+                <small style={{ fontWeight: 'normal', fontSize: '14px' }}>
                   Create time slots, assign drivers and set prices
                 </small>
 
               </div>
               <div className="pt-md-2">
                 <div className="dropleft ">
-                  <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className={`${styles.export_btn} pt-2 btn m-0`}>
+                  <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className={`${styles.export_btn} pt-2 btn m-0 ml-auto`}>
                     <span style={{
                       paddingTop: '8px',
                     }}>
@@ -174,7 +173,7 @@ export default function TripsPage() {
 
           </div>
           <Scrollbar>
-            <div className={`${styles.overflow_table} table-responsive  pt-3 pb-3 pl-0 pr-0`}  >
+            <div className={`${styles.overflow_table} table-responsive pb-3 pl-0 pr-0`}  >
               <table className={`${styles.table} table-hover table-striped`}>
                 <thead className={`${styles.thead}`}>
                   <tr>
@@ -184,7 +183,6 @@ export default function TripsPage() {
                     </th>
                     <th className="text-muted text-center">
                       No of Assigned Drivers
-                      <img className="pl-2" src="/assets/icons/down.svg" alt="" />
                     </th>
                     <th className="text-muted">
                       Date
@@ -205,12 +203,12 @@ export default function TripsPage() {
 
                   <tr className={`${styles.tr} `}>
                     <td>
-                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', width: '8em' }}>
                         <div className=" ">
                           <p className="mb-0 font-weight-bold" style={{ fontSize: '14px' }}>
-                            Ariene McCoy
+                            Sabo-Yaba
                           </p>
-                          <span style={{ fontSize: '14px' }}>
+                          <span style={{ fontSize: '13px' }}>
                             VI (Eko Hotel)
                           </span>
 
@@ -223,7 +221,6 @@ export default function TripsPage() {
                         </div>
 
                       </div>
-
                     </td>
 
                     <td className="text-center">
@@ -267,25 +264,33 @@ export default function TripsPage() {
 
                   <tr className={`${styles.tr} `}>
                     <td>
-                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "center",
+                          width: '8em'
+                        }}
+                      >
                         <div className=" ">
-                          <p className="mb-0 font-weight-bold" style={{ fontSize: '14px' }}>
-                            Ariene McCoy
+                          <p className="mb-0" style={{ fontSize: "14px" }}>
+                            <strong>Sabo Yaba</strong>
                           </p>
-                          <span style={{ fontSize: '14px' }}>
+                          <span style={{ fontSize: "13px" }}>
                             VI (Eko Hotel)
                           </span>
-
                         </div>
                         &nbsp;
                         &nbsp;
                         <div className="initials">
                           {/* AM */}
-                          <img src="/assets/icons/to-fro.png" alt="" />
+                          <img
+                            src="/assets/icons/to-fro.png"
+                            alt=""
+                            style={{ width: "auto" }}
+                          />
                         </div>
-
                       </div>
-
                     </td>
 
                     <td className="text-center">
@@ -329,25 +334,33 @@ export default function TripsPage() {
 
                   <tr className={`${styles.tr} `}>
                     <td>
-                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "center",
+                          width: '8em'
+                        }}
+                      >
                         <div className=" ">
-                          <p className="mb-0 font-weight-bold" style={{ fontSize: '14px' }}>
-                            Ariene McCoy
+                          <p className="mb-0" style={{ fontSize: "14px" }}>
+                            <strong>Sabo Yaba</strong>
                           </p>
-                          <span style={{ fontSize: '14px' }}>
+                          <span style={{ fontSize: "13px" }}>
                             VI (Eko Hotel)
                           </span>
-
                         </div>
                         &nbsp;
                         &nbsp;
                         <div className="initials">
                           {/* AM */}
-                          <img src="/assets/icons/to-fro.png" alt="" />
+                          <img
+                            src="/assets/icons/to-fro.png"
+                            alt=""
+                            style={{ width: "auto" }}
+                          />
                         </div>
-
                       </div>
-
                     </td>
 
                     <td className="text-center">
@@ -391,25 +404,33 @@ export default function TripsPage() {
 
                   <tr className={`${styles.tr} `}>
                     <td>
-                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "center",
+                          width: '8em'
+                        }}
+                      >
                         <div className=" ">
-                          <p className="mb-0 font-weight-bold" style={{ fontSize: '14px' }}>
-                            Ariene McCoy
+                          <p className="mb-0" style={{ fontSize: "14px" }}>
+                            <strong>Sabo Yaba</strong>
                           </p>
-                          <span style={{ fontSize: '14px' }}>
+                          <span style={{ fontSize: "13px" }}>
                             VI (Eko Hotel)
                           </span>
-
                         </div>
                         &nbsp;
                         &nbsp;
                         <div className="initials">
                           {/* AM */}
-                          <img src="/assets/icons/to-fro.png" alt="" />
+                          <img
+                            src="/assets/icons/to-fro.png"
+                            alt=""
+                            style={{ width: "auto" }}
+                          />
                         </div>
-
                       </div>
-
                     </td>
 
                     <td className="text-center">
@@ -453,25 +474,33 @@ export default function TripsPage() {
 
                   <tr className={`${styles.tr} `}>
                     <td>
-                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "center",
+                          width: '8em'
+                        }}
+                      >
                         <div className=" ">
-                          <p className="mb-0 font-weight-bold" style={{ fontSize: '14px' }}>
-                            Ariene McCoy
+                          <p className="mb-0" style={{ fontSize: "14px" }}>
+                            <strong>Sabo Yaba</strong>
                           </p>
-                          <span style={{ fontSize: '14px' }}>
+                          <span style={{ fontSize: "13px" }}>
                             VI (Eko Hotel)
                           </span>
-
                         </div>
                         &nbsp;
                         &nbsp;
                         <div className="initials">
                           {/* AM */}
-                          <img src="/assets/icons/to-fro.png" alt="" />
+                          <img
+                            src="/assets/icons/to-fro.png"
+                            alt=""
+                            style={{ width: "auto" }}
+                          />
                         </div>
-
                       </div>
-
                     </td>
 
                     <td className="text-center">
@@ -515,25 +544,33 @@ export default function TripsPage() {
 
                   <tr className={`${styles.tr} `}>
                     <td>
-                      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "center",
+                          width: '8em'
+                        }}
+                      >
                         <div className=" ">
-                          <p className="mb-0 font-weight-bold" style={{ fontSize: '14px' }}>
-                            Ariene McCoy
+                          <p className="mb-0" style={{ fontSize: "14px" }}>
+                            <strong>Sabo Yaba</strong>
                           </p>
-                          <span style={{ fontSize: '14px' }}>
+                          <span style={{ fontSize: "13px" }}>
                             VI (Eko Hotel)
                           </span>
-
                         </div>
                         &nbsp;
                         &nbsp;
                         <div className="initials">
                           {/* AM */}
-                          <img src="/assets/icons/to-fro.png" alt="" />
+                          <img
+                            src="/assets/icons/to-fro.png"
+                            alt=""
+                            style={{ width: "auto" }}
+                          />
                         </div>
-
                       </div>
-
                     </td>
 
                     <td className="text-center">
@@ -588,24 +625,36 @@ export default function TripsPage() {
               </div> */}
 
           </Scrollbar>
+
           <div className="card border-0 p-0 m-0">
             <div className="card-body pt-0 mt-0">
               <div className="d-flex justify-content-between">
-                <div className="d-flex align-item-center pt-2">
+                <div className=" pt-2">
                   Page 1 of <b className="pl-1"> 10</b>
                 </div>
                 <div className={`${styles.pagination_button_container}`}>
-                  <button className="btn" >Previous</button>
+                  <button className="btn border" >
+                    <span className="d-none d-sm-block">
+                      Previous
+                    </span>
+                    <span>
+                      <i className="bi bi-chevron-left d-block d-sm-none"></i>
+                    </span>
+                  </button>
                   &nbsp;
                   &nbsp;
-                  <button className="btn" >Next</button>
+                  <button className="btn border" >
+                    <span className="d-none d-sm-block">
+                      Next
+                    </span>
+                    <span>
+                      <i className="bi bi-chevron-right d-block d-sm-none"></i>
+                    </span>
+                  </button>
                 </div>
               </div>
-
-
             </div>
           </div>
-
         </Card>
       </div>
 
@@ -803,7 +852,7 @@ export default function TripsPage() {
 
               </div>
             </div>
-            <div className="mb-4">
+            <div className="mt-4">
               <button type="button" className={`${styles.modal_btn} btn btn-block`}>
                 Proceed
               </button>
@@ -947,10 +996,10 @@ export default function TripsPage() {
           timeout: 500,
         }}
         disableEnforceFocus
-        style={{maxWidth: '100%'}}
+        style={{ maxWidth: '100%' }}
       >
-        <Fade in={editRoute} style={{maxWidth: '95%'}}>
-          <Box sx={style2} className={`mobile_modal_size bg-white`} style={{maxWidth: '95%'}}>
+        <Fade in={editRoute} style={{ maxWidth: '95%' }}>
+          <Box sx={style2} className={`mobile_modal_size bg-white p-3 p-md-5`} style={{ maxWidth: '95%' }}>
             <div className={`modal_content bg-transparent`}
               style={{ overflowY: 'scroll', minHeight: '29em' }}
             >
@@ -1035,13 +1084,13 @@ export default function TripsPage() {
                             243666
                           </span>
                         </div>
-                          <span className='py-0 ' onClick={() => setAssignDriver(true)}>
-                            <iconify-icon icon="octicon:chevron-down-24" width="20" style={{lineHeight: '0', verticalAlign: 'middle'}}></iconify-icon>
-                          </span>
+                        <span className='py-0 ' onClick={() => setAssignDriver(true)}>
+                          <iconify-icon icon="octicon:chevron-down-24" width="20" style={{ lineHeight: '0', verticalAlign: 'middle' }}></iconify-icon>
+                        </span>
 
                       </div>
                     </div>
-                    
+
                     {/* <div style={{color: '#00AF52'}}>
                       <p >
                         Assign Drivers
@@ -1056,42 +1105,42 @@ export default function TripsPage() {
                   <div className='col-md-6'>
                     <label htmlFor="drivers" style={{ fontSize: '16px' }}>Time Slot</label>
                     <div className={`${styles.accordion_wrap} mb-3`} >
-                        <Accordion >
-                            <AccordionSummary
-                                className={`${styles.acc_summary}`}
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel1a-content"
-                                id="panel1a-header"
-                            >
-                                <div className='d-flex justify-content-between w-100'>
-                                  <span>MONDAY</span> <span>TUESDAY</span><span>WEDNESDAY</span><span>THURSDAY</span>
-                                </div>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <div className='d-flex justify-content-between w-100 pr-md-4'>
-                                  <div>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                  </div>
-                                  <div>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                  </div>
-                                  <div>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                  </div>
-                                  <div>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                  </div>
-                                </div>
-                            </AccordionDetails>
-                        </Accordion>
+                      <Accordion >
+                        <AccordionSummary
+                          className={`${styles.acc_summary}`}
+                          expandIcon={<ExpandMoreIcon />}
+                          aria-controls="panel1a-content"
+                          id="panel1a-header"
+                        >
+                          <div className='d-flex justify-content-between w-100'>
+                            <span>MONDAY</span> <span>TUESDAY</span><span>WEDNESDAY</span><span>THURSDAY</span>
+                          </div>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                          <div className='d-flex justify-content-between w-100 pr-md-4'>
+                            <div>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                            </div>
+                            <div>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                            </div>
+                            <div>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                            </div>
+                            <div>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                            </div>
+                          </div>
+                        </AccordionDetails>
+                      </Accordion>
 
                     </div>
                     {/* <div className="row justify-content-between" style={{fontSize: '13px'}}>
@@ -1123,8 +1172,8 @@ export default function TripsPage() {
                   </div>
                   <div className="col-md-3">
                     <label htmlFor="drivers" className="d-block w-100 text-success" style={{ fontSize: '14px', textAlign: 'right', cursor: 'pointer' }}>
-                    <iconify-icon icon="octicon:plus-24" width="20" style={{lineHeight: '0', verticalAlign: 'middle'}}></iconify-icon>
-                       Add Drivers
+                      <iconify-icon icon="octicon:plus-24" width="20" style={{ lineHeight: '0', verticalAlign: 'middle' }}></iconify-icon>
+                      Add Drivers
                     </label>
 
                     <div>
@@ -1142,7 +1191,7 @@ export default function TripsPage() {
                   </div>
 
 
-                  
+
                   <div className='col-md-3'>
 
                     <div className="mb-3">
@@ -1166,8 +1215,8 @@ export default function TripsPage() {
 
                         </div>
                         <span className='py-0 ' onClick={() => setAssignDriver(true)}>
-                            <iconify-icon icon="octicon:chevron-down-24" width="20" style={{lineHeight: '0', verticalAlign: 'middle'}}></iconify-icon>
-                          </span>
+                          <iconify-icon icon="octicon:chevron-down-24" width="20" style={{ lineHeight: '0', verticalAlign: 'middle' }}></iconify-icon>
+                        </span>
 
                       </div>
                     </div>
@@ -1185,42 +1234,42 @@ export default function TripsPage() {
                   </div>
                   <div className='col-md-6'>
                     <div className={`${styles.accordion_wrap} mb-3`} >
-                        <Accordion >
-                            <AccordionSummary
-                                className={`${styles.acc_summary}`}
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel1a-content"
-                                id="panel1a-header"
-                            >
-                                <div className='d-flex justify-content-between w-100'>
-                                  <span>MONDAY</span> <span>TUESDAY</span><span>WEDNESDAY</span><span>THURSDAY</span>
-                                </div>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <div className='d-flex justify-content-between w-100 pr-md-4'>
-                                  <div>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                  </div>
-                                  <div>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                  </div>
-                                  <div>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                  </div>
-                                  <div>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                    <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
-                                  </div>
-                                </div>
-                            </AccordionDetails>
-                        </Accordion>
+                      <Accordion >
+                        <AccordionSummary
+                          className={`${styles.acc_summary}`}
+                          expandIcon={<ExpandMoreIcon />}
+                          aria-controls="panel1a-content"
+                          id="panel1a-header"
+                        >
+                          <div className='d-flex justify-content-between w-100'>
+                            <span>MONDAY</span> <span>TUESDAY</span><span>WEDNESDAY</span><span>THURSDAY</span>
+                          </div>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                          <div className='d-flex justify-content-between w-100 pr-md-4'>
+                            <div>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                            </div>
+                            <div>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                            </div>
+                            <div>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                            </div>
+                            <div>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                              <p className="m-0 mb-2 pb-1"><span className="border rounded p-1 bg-light">6:00am &times;</span></p>
+                            </div>
+                          </div>
+                        </AccordionDetails>
+                      </Accordion>
 
                     </div>
                     {/* <div className="row justify-content-between" style={{fontSize: '13px'}}>
@@ -1267,7 +1316,7 @@ export default function TripsPage() {
                 </div>
               </div>
 
-              <div className='d-block w-100 mt-4 pt-3 pb-0 mb-0'><button className='d-block w-100 btn py-2 text-white pb-0 mb-0' onClick={handleCloseEditRoute} style={{ background: '#00AF52' }}>Close</button></div>
+              <div className='d-block w-100 mt-4 pt-3 pb-0 mb-0'><button className='d-block w-100 btn py-2 text-white pb-0 mb-0' onClick={handleCloseEditRoute} style={{ background: '#00AF52' }}>Save</button></div>
 
             </div>
           </Box>
@@ -1275,8 +1324,8 @@ export default function TripsPage() {
       </Modal>
 
 
-       {/* Select Vehicle Modal */}
-       <GlobalModal
+      {/* Select Vehicle Modal */}
+      <GlobalModal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         open={assignDriver}
@@ -1293,193 +1342,189 @@ export default function TripsPage() {
         boxShadow='24'
         p='25px'
       >
-        {/* <Fade in={assignDriver}>
-          <Box sx={style2} className={`mobile_modal_size bg-white`}> */}
-            <div className={`modal_content`}
-            // style={{overflowY: 'scroll', height: '450px'}} 
-            >
-              <div className={`modal_header mb-0`}>
-                
-                <div className={`${styles.hold_input1} w-100`}>
-                  <img src="/assets/icons/search.svg" alt="" />
-                  <input type="text" name="search" placeholder="Search" style={{ textIndent: '25px', width: '100%' }} className=" form-control" />
- 
+        <div className={`modal_content`}
+        // style={{overflowY: 'scroll', height: '450px'}} 
+        >
+          <div className={`modal_header mb-0`}>
+
+            <div className={`${styles.hold_input1} w-100`}>
+              <img src="/assets/icons/search.svg" alt="" />
+              <input type="text" name="search" placeholder="Search" style={{ textIndent: '25px', width: '100%' }} className=" form-control" />
+
+            </div>
+
+          </div>
+
+          <div className="mt-4 modal_content" style={{ maxHeight: '310px', overflowY: 'scroll' }}>
+            <div className="mb-3">
+              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}>
+                <div className="initials">
+                  <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
+                </div>
+                &nbsp;
+                <div className=" ">
+                  <span className="text-muted" style={{ fontSize: '13px' }}>
+                    Bus 001(Toyota Hiace)
+                  </span>
+                  <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
+                    <strong>
+                      Ariene McCoy
+                    </strong>
+                  </p>
+                  <span className="text-muted" style={{ fontSize: '13px' }}>
+                    243666
+                  </span>
+
                 </div>
 
-              </div>
-
-              <div className="mt-4 modal_content" style={{maxHeight: '310px', overflowY: 'scroll'}}>
-                <div className="mb-3">
-                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}>
-                      <div className="initials">
-                        <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
-                      </div>
-                      &nbsp;
-                      <div className=" ">
-                        <span className="text-muted" style={{ fontSize: '13px' }}>
-                          Bus 001(Toyota Hiace)
-                        </span>
-                        <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
-                          <strong>
-                            Ariene McCoy
-                          </strong>
-                        </p>
-                        <span className="text-muted" style={{ fontSize: '13px' }}>
-                          243666
-                        </span>
-
-                      </div>
-
-                    </div>
-                </div>
-
-                <div className="mb-3">
-                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}>
-                      <div className="initials">
-                        <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
-                      </div>
-                      &nbsp;
-                      <div className=" ">
-                        <span className="text-muted" style={{ fontSize: '13px' }}>
-                          Bus 001(Toyota Hiace)
-                        </span>
-                        <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
-                          <strong>
-                            Ariene McCoy
-                          </strong>
-                        </p>
-                        <span className="text-muted" style={{ fontSize: '13px' }}>
-                          243666
-                        </span>
-
-                      </div>
-
-                    </div>
-                </div>
-
-                <div className="mb-3">
-                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}>
-                      <div className="initials">
-                        <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
-                      </div>
-                      &nbsp;
-                      <div className=" ">
-                        <span className="text-muted" style={{ fontSize: '13px' }}>
-                          Bus 001(Toyota Hiace)
-                        </span>
-                        <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
-                          <strong>
-                            Ariene McCoy
-                          </strong>
-                        </p>
-                        <span className="text-muted" style={{ fontSize: '13px' }}>
-                          243666
-                        </span>
-
-                      </div>
-
-                    </div>
-                </div>
-
-                <div className="mb-3">
-                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}>
-                      <div className="initials">
-                        <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
-                      </div>
-                      &nbsp;
-                      <div className=" ">
-                        <span className="text-muted" style={{ fontSize: '13px' }}>
-                          Bus 001(Toyota Hiace)
-                        </span>
-                        <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
-                          <strong>
-                            Ariene McCoy
-                          </strong>
-                        </p>
-                        <span className="text-muted" style={{ fontSize: '13px' }}>
-                          243666
-                        </span>
-
-                      </div>
-
-                    </div>
-                </div>
-
-                <div className="mb-3">
-                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}>
-                      <div className="initials">
-                        <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
-                      </div>
-                      &nbsp;
-                      <div className=" ">
-                        <span className="text-muted" style={{ fontSize: '13px' }}>
-                          Bus 001(Toyota Hiace)
-                        </span>
-                        <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
-                          <strong>
-                            Ariene McCoy
-                          </strong>
-                        </p>
-                        <span className="text-muted" style={{ fontSize: '13px' }}>
-                          243666
-                        </span>
-
-                      </div>
-
-                    </div>
-                </div>
-
-                <div className="mb-3">
-                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}>
-                      <div className="initials">
-                        <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
-                      </div>
-                      &nbsp;
-                      <div className=" ">
-                        <span className="text-muted" style={{ fontSize: '13px' }}>
-                          Bus 001(Toyota Hiace)
-                        </span>
-                        <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
-                          <strong>
-                            Ariene McCoy
-                          </strong>
-                        </p>
-                        <span className="text-muted" style={{ fontSize: '13px' }}>
-                          243666
-                        </span>
-
-                      </div>
-
-                    </div>
-                </div>
-
-                <div className="mb-3">
-                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}>
-                      <div className="initials">
-                        <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
-                      </div>
-                      &nbsp;
-                      <div className=" ">
-                        <span className="text-muted" style={{ fontSize: '13px' }}>
-                          Bus 001(Toyota Hiace)
-                        </span>
-                        <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
-                          <strong>
-                            Ariene McCoy
-                          </strong>
-                        </p>
-                        <span className="text-muted" style={{ fontSize: '13px' }}>
-                          243666
-                        </span>
-
-                      </div>
-
-                    </div>
-                </div>
               </div>
             </div>
-          {/* </Box>
-        </Fade> */}
+
+            <div className="mb-3">
+              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}>
+                <div className="initials">
+                  <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
+                </div>
+                &nbsp;
+                <div className=" ">
+                  <span className="text-muted" style={{ fontSize: '13px' }}>
+                    Bus 001(Toyota Hiace)
+                  </span>
+                  <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
+                    <strong>
+                      Ariene McCoy
+                    </strong>
+                  </p>
+                  <span className="text-muted" style={{ fontSize: '13px' }}>
+                    243666
+                  </span>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div className="mb-3">
+              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}>
+                <div className="initials">
+                  <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
+                </div>
+                &nbsp;
+                <div className=" ">
+                  <span className="text-muted" style={{ fontSize: '13px' }}>
+                    Bus 001(Toyota Hiace)
+                  </span>
+                  <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
+                    <strong>
+                      Ariene McCoy
+                    </strong>
+                  </p>
+                  <span className="text-muted" style={{ fontSize: '13px' }}>
+                    243666
+                  </span>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div className="mb-3">
+              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}>
+                <div className="initials">
+                  <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
+                </div>
+                &nbsp;
+                <div className=" ">
+                  <span className="text-muted" style={{ fontSize: '13px' }}>
+                    Bus 001(Toyota Hiace)
+                  </span>
+                  <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
+                    <strong>
+                      Ariene McCoy
+                    </strong>
+                  </p>
+                  <span className="text-muted" style={{ fontSize: '13px' }}>
+                    243666
+                  </span>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div className="mb-3">
+              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}>
+                <div className="initials">
+                  <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
+                </div>
+                &nbsp;
+                <div className=" ">
+                  <span className="text-muted" style={{ fontSize: '13px' }}>
+                    Bus 001(Toyota Hiace)
+                  </span>
+                  <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
+                    <strong>
+                      Ariene McCoy
+                    </strong>
+                  </p>
+                  <span className="text-muted" style={{ fontSize: '13px' }}>
+                    243666
+                  </span>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div className="mb-3">
+              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}>
+                <div className="initials">
+                  <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
+                </div>
+                &nbsp;
+                <div className=" ">
+                  <span className="text-muted" style={{ fontSize: '13px' }}>
+                    Bus 001(Toyota Hiace)
+                  </span>
+                  <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
+                    <strong>
+                      Ariene McCoy
+                    </strong>
+                  </p>
+                  <span className="text-muted" style={{ fontSize: '13px' }}>
+                    243666
+                  </span>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div className="mb-3">
+              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}>
+                <div className="initials">
+                  <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
+                </div>
+                &nbsp;
+                <div className=" ">
+                  <span className="text-muted" style={{ fontSize: '13px' }}>
+                    Bus 001(Toyota Hiace)
+                  </span>
+                  <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
+                    <strong>
+                      Ariene McCoy
+                    </strong>
+                  </p>
+                  <span className="text-muted" style={{ fontSize: '13px' }}>
+                    243666
+                  </span>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </GlobalModal>
 
 

@@ -16,7 +16,9 @@ import Backdrop from '@mui/material/Backdrop';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import navConfig from './config';
-
+// import bus from "../../../bus";
+import bus from "src/bus"
+import '../header/index';
 // ----------------------------------------------------------------------
 
 const style1 = {
@@ -25,6 +27,7 @@ const style1 = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 500,
+  maxWidth: '95%',
   overflow: 'scroll',
   bgcolor: '#F5F5F5',
   border: '1px solid #F5F5F5',
@@ -66,6 +69,12 @@ export default function Nav({ openNav, onCloseNav }) {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
+  
+  useEffect(() => {
+    bus.on("open-logout-modal", () => {
+      setOpenLogoutDialog(true);
+    });
+  }, []);
 
   const renderContent = (
     <Scrollbar
@@ -191,6 +200,7 @@ export default function Nav({ openNav, onCloseNav }) {
         }}
         disableEnforceFocus
         className='modal_bg'
+        style={{maxWidth: '100%'}}
       >
         <Fade in={openSwitchDialog} className='modal_bg'>
           <Box className={`mobile_modal_size modal_bg`} sx={style1}>
@@ -211,7 +221,7 @@ export default function Nav({ openNav, onCloseNav }) {
               <div className="my-4 px-4">
                 <button 
                   onClick={() => setOpenSwitchDialog(false)} 
-                  className={`modal_btn d-block w-100 hover btn mx-auto border py-3 bg-light text-dark`}
+                  className={`modal_btn d-block w-100 hover btn mx-auto border py-2 py-md-3 bg-light text-dark`}
                   style={{
                     boxShadow: '0 5px 5px #bbb'
                   }}
@@ -237,9 +247,10 @@ export default function Nav({ openNav, onCloseNav }) {
   }}
   disableEnforceFocus
   className='modal_bg'
+  style={{maxWidth: '100%'}}
 >
-  <Fade in={openLogoutDialog} className='modal_bg'>
-    <Box className={`mobile_modal_size modal_bg`} sx={style1}>
+  <Fade in={openLogoutDialog} className='modal_bg'style={{maxWidth: '90%'}}>
+    <Box className={`mobile_modal_size modal_bg`} sx={style1}style={{maxWidth: '90%'}}>
       <div className={`text-center add_to_cart_content py-3`}>
               {/* <div className={`d-flex justify-content-between`}>
                   <span className='m-0'></span>
@@ -251,10 +262,10 @@ export default function Nav({ openNav, onCloseNav }) {
               </div> */}
         <img src="/assets/RABBIT1.png" alt="" />
         {/* <h4 className="mt-3" style={{ fontWeight: 'bold' }}>Switch Dashboard</h4> */}
-        <p className='text-center font-weight-normal my-3' style={{ textAlign: 'center !important', fontSize: '1.3em' }}>
+        <p className='text-center font-weight-normal my-3' style={{ textAlign: 'center !important', fontSize: '1.2em' }}>
           Do you want to Logout?
         </p>
-        <div className="d-flex px-4">
+        <div className="d-flex px-2">
           <button 
             onClick={() => setOpenLogoutDialog(false)} 
             className={`modal_btn d-block w-100 hover btn border py-2 bg-light text-dark mr-2`}

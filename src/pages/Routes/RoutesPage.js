@@ -61,7 +61,7 @@ export default function RoutesPage() {
   };
 
   useEffect(() => {
-    bus.on('open-modal', () => {
+    bus.on('open-createroute-modal', () => {
       setcreateRoute(true)
     })
   }, [])
@@ -74,7 +74,7 @@ export default function RoutesPage() {
       </Helmet>
 
       <div className="wrapper">
-        <div className="header d-block d-md-none mb-4 mt-5 pt-3">
+        <div className="header d-block d-md-none mb-4 mt-2 pt-3">
           <div className={`${styles.product_actions} d-md-flex justify-content-between`}>
             <div className=" ">
               <h4 className={`mb-0 pb-0`}>Routes</h4>

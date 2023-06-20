@@ -59,7 +59,7 @@ export default function CharterPage() {
   };
 
   useEffect(() => {
-    bus.on("open-modal", () => {
+    bus.on("open-charter-modal", () => {
       setaddVehicles(true);
     });
   }, []);
@@ -67,7 +67,7 @@ export default function CharterPage() {
   return (
     <>
       <Helmet>
-        <title> Routes </title>
+        <title> Charter </title>
       </Helmet>
 
       <div className="wrapper">

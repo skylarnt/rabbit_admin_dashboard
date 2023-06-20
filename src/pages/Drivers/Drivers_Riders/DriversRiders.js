@@ -77,7 +77,7 @@ export default function DriversRidersPage() {
   };
 
   useEffect(() => {
-    bus.on('open-modal', () => {
+    bus.on('open-driverinfo-modal', () => {
       setAddDriverModalOpen(true)
     })
   }, [])

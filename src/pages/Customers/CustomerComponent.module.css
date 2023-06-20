@@ -664,6 +664,7 @@ tbody .tr {
 .modal_content::-webkit-scrollbar,
 .modal_content::-webkit-scrollbar-track {
     appearance: none;
+    display: none;
 }
 .modal_content h3 {
     font-weight: 600;

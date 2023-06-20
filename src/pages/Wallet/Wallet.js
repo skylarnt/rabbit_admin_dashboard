@@ -42,10 +42,10 @@ export default function DashboardAppPage() {
 
 
     useEffect(() => {
-        bus.on("open-modal", () => {
+        bus.on("open-topup-modal", () => {
             setTopupModalOpen(true);
         });
-        bus.on("open-modal2", () => {
+        bus.on("open-withdraw-modal", () => {
             setWithdrawModalOpen(true);
         });
     }, []);

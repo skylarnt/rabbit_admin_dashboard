@@ -52,13 +52,13 @@ export default function CustomerPage() {
   };
 
   useEffect(() => {
-    bus.on('open-modal', () => {
+    bus.on('open-addbus-modal', () => {
       setAddDriverModalOpen(true)
     })
   }, [])
 
   useEffect(() => {
-    bus.on('open-modal2', () => {
+    bus.on('open-addbike-modal', () => {
       setAddBikeModalOpen(true)
     })
   }, [])

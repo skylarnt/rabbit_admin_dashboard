@@ -20,7 +20,7 @@ const navConfig = [
   },
   {
     title: 'drivers',
-    path: '/dashboard/drivers',
+    path: '/dashboard/driver',
     icon: '/assets/icons/driver.svg',
     type: 'transport',
     iconActive: '/assets/icons/driver_active.svg'
@@ -28,7 +28,7 @@ const navConfig = [
   },
   {
     title: 'vehicles',
-    path: '/dashboard/buses_bikes',
+    path: '/dashboard/vehicles',
     icon: '/assets/icons/vehicle.svg',
     iconActive: '/assets/icons/vehicles_active.svg'
 

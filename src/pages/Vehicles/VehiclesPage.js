@@ -6,6 +6,10 @@ import Fade from '@mui/material/Fade';
 import Box from '@mui/material/Box';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
+// import Accordion from '@mui/material/Accordion';
+// import AccordionSummary from '@mui/material/AccordionSummary';
+// import AccordionDetails from '@mui/material/AccordionDetails';
+// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { Helmet } from 'react-helmet-async';
 // import { useState } from "react";
@@ -44,7 +48,7 @@ const style = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 400,
-    height: 600,
+    minHeight: 600,
     overflow: 'hidden',
     bgcolor: '#F5F5F5',
     border: '1px solid #F5F5F5',
@@ -53,38 +57,19 @@ const style = {
     p: 3,
 };
 
-// const NAV_WIDTH = 280;
-
-// const HEADER_MOBILE = 64;
-
-// const HEADER_DESKTOP = 50;
-
-// const StyledRoot = styled(AppBar)(({ theme }) => ({
-//     ...bgBlur({ color: theme.palette.background.default }),
-//     boxShadow: 'none',
-//     [theme.breakpoints.up('lg')]: {
-//         width: `calc(100% - ${NAV_WIDTH + 1}px)`,
-//     },
-// }));
-
-// const StyledToolbar = styled(Toolbar)(({ theme }) => ({
-//     minHeight: HEADER_MOBILE,
-//     [theme.breakpoints.up('lg')]: {
-//         minHeight: HEADER_DESKTOP,
-//         padding: theme.spacing(0, 5),
-//     },
-// }));
-// ----------------------------------------------------------------------
-
 
 export default function VehiclesPage() {
-    // const [modalOpen, setModalOpen] = useState(false);
+    const [reAssignModalOpen, setReAssignModalOpen] = useState(false);
     const [assignDriver, setassignDriver] = useState(false);
     const [filterModalOpen, setFilterModalOpen] = useState(false);
     const [addDriverModalOpen, setAddDriverModalOpen] = useState(false);
 
     const [startDate, setStartDate] = useState(null);
     const [endDate, setEndDate] = useState(null);
+
+    const handleCloseReAssign = () => {
+        setReAssignModalOpen(false);
+    };
 
     const handleCloseViewFilter = () => {
         setFilterModalOpen(false);
@@ -99,10 +84,10 @@ export default function VehiclesPage() {
     };
 
     useEffect(() => {
-      bus.on('open-modal', ()=> {
-        setAddDriverModalOpen(true)
-      })
-    },[])
+        bus.on('open-addvehicle-modal', () => {
+            setAddDriverModalOpen(true)
+        })
+    }, [])
 
     // const [value, setValue] = React.useState('1');
 
@@ -180,16 +165,15 @@ export default function VehiclesPage() {
                 </div>
 
 
-                <div className=" px-2">
+                <div className="px-0 px-md-2">
 
                     <div className={`${styles.filters} mt-4`}>
-                        <div className="row">
-                            <div className={`${styles.hold_input} col-6   `}>
+                        <div className="d-flex justify-content-between" style={{ gap: '10px' }}>
+                            <div className={`${styles.hold_input}  `}>
                                 <img src="/assets/icons/search.svg" alt="" />
-                                <input type="text" name="search" placeholder="Search" style={{ textIndent: '25px', width: '240px' }} className=" form-control" />
-
+                                <input type="text" name="search" placeholder="Search" style={{ textIndent: '25px', width: '240px', }} className=" form-control" />
                             </div>
-                            <div className="col-6  text-right">
+                            <div className="text-right">
                                 <button
                                     onClick={() => setFilterModalOpen(true)}
                                     className="btn  border"
@@ -197,9 +181,10 @@ export default function VehiclesPage() {
                                         backgroundColor: '#fff',
                                         border: '1px solid #D0D5DD',
                                         boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
-                                        borderRadius: '4px'
+                                        borderRadius: '4px',
+                                        height: '40px'
                                     }}>
-                                    <img className="" style={{ display: 'inline', width: '28%' }} src="/assets/icons/filterlines.svg" alt="" />
+                                    <img className="" style={{ display: 'inline', width: '20px' }} src="/assets/icons/filterlines.svg" alt="" />
                                     &nbsp;
                                     <small className="d-none d-md-inline-block">
                                         Filters
@@ -215,17 +200,17 @@ export default function VehiclesPage() {
 
                             <div className="d-md-flex justify-content-between" >
                                 <div className="pb-3 pb-md-0">
-                                    <h5 className="table_desc_header">
+                                    <h5 className="table_desc_header mb-2">
                                         Vehicle Information
                                     </h5>
-                                    <small style={{ fontWeight: '200', fontSize: '14px' }}>
+                                    <small style={{ fontWeight: 'normal', fontSize: '14px' }}>
                                         Details of buses and assigned drivers
                                     </small>
 
                                 </div>
                                 <div className="pt-md-2">
                                     <div className="dropleft ">
-                                        <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className={`${styles.export_btn} pt-0 btn m-0`}>
+                                        <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className={`${styles.export_btn} pt-0 btn m-0 ml-auto`}>
                                             <span style={{
                                                 paddingTop: '8px',
 
@@ -266,7 +251,7 @@ export default function VehiclesPage() {
 
                         </div>
                         <Scrollbar>
-                            <div className={`${styles.overflow_table} table-responsive  pt-3 pb-3 pl-0 pr-0`}  >
+                            <div className={`${styles.overflow_table} table-responsive pb-3 pl-0 pr-0`}  >
 
                                 <table className={`${styles.table} table-hover table-striped`}>
                                     <thead className={`${styles.thead}`}>
@@ -353,7 +338,7 @@ export default function VehiclesPage() {
 
                                                     <div className="dropdown-menu drop-left" aria-labelledby="dropdownMenuButton">
                                                         <button type="button" className="rss dropdown-item btn border-0 text-danger">Remove</button>
-                                                        <button type="button" className="rss dropdown-item btn border-0">Re-assign</button>
+                                                        <button type="button" className="rss dropdown-item btn border-0" onClick={() => setReAssignModalOpen(true)} >Re-assign</button>
                                                     </div>
                                                 </div>
                                             </td>
@@ -373,7 +358,6 @@ export default function VehiclesPage() {
                                             <td>
                                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                                     <div className="initials">
-                                                        {/* AM */}
                                                         <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
                                                     </div>
                                                     &nbsp;
@@ -420,7 +404,7 @@ export default function VehiclesPage() {
 
                                                     <div className="dropdown-menu drop-left" aria-labelledby="dropdownMenuButton">
                                                         <button type="button" className="rss dropdown-item btn border-0 text-danger">Remove</button>
-                                                        <button type="button" className="rss dropdown-item btn border-0">Re-assign</button>
+                                                        <button type="button" className="rss dropdown-item btn border-0" onClick={() => setReAssignModalOpen(true)} >Re-assign</button>
                                                     </div>
                                                 </div>
                                             </td>
@@ -440,7 +424,6 @@ export default function VehiclesPage() {
                                             <td>
                                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                                     <div className="initials">
-                                                        {/* AM */}
                                                         <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
                                                     </div>
                                                     &nbsp;
@@ -487,7 +470,7 @@ export default function VehiclesPage() {
 
                                                     <div className="dropdown-menu drop-left" aria-labelledby="dropdownMenuButton">
                                                         <button type="button" className="rss dropdown-item btn border-0 text-danger">Remove</button>
-                                                        <button type="button" className="rss dropdown-item btn border-0">Re-assign</button>
+                                                        <button type="button" className="rss dropdown-item btn border-0" onClick={() => setReAssignModalOpen(true)} >Re-assign</button>
                                                     </div>
                                                 </div>
                                             </td>
@@ -507,7 +490,6 @@ export default function VehiclesPage() {
                                             <td>
                                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                                     <div className="initials">
-                                                        {/* AM */}
                                                         <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
                                                     </div>
                                                     &nbsp;
@@ -554,7 +536,7 @@ export default function VehiclesPage() {
 
                                                     <div className="dropdown-menu drop-left" aria-labelledby="dropdownMenuButton">
                                                         <button type="button" className="rss dropdown-item btn border-0 text-danger">Remove</button>
-                                                        <button type="button" className="rss dropdown-item btn border-0">Re-assign</button>
+                                                        <button type="button" className="rss dropdown-item btn border-0" onClick={() => setReAssignModalOpen(true)} >Re-assign</button>
                                                     </div>
                                                 </div>
                                             </td>
@@ -574,7 +556,6 @@ export default function VehiclesPage() {
                                             <td>
                                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                                     <div className="initials">
-                                                        {/* AM */}
                                                         <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
                                                     </div>
                                                     &nbsp;
@@ -621,7 +602,7 @@ export default function VehiclesPage() {
 
                                                     <div className="dropdown-menu drop-left" aria-labelledby="dropdownMenuButton">
                                                         <button type="button" className="rss dropdown-item btn border-0 text-danger">Remove</button>
-                                                        <button type="button" className="rss dropdown-item btn border-0">Re-assign</button>
+                                                        <button type="button" className="rss dropdown-item btn border-0" onClick={() => setReAssignModalOpen(true)} >Re-assign</button>
                                                     </div>
                                                 </div>
                                             </td>
@@ -641,7 +622,6 @@ export default function VehiclesPage() {
                                             <td>
                                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                                     <div className="initials">
-                                                        {/* AM */}
                                                         <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
                                                     </div>
                                                     &nbsp;
@@ -688,7 +668,7 @@ export default function VehiclesPage() {
 
                                                     <div className="dropdown-menu drop-left" aria-labelledby="dropdownMenuButton">
                                                         <button type="button" className="rss dropdown-item btn border-0 text-danger">Remove</button>
-                                                        <button type="button" className="rss dropdown-item btn border-0">Re-assign</button>
+                                                        <button type="button" className="rss dropdown-item btn border-0" onClick={() => setReAssignModalOpen(true)} >Re-assign</button>
                                                     </div>
                                                 </div>
                                             </td>
@@ -696,47 +676,44 @@ export default function VehiclesPage() {
                                     </tbody>
                                 </table>
                             </div>
-
                         </Scrollbar>
+
                         <div className="card border-0 p-0 m-0">
                             <div className="card-body pt-0 mt-0">
                                 <div className="d-flex justify-content-between">
-                                    <div className="d-flex align-item-center">
+                                    <div className=" pt-2">
                                         Page 1 of <b className="pl-1"> 10</b>
                                     </div>
+
                                     <div className={`${styles.pagination_button_container}`}>
-                                        <button className="btn border rounded" >Previous</button>
+                                        <button className="btn border" >
+                                            <span className="d-none d-sm-block">
+                                                Previous
+                                            </span>
+                                            <span>
+                                                <i className="bi bi-chevron-left d-block d-sm-none"></i>
+                                            </span>
+                                        </button>
                                         &nbsp;
                                         &nbsp;
-                                        <button className="btn border rounded" >Next</button>
+                                        <button className="btn border" >
+                                            <span className="d-none d-sm-block">
+                                                Next
+                                            </span>
+                                            <span>
+                                                <i className="bi bi-chevron-right d-block d-sm-none"></i>
+                                            </span>
+                                        </button>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
-
                     </Card>
                 </div>
-
-
-                {/* <Box style={{ padding: '0' }} className='aa' sx={{ width: '100%', typography: 'body1' }}>
-          <TabContext value={value}>
-            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-              <TabList aria-label="lab API tabs" onChange={handleChange}>
-                <Tab label="Customer Details" value="1" />
-                <Tab label="Reviews" value="2" />
-              </TabList>
-            </Box>
-            <TabPanel value="1" style={{ paddingLeft: '0' }}>
-              <Details />
-            </TabPanel>
-            <TabPanel value="2" style={{ paddingLeft: '0' }}>
-              <Reviews />
-            </TabPanel>
-          </TabContext>
-        </Box> */}
             </div>
+
+
+            {/* Add Vehicle Modal */}
 
             <GlobalModal
                 open={addDriverModalOpen}
@@ -755,7 +732,7 @@ export default function VehiclesPage() {
             >
                 <div className={`${styles.modal_content}`}>
                     <div className={`${styles.modal_header} mb-0`}>
-                        <h5 style={{
+                        <h5 className="mb-1" style={{
                             fontSize: '19px',
                             fontWeight: '700',
 
@@ -767,7 +744,9 @@ export default function VehiclesPage() {
                         </span>
 
                     </div>
-                    <span className="text-muted mb-4" style={{ fontSize: '13px' }}>Details of Vehicle</span>
+                    <p className="m-0">
+                        <span className="text-muted mb-4" style={{ fontSize: '13px' }}>Details of Vehicle</span>
+                    </p>
 
                     <form action="" className="mt-0">
                         <div className="row mt-4">
@@ -819,6 +798,7 @@ export default function VehiclesPage() {
 
 
             {/* Fiter Modal */}
+
             <GlobalModal
                 open={filterModalOpen}
                 onClose={handleCloseViewFilter}
@@ -1030,9 +1010,10 @@ export default function VehiclesPage() {
                     timeout: 500,
                 }}
                 disableEnforceFocus
+            // className={`${styles.modal_content} `}
             >
                 <Fade in={assignDriver}>
-                    <Box sx={style} className={`mobile_modal_size`}>
+                    <Box sx={style} className={`mobile_modal_size ${styles.modal_content} `}>
                         <div className={`modal_content`}
                         // style={{overflowY: 'scroll', height: '450px'}} 
                         >
@@ -1077,7 +1058,6 @@ export default function VehiclesPage() {
                             <div className='hold_input4' style={{ width: '100%' }}>
                                 <img src="/assets/icons/search.svg" alt="" />
                                 <input type="text" placeholder="Search" style={{ textIndent: '25px', width: '100%' }} className=" form-control" />
-
                             </div>
 
                             <div className={`table-responsive mt-3 pb-3 pl-0 pr-0`}
@@ -1090,7 +1070,6 @@ export default function VehiclesPage() {
                                             <td>
                                                 <div style={{ cursor: 'pointer', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                                     <div className="initials">
-                                                        {/* AM */}
                                                         <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
                                                     </div>
                                                     &nbsp;
@@ -1113,31 +1092,6 @@ export default function VehiclesPage() {
                                             <td>
                                                 <div style={{ cursor: 'pointer', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                                     <div className="initials">
-                                                        {/* AM */}
-                                                        <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
-                                                    </div>
-                                                    &nbsp;
-                                                    <div className=" ">
-                                                        <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
-                                                            <strong>
-                                                                Ariene McCoy
-                                                            </strong>
-                                                        </p>
-                                                        <span className="text-muted" style={{ fontSize: '13px' }}>
-                                                            243666
-                                                        </span>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </td>
-                                        </tr>
-                                        <tr className={`${styles.tr} `}>
-                                            <td>
-                                                <div style={{ cursor: 'pointer', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                                                    <div className="initials">
-                                                        {/* AM */}
                                                         <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
                                                     </div>
                                                     &nbsp;
@@ -1161,7 +1115,6 @@ export default function VehiclesPage() {
                                             <td>
                                                 <div style={{ cursor: 'pointer', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                                     <div className="initials">
-                                                        {/* AM */}
                                                         <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
                                                     </div>
                                                     &nbsp;
@@ -1185,7 +1138,6 @@ export default function VehiclesPage() {
                                             <td>
                                                 <div style={{ cursor: 'pointer', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                                     <div className="initials">
-                                                        {/* AM */}
                                                         <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
                                                     </div>
                                                     &nbsp;
@@ -1209,7 +1161,29 @@ export default function VehiclesPage() {
                                             <td>
                                                 <div style={{ cursor: 'pointer', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                                     <div className="initials">
-                                                        {/* AM */}
+                                                        <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
+                                                    </div>
+                                                    &nbsp;
+                                                    <div className=" ">
+                                                        <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
+                                                            <strong>
+                                                                Ariene McCoy
+                                                            </strong>
+                                                        </p>
+                                                        <span className="text-muted" style={{ fontSize: '13px' }}>
+                                                            243666
+                                                        </span>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        <tr className={`${styles.tr} `}>
+                                            <td>
+                                                <div style={{ cursor: 'pointer', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                                                    <div className="initials">
                                                         <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
                                                     </div>
                                                     &nbsp;
@@ -1236,13 +1210,167 @@ export default function VehiclesPage() {
 
                             </div>
 
-                            <div className="d-block w-100 mt-3"><button className="d-block w-100 btn py-2 text-white" onClick={handleCloseAssignDriver} style={{ background: '#00AF52' }}>Assign</button></div>
+                            <div className="d-block w-100 mt-3">
+                                <button className="d-block w-100 btn py-2 text-white" onClick={handleCloseAssignDriver} style={{ background: '#00AF52' }}>Assign</button>
+                            </div>
 
                         </div>
 
                     </Box>
                 </Fade>
             </Modal>
+
+
+
+            {/* Re-Assign Modal */}
+
+            <GlobalModal
+                open={reAssignModalOpen}
+                onClose={handleCloseReAssign}
+                position='absolute'
+                top='50%'
+                left='50%'
+                transform='translate(-50%, -50%)'
+                width='740px !important'
+                overflowY='scroll'
+                bgcolor='#FFFFFF'
+                border='1px solid #F5F5F5'
+                borderRadius='5px'
+                boxShadow='24'
+                p='25px'
+            >
+                <div className={`${styles.modal_content}`}>
+                    <div className={`${styles.modal_header} mb-0`}>
+                        <h5 style={{
+                            fontSize: '19px',
+                            fontWeight: '700',
+
+                        }}>Re-Assign Driver</h5>
+                        <span onClick={handleCloseReAssign} style={{ cursor: 'pointer' }}>
+                            <img src="/assets/icons/x.svg" alt="" />
+                        </span>
+                    </div>
+
+                    <div>
+                        <p className="mb-2 text-dark " style={{ fontWeight: '600' }}>Assign Driver</p>
+                    </div>
+                    <div className="row mb-2">
+                        <div className="col-md-5">
+                            <div className={`${styles.chosed_driver_wrap} border-bottom px-md-3 py-3`}>
+                                <div style={{ cursor: 'pointer', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                                    <div className="initials">
+                                        <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
+                                    </div>
+                                    &nbsp;
+                                    <div className=" ">
+                                        <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
+                                            <strong>
+                                                Ariene McCoy
+                                            </strong>
+                                        </p>
+                                        <span className="text-muted" style={{ fontSize: '13px' }}>
+                                            243666
+                                        </span>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div className="my-3">
+                                <label htmlFor="name">Select New Driver</label>
+                                <Select
+                                    labelId="s"
+                                    id="s"
+                                    fullWidth
+                                    size="small"
+                                    required
+                                    name="verified"
+                                    defaultValue='select'
+                                >
+
+                                    <MenuItem value='select'>Select Driver</MenuItem>
+                                    <MenuItem value='search' disabled>
+                                        <div className='hold_input4 mt-2' style={{ width: '100%' }}>
+                                            <img src="/assets/icons/search.svg" alt="" />
+                                            <input type="text" placeholder="Search" style={{ textIndent: '25px', width: '100%' }} className=" form-control" />
+                                        </div>
+                                    </MenuItem>
+                                    <MenuItem value='driver1'>
+                                        <div style={{ cursor: 'pointer', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                                            <div className="initials">
+                                                <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
+                                            </div>
+                                            &nbsp;
+                                            <div className=" ">
+                                                <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
+                                                    <strong>
+                                                        Ariene McCoy
+                                                    </strong>
+                                                </p>
+                                                <span className="text-muted" style={{ fontSize: '13px' }}>
+                                                    243666
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+                                    </MenuItem>
+                                    <MenuItem value='driver2'>
+                                        <div style={{ cursor: 'pointer', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                                            <div className="initials">
+                                                <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
+                                            </div>
+                                            &nbsp;
+                                            <div className=" ">
+                                                <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
+                                                    <strong>
+                                                        Ariene McCoy
+                                                    </strong>
+                                                </p>
+                                                <span className="text-muted" style={{ fontSize: '13px' }}>
+                                                    243666
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+                                    </MenuItem>
+                                    <MenuItem value='driver3'>
+                                        <div style={{ cursor: 'pointer', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                                            <div className="initials">
+                                                <img src="/assets/illustrations/illustration_avatar.png" alt="" style={{ width: '50px' }} />
+                                            </div>
+                                            &nbsp;
+                                            <div className=" ">
+                                                <p className="mb-0 text-dark" style={{ fontSize: '14px' }}>
+                                                    <strong>
+                                                        Ariene McCoy
+                                                    </strong>
+                                                </p>
+                                                <span className="text-muted" style={{ fontSize: '13px' }}>
+                                                    243666
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </MenuItem>
+                                </Select>
+                            </div>
+                        </div>
+                        <div className="col-md-2">
+                        </div>
+                        <div className="col-md-5">
+                            <p className="m-0 font-weight-bold">Bus 001</p>
+                            <p className="m-0"><small className="font-weight-normal text-muted">Toyota Hiace</small></p>
+                        </div>
+                    </div>
+                    <div className="mt-4">
+                        <button type="button" className={`${styles.modal_btn} btn btn-block`}>
+                            Assign
+                        </button>
+                    </div>
+                </div>
+            </GlobalModal>
 
         </>
     );

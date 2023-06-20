@@ -114,7 +114,7 @@ export default function DashboardAppPage() {
         
         {/* Banner */}
         <div style={{ overflow: 'hidden' }}>
-          {/* <Slider {...settings}> */}
+          <Slider {...settings}>
             <div>
               <Typography variant="h3" className={`${styles.banner} border`}>
                   <div>
@@ -127,12 +127,25 @@ export default function DashboardAppPage() {
                   {/* <img src="/assets/icons/bannerImageOne.png" className={`${styles.banner_img1}`} alt="" /> */}
               </Typography>
             </div>
+            <div>
+              <Typography variant="h3" className={`${styles.banner_sec} border bg-primary`}>
+                  <div className='px-5'>
+                    <img src='/assets/rabbit_white.png' className='img-fluid img-responsive' alt='' />
+                      {/* <h2 className='text-white font-weight-bold'>Welcome to Logistics</h2>
+                      <h5 className='text-white font-weight-bold pl-md-4 mb-0'>Stress free . Commute . Delivery</h5> */}
+                  </div>
+                  {/* <div className={`${styles.banner_img}`}>
+                    <img src='/assets/dashboard_img.png' alt='' />
+                  </div> */}
+                  {/* <img src="/assets/icons/bannerImageOne.png" className={`${styles.banner_img1}`} alt="" /> */}
+              </Typography>
+            </div>
             {/* <div>
               <Typography variant="h3" className={`${styles.banner}`}>
                 <img src="/assets/icons/bannerImageTwo.png" alt="logo" className={`${styles.banner_img1}`}/>
               </Typography>
             </div> */}
-          {/* </Slider> */}
+          </Slider>
         </div>
 
         {/* <div className={styles.landing} /> */}
@@ -429,7 +442,7 @@ export default function DashboardAppPage() {
         <Card style={{ marginTop: '50px', marginBottom: '20px', borderRadius: '10px' }} className='p-0'>
           <CardContent>
             <div className={`${styles.insight_header} pl-md-5`}>
-              <h5>
+              <h5 className='mb-2'>
                 Customers, Bookings and Income stats
 
               </h5>
@@ -447,7 +460,7 @@ export default function DashboardAppPage() {
                         boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
                         borderRadius: '4px'
                       }}>
-                      <img className="" style={{ display: 'inline', width: '28%' }} src="/assets/icons/filterlines.svg" alt="" />
+                      <img className="" style={{ display: 'inline', width: '20px' }} src="/assets/icons/filterlines.svg" alt="" />
                       &nbsp;
                       <small className="d-none d-md-inline-block">
                         Filters
@@ -576,10 +589,11 @@ export default function DashboardAppPage() {
           top='50%'
           left='50%'
           transform='translate(-50%, -50%)'
-          width='740px !important'
-          height='auto !important'
-          maxHeight='50vh !important'
-          overflowY='scroll'
+          width='800px !important'
+          // height='970px'
+          // maxHeight='50vh !important'
+          // overflowY='scroll'
+          overflow='hidden'
           bgcolor='#fff'
           border='1px solid #F5F5F5'
           borderRadius='5px'

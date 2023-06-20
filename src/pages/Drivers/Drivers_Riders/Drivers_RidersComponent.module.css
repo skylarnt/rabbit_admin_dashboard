@@ -599,6 +599,14 @@ div.percent2 small {
     box-shadow: 0px 1.12465px 3.37394px rgba(16, 24, 40, 0.1), 0px 1.12465px 2.24929px rgba(16, 24, 40, 0.06) !important;
     border-radius: 8.99717px !important;
 }
+.modal_content {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.modal_content::-webkit-scrollbar,
+.modal_content::-webkit-scrollbar-track {
+    appearance: none;
+}
 .modal_content h3 {
     font-weight: 600;
     font-size: 20px;
