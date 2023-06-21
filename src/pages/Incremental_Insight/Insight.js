@@ -291,7 +291,7 @@ export default function DashboardAppPage() {
                                     <div className="d-md-flex">
                                         <div className="">
                                             <div className="card  p-0 overallYearlyMonthly"  >
-                                                <div className="card-body d-flex justify-content-around  pb-0 pt-1">
+                                                <div className="card-body d-flex justify-content-around  pb-0 pt-1" style={{gap: '10px'}}>
                                                     <label htmlFor="ov2">
                                                         <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="ov2" /> Overall
                                                     </label>
@@ -299,7 +299,7 @@ export default function DashboardAppPage() {
                                                         <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="year2" /> Yearly
                                                     </label>
                                                     <label htmlFor="month2">
-                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="month2" /> Montly
+                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="month2" /> Monthly
                                                     </label>
                                                 </div>
                                             </div>
@@ -538,7 +538,7 @@ export default function DashboardAppPage() {
                                     <div className="d-md-flex">
                                         <div className="">
                                             <div className="card  p-0 overallYearlyMonthly"  >
-                                                <div className="card-body d-flex justify-content-around  pb-0 pt-1">
+                                                <div className="card-body d-flex justify-content-around  pb-0 pt-1" style={{gap: '10px'}}>
                                                     <label htmlFor="ov2">
                                                         <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="ov2" /> Overall
                                                     </label>
@@ -546,7 +546,7 @@ export default function DashboardAppPage() {
                                                         <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="year2" /> Yearly
                                                     </label>
                                                     <label htmlFor="month2">
-                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="month2" /> Montly
+                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="month2" /> Monthly
                                                     </label>
                                                 </div>
                                             </div>
@@ -644,7 +644,7 @@ export default function DashboardAppPage() {
                                     <div className="d-md-flex">
                                         <div className="">
                                             <div className="card  p-0 overallYearlyMonthly"  >
-                                                <div className="card-body d-flex justify-content-around  pb-0 pt-1">
+                                                <div className="card-body d-flex justify-content-around  pb-0 pt-1" style={{gap: '10px'}}>
                                                     <label htmlFor="ov2">
                                                         <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="ov2" /> Overall
                                                     </label>
@@ -652,7 +652,7 @@ export default function DashboardAppPage() {
                                                         <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="year2" /> Yearly
                                                     </label>
                                                     <label htmlFor="month2">
-                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="month2" /> Montly
+                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="month2" /> Monthly
                                                     </label>
                                                 </div>
                                             </div>
@@ -745,7 +745,7 @@ export default function DashboardAppPage() {
                                     <div className="d-md-flex ">
                                         <div className="">
                                             <div className="card  p-0 m-0 overallYearlyMonthly"  >
-                                                <div className="card-body d-flex justify-content-around  pb-0 pt-1">
+                                                <div className="card-body d-flex justify-content-around  pb-0 pt-1" style={{gap: '10px'}}>
                                                     <label htmlFor="ov2">
                                                         <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="ov2" /> Overall
                                                     </label>
@@ -753,7 +753,7 @@ export default function DashboardAppPage() {
                                                         <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="year2" /> Yearly
                                                     </label>
                                                     <label htmlFor="month2">
-                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="month2" /> Montly
+                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="month2" /> Monthly
                                                     </label>
                                                 </div>
                                             </div>
