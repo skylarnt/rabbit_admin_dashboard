@@ -903,6 +903,10 @@ td:last-child, td:last-of-type {
     /* border: 2px solid blue; */
   }
 
+  .showPasswordWrap {
+    min-width: 20em;
+  }
+
   .showPasswordWrap input {
     padding: 10px !important;
     text-align: center !important;

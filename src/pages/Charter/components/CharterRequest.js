@@ -41,7 +41,7 @@ export default function CharterRequest() {
 
     const handleCloseAssignVehicle = () => {
         setassignVehicle(false);
-    };  
+    };
 
 
     return (
@@ -73,29 +73,13 @@ export default function CharterRequest() {
                             </div>
                             <div className="pt-md-2">
                                 <div className="dropleft ">
-                                    <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className={`${styles.export_btn} pt-2 btn m-0 ml-auto`}>
+                                    <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className={`${styles.export_btn} pt-2 btn m-0`}>
                                         <span style={{
                                             paddingTop: '8px',
                                         }}>
                                             <img src="/assets/icons/download.svg" alt="" /> &nbsp;
                                             Export
                                         </span>
-                                        {/* &nbsp;
-                    &nbsp;
-                    <span style={{
-                        borderLeft: '1px solid white',
-                        display: 'inline-block',
-                        height: 'inherit',
-                        paddingTop: '8px',
-                        paddingLeft: '8px',
-                        textAlign: 'center',
-
-                    }}>
-                        <img src="/assets/icons/arrowDown.svg" alt="" />
-
-                    </span> */}
-
-
                                     </button>
 
                                     <div className="dropdown-menu drop-left" aria-labelledby="dropdownMenuButton">
@@ -574,14 +558,28 @@ export default function CharterRequest() {
                     <div className="card border-0 p-0 m-0">
                         <div className="card-body pt-0 mt-0">
                             <div className="d-flex justify-content-between">
-                                <div className="d-flex align-item-center pt-2">
+                                <div className=" pt-2">
                                     Page 1 of <b className="pl-1"> 10</b>
                                 </div>
                                 <div className={`${styles.pagination_button_container}`}>
-                                    <button className="btn" >Previous</button>
+                                    <button className="btn border" >
+                                        <span className="d-none d-sm-block">
+                                            Previous
+                                        </span>
+                                        <span>
+                                            <i className="bi bi-chevron-left d-block d-sm-none"></i>
+                                        </span>
+                                    </button>
                                     &nbsp;
                                     &nbsp;
-                                    <button className="btn" >Next</button>
+                                    <button className="btn border" >
+                                        <span className="d-none d-sm-block">
+                                            Next
+                                        </span>
+                                        <span>
+                                            <i className="bi bi-chevron-right d-block d-sm-none"></i>
+                                        </span>
+                                    </button>
                                 </div>
                             </div>
 

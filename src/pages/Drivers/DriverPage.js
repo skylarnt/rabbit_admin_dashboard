@@ -130,7 +130,7 @@ export default function DriverPage() {
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
-                      className={`${styles.export_btn} pt-0 btn m-0 ml-auto`}
+                      className={`${styles.export_btn} pt-0 btn m-0`}
                     >
                       <span
                         style={{

@@ -210,7 +210,7 @@ export default function VehiclesPage() {
                                 </div>
                                 <div className="pt-md-2">
                                     <div className="dropleft ">
-                                        <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className={`${styles.export_btn} pt-0 btn m-0 ml-auto`}>
+                                        <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className={`${styles.export_btn} pt-2 btn m-0`}>
                                             <span style={{
                                                 paddingTop: '8px',
 

@@ -56,7 +56,7 @@ export default function DashboardAppPage() {
                 <title> Dashboard </title>
             </Helmet>
             <div className='wrapper mt-md-3 mt-4'>
-                <div className={`${styles.header} d-block d-md-none mb-4 mt-5`}>
+                <div className={`${styles.header} d-block d-md-none mb-4 mt-2`}>
                     <h4 className={`mb-0 pb-0`}>Dashboard</h4>
                     <p style={{ fontSize: '14px' }} className={`mb-0 pb-0`}>
                         An overview of your business performance
@@ -236,10 +236,10 @@ export default function DashboardAppPage() {
 
                         <div className="d-md-flex justify-content-between" >
                             <div className="pb-3 pb-md-0">
-                                <h5 className="table_desc_header">
+                                <h5 className="table_desc_header mb-2">
                                     All Transactions
                                 </h5>
-                                <small style={{ fontWeight: '200', fontSize: '14px' }}>
+                                <small style={{ fontWeight: 'normal', fontSize: '14px' }}>
                                     Your transaction history
                                 </small>
 
@@ -254,7 +254,7 @@ export default function DashboardAppPage() {
                                             boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
                                             borderRadius: '4px'
                                         }}>
-                                        <img className="" style={{ display: 'inline', width: '28%' }} src="/assets/icons/filterlines.svg" alt="" />
+                                        <img className="" style={{ display: 'inline', width: '20px' }} src="/assets/icons/filterlines.svg" alt="" />
                                         &nbsp;
                                         <small className="d-none d-md-inline-block">
                                             Filters
@@ -477,14 +477,28 @@ export default function DashboardAppPage() {
                     <div className="card border-0 p-0 m-0">
                         <div className="card-body pt-0 mt-0">
                             <div className="d-flex justify-content-between">
-                                <div className="d-flex align-item-center pt-2">
+                                <div className=" pt-2">
                                     Page 1 of <b className="pl-1"> 10</b>
                                 </div>
                                 <div className={`${styles.pagination_button_container}`}>
-                                    <button className="btn border rounded" >Previous</button>
+                                    <button className="btn border" >
+                                        <span className="d-none d-sm-block">
+                                            Previous
+                                        </span>
+                                        <span>
+                                            <i className="bi bi-chevron-left d-block d-sm-none"></i>
+                                        </span>
+                                    </button>
                                     &nbsp;
                                     &nbsp;
-                                    <button className="btn border rounded" >Next</button>
+                                    <button className="btn border" >
+                                        <span className="d-none d-sm-block">
+                                            Next
+                                        </span>
+                                        <span>
+                                            <i className="bi bi-chevron-right d-block d-sm-none"></i>
+                                        </span>
+                                    </button>
                                 </div>
                             </div>
 
@@ -504,7 +518,7 @@ export default function DashboardAppPage() {
                     transform='translate(-50%, -50%)'
                     width='740px !important'
                     height='auto !important'
-                    overflowY='scroll'
+                    overflow='hidden'
                     bgcolor='#fff'
                     border='1px solid #F5F5F5'
                     borderRadius='5px'
@@ -621,7 +635,7 @@ export default function DashboardAppPage() {
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <label htmlFor="ounit">Date</label>
 
                                     <div className=" d-flex">
@@ -661,7 +675,7 @@ export default function DashboardAppPage() {
 
                                 </div>
                             </div>
-                            <div className="mt-">
+                            <div className="my-3">
                                 <button className="btn btn-success w-100 d-block" data-dismiss="modal" aria-label="Close">Proceed</button>
                             </div>
                             {/* <div className="mb-4">
@@ -742,7 +756,7 @@ export default function DashboardAppPage() {
                     </div>
                 </GlobalModal>
 
-                
+
                 {/* Withdraw Modal */}
                 <GlobalModal
                     open={withdrawModalOpen}
@@ -836,7 +850,7 @@ export default function DashboardAppPage() {
 
                                                 />
                                             </div>
-                                            <p className='text-muted' style={{fontSize: '14px'}}>Saidi Adegoke Olayemi</p>
+                                            <p className='text-muted' style={{ fontSize: '14px' }}>Saidi Adegoke Olayemi</p>
                                         </div>
                                     </div>
 

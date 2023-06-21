@@ -23,10 +23,10 @@ export default function ProfilePage() {
                     </div>
 
                 </div>
-                <div>
+                <div className="mt-md-3">
                     <div className="row border-top border-bottom py-3">
                         <div className="col-md-3">
-                            <p>Card details</p>
+                            <p className="font-weight-bold">Card details</p>
                         </div>
                         <div className="col-md-6">
                             <div className="row">
@@ -95,7 +95,7 @@ export default function ProfilePage() {
                     
                     <div className="row border-bottom pt-4 pb-2">
                         <div className="col-md-3">
-                            <p className="m-0">Email address</p>
+                            <p className="m-0 font-weight-bold">Email address</p>
                             <p><small className="text-muted font-weight-normal">Invoices will be sent to this email address.</small></p>
                         </div>
                         <div className="col-md-6">
@@ -112,7 +112,7 @@ export default function ProfilePage() {
                     
                     <div className="row border-bottom py-4">
                         <div className="col-md-3">
-                            <p className="m-0 mb-2">Address</p>
+                            <p className="m-0 mb-2 font-weight-bold">Address</p>
                         </div>
                         <div className="col-md-6">
                             <TextField
@@ -128,7 +128,7 @@ export default function ProfilePage() {
                     
                     <div className="row border-bottom py-4">
                         <div className="col-md-3">
-                            <p className="m-0 mb-2">City</p>
+                            <p className="m-0 mb-2 font-weight-bold">City</p>
                         </div>
                         <div className="col-md-6">
                             <TextField
@@ -144,11 +144,11 @@ export default function ProfilePage() {
                     
                     <div className="row border-bottom py-4">
                         <div className="col-md-3">
-                            <p className="m-0 mb-2">State / Province</p>
+                            <p className="m-0 mb-2 font-weight-bold">State / Province</p>
                         </div>
                         <div className="col-md-6">
-                            <div className="row">
-                                <div className="col-3">
+                            <div className="d-flex">
+                                <div className="mr-3">
                                     <TextField
                                         required
                                         name="max_products"
@@ -156,9 +156,10 @@ export default function ProfilePage() {
                                         placeholder="VIC"
                                         size="small"
                                         fullWidth
+                                        style={{width: '7em'}}
                                     />
                                 </div>
-                                <div className="col-3">
+                                <div className="">
                                     <TextField
                                         required
                                         name="max_products"
@@ -166,6 +167,7 @@ export default function ProfilePage() {
                                         placeholder="3066"
                                         size="small"
                                         fullWidth
+                                        style={{width: '7em'}}
                                     />
                                 </div>
                             </div>
@@ -174,7 +176,7 @@ export default function ProfilePage() {
                     
                     <div className="row py-4">
                         <div className="col-md-3">
-                            <p className="m-0 mb-2">Country</p>
+                            <p className="m-0 mb-2 font-weight-bold">Country</p>
                         </div>
                         <div className="col-md-6">
                             <TextField

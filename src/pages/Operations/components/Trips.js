@@ -42,34 +42,45 @@ export default function TripsOpr() {
 
     return (
         <>
-            <div className=" px-2">
+            <div className="px-0 px-md-2">
 
                 <div className={`${styles.filters} mt-4`}>
-                    <div className="row">
-                        <div className={`${styles.hold_input} col-6   `}>
+                    <div
+                        className="d-flex justify-content-between"
+                        style={{ gap: "10px" }}
+                    >
+                        <div className={`${styles.hold_input}  `}>
                             <img src="/assets/icons/search.svg" alt="" />
-                            <input type="text" name="search" placeholder="Search" style={{ textIndent: '25px', width: '240px' }} className=" form-control" />
-
+                            <input
+                                type="text"
+                                name="search"
+                                placeholder="Search"
+                                style={{ textIndent: "25px", width: "240px" }}
+                                className=" form-control"
+                            />
                         </div>
-                        <div className="col-6  text-right">
+                        <div className="text-right">
                             <button
                                 onClick={() => setFilterModalOpen(true)}
                                 className="btn  border"
                                 style={{
-                                    backgroundColor: '#fff',
-                                    border: '1px solid #D0D5DD',
-                                    boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
-                                    borderRadius: '4px'
-                                }}>
-                                <img className="" style={{ display: 'inline', width: '28%' }} src="/assets/icons/filterlines.svg" alt="" />
+                                    backgroundColor: "#fff",
+                                    border: "1px solid #D0D5DD",
+                                    boxShadow: "0px 1px 2px rgba(16, 24, 40, 0.05)",
+                                    borderRadius: "4px",
+                                    height: "40px",
+                                }}
+                            >
+                                <img
+                                    className=""
+                                    style={{ display: "inline", width: "20px" }}
+                                    src="/assets/icons/filterlines.svg"
+                                    alt=""
+                                />
                                 &nbsp;
-                                <small className="d-none d-md-inline-block">
-                                    Filters
-                                </small>
+                                <small className="d-none d-md-inline-block">Filters</small>
                             </button>
-
                         </div>
-
                     </div>
                 </div>
                 <Card style={{ marginTop: '50px', borderRadius: '10px' }} className='p-0'>
@@ -77,10 +88,10 @@ export default function TripsOpr() {
 
                         <div className="d-md-flex justify-content-between" >
                             <div className="pb-3 pb-md-0">
-                                <h5 className="table_desc_header">
+                                <h5 className="table_desc_header mb-2">
                                     Trips
                                 </h5>
-                                <small style={{ fontWeight: '200', fontSize: '14px' }}>
+                                <small style={{ fontWeight: 'normal', fontSize: '14px' }}>
                                     View trip details, status and history.
                                 </small>
 
@@ -921,14 +932,28 @@ export default function TripsOpr() {
                     <div className="card border-0 p-0 m-0">
                         <div className="card-body pt-0 mt-0">
                             <div className="d-flex justify-content-between">
-                                <div className="d-flex align-item-center pt-2">
+                                <div className=" pt-2">
                                     Page 1 of <b className="pl-1"> 10</b>
                                 </div>
                                 <div className={`${styles.pagination_button_container}`}>
-                                    <button className="btn" >Previous</button>
+                                    <button className="btn border" >
+                                        <span className="d-none d-sm-block">
+                                            Previous
+                                        </span>
+                                        <span>
+                                            <i className="bi bi-chevron-left d-block d-sm-none"></i>
+                                        </span>
+                                    </button>
                                     &nbsp;
                                     &nbsp;
-                                    <button className="btn" >Next</button>
+                                    <button className="btn border" >
+                                        <span className="d-none d-sm-block">
+                                            Next
+                                        </span>
+                                        <span>
+                                            <i className="bi bi-chevron-right d-block d-sm-none"></i>
+                                        </span>
+                                    </button>
                                 </div>
                             </div>
 

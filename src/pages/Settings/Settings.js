@@ -30,7 +30,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-
+import bus from "src/bus"
 
 
 // ----------------------------------------------------------------------
@@ -89,7 +89,7 @@ export default function SettingsPage() {
 
     return (
         <>
-            <div className="wrapper mt-md-0 mt-4 px-2">
+            <div className="wrapper mt-md-0 mt-4 px-0 px-md-2">
                 <div className="header d-block d-md-none mb-4">
                     <div className="d-md-flex justify-content-between">
                         <div className="mb-3">
@@ -100,18 +100,18 @@ export default function SettingsPage() {
                     </div>
 
                 </div>
-                <div className="card" style={{ height: '100%' }}>
+                <div className="card px-0 mx-0" style={{ height: '100%' }}>
 
                     <div className="row">
-                        <div className="col-md-4 border-right pr-0" style={{ height: '100vh', position: 'relative' }}>
+                        <div className="col-md-4 border-right pr-0 settings_tab_wrap" >
                             <Tabs
                                 orientation="vertical"
                                 variant="scrollable"
                                 value={value}
                                 onChange={handleChange}
                                 aria-label="Vertical tabs example"
-
-
+                                className="border"
+                                style={{width: '96%'}}
                             >
                                 <Tab className={`${value === 0 ? styles.active : styles.default_cl} ${styles.control_button}`} label={
                                     <div className="d-flex" style={{ justifyContent: 'flex-start', alignItems: 'flex-start', gap: '9px' }}>
@@ -175,8 +175,12 @@ export default function SettingsPage() {
                                 } />
                             </Tabs>
                             <div className="logout" style={{ position: 'absolute', bottom: '2%', left: '7%' }}>
-                                <button type="button" className="btn ">
-                                    <img src="/assets/icons/logout.svg" alt="" style={{ width: '30%' }} />
+                                <button 
+                                    type="button" 
+                                    className="btn " 
+                                    onClick={() => bus.emit("open-logout-modal")}
+                                >
+                                    <img src="/assets/icons/logout.svg" alt="" style={{ width: '30px' }} />
                                     &nbsp;
 
                                     Log out
@@ -188,10 +192,10 @@ export default function SettingsPage() {
 
 
                         </div>
-                        <div className="col-md-8 pl-0" style={{ height: '100vh' }}>
+                        <div className="col-md-8 pl-0 pr-4" style={{ height: '100vh' }}>
                             {value === 0 &&
-                                <div className={`${styles.card_n_body} card-body pl-0`}>
-                                    <div className={`${styles.content_header_container}`}>
+                                <div className={`${styles.card_n_body} card-body px-2 pl-md-0`}>
+                                    <div className={`${styles.content_header_container} ml-2`}>
                                         <h5>
                                             Password Info
                                         </h5>
@@ -202,12 +206,12 @@ export default function SettingsPage() {
                                     </div>
                                     <div className={`${styles.content_body}`}>
                                         <div className={`${styles.row_container} row border-bottom `}>
-                                            <div className="col-6">
+                                            <div className="col-sm-6">
                                                 <label htmlFor="p">
                                                     Current password
                                                 </label>
                                             </div>
-                                            <div className="col-6 position_settings">
+                                            <div className="col-sm-6 position_settings">
                                                 <div className={`${styles.showPasswordWrap} mb-4`}>
                                                     <FormControl sx={{ mt: 2, width: '100%', p: 0 }} variant="outlined">
                                                         <OutlinedInput
@@ -233,12 +237,12 @@ export default function SettingsPage() {
                                             </div>
                                         </div>
                                         <div className={`${styles.row_container} row border-bottom pb-4`}>
-                                            <div className="col-6 ">
+                                            <div className="col-sm-6 ">
                                                 <label htmlFor="n">
                                                     Enter new password
                                                 </label>
                                             </div>
-                                            <div className="col-6 position_settings">
+                                            <div className="col-sm-6 position_settings">
 
                                                 <div className={`${styles.showPasswordWrap}`}>
                                                     <FormControl sx={{ mt: 2, width: '100%', p: 0 }} variant="outlined">
@@ -268,12 +272,12 @@ export default function SettingsPage() {
                                             </div>
                                         </div>
                                         <div className={`${styles.row_container} row border-bottom pb-4`}>
-                                            <div className="col-6">
+                                            <div className="col-sm-6">
                                                 <label htmlFor="c">
                                                     Confirm password
                                                 </label>
                                             </div>
-                                            <div className="col-6 position_settings">
+                                            <div className="col-sm-6 position_settings">
                                                 <div className={`${styles.showPasswordWrap} mb-4`}>
                                                     <FormControl sx={{ mt: 2, width: '100%', p: 0 }} variant="outlined">
                                                         <OutlinedInput
@@ -330,12 +334,12 @@ export default function SettingsPage() {
                                     </div>
                                     <div className={`${styles.content_body}`}>
                                         <div className={`${styles.row_container} row border-bottom pb-4`}>
-                                            <div className="col-6">
+                                            <div className="col-sm-6">
                                                 <label htmlFor="sub">
                                                     Subject
                                                 </label>
                                             </div>
-                                            <div className="col-6">
+                                            <div className="col-sm-6">
                                                 <TextField
                                                     required
                                                     id="sub"
@@ -350,13 +354,13 @@ export default function SettingsPage() {
                                             </div>
                                         </div>
                                         <div className={`${styles.row_container} row border-bottom pb-4`}>
-                                            <div className="col-6">
+                                            <div className="col-sm-6">
                                                 <label htmlFor="m">
                                                     Your message
 
                                                 </label>
                                             </div>
-                                            <div className="col-6">
+                                            <div className="col-sm-6">
                                                 <TextField
                                                     required
                                                     id="m"

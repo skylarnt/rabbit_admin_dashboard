@@ -146,7 +146,7 @@ body {
 }
 
 .overallYearlyMonthly {
-    min-width: 20em;
+    min-width: 15em;
     max-width: 100%;
 }
 
@@ -252,6 +252,11 @@ img {
     padding: 0 !important;
 }
 
+.settings_tab_wrap {
+    height: 100vh; 
+    position: relative;
+}
+
 @media screen and (min-width: 1200px) {
     .style_c {
         padding: 0px 22px !important;
@@ -293,9 +298,20 @@ img {
     .wrapper {
         padding-top: 10px !important;
     }
+
+    .settings_tab_wrap {
+        max-height: 72vh; 
+        position: relative;
+    }
+    .border-right {
+        border-right: none !important;
+    }
 }
 
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width: 480px) {
+    .simple_transparent_pr {
+        font-size: 2em;
+    }
     .table-responsive-sm table {
         width: 200% !important;
 

@@ -19,8 +19,8 @@ export default function AdministrationPage() {
 
             <div className=" px-2 mt-5 pt-3">
                 <div className='mt-2 text-center' >
-                    <h4 className="text-success">Pricing</h4>
-                    <h1>Simple, transparent pricing</h1>
+                    <h4 className="text-success mt-3">Pricing</h4>
+                    <h1 className="simple_transparent_pr">Simple, transparent pricing</h1>
                     <p style={{fontSize: '19px'}} className="text-muted">We believe Rabbit should be accessible to all companies, no matter the size.</p>
                 </div>
                 
@@ -29,9 +29,9 @@ export default function AdministrationPage() {
                     <button className="btn mx-2 border rounded bg-light">Annual Billing</button>
                 </div>
 
-                <div className="mt-5">
-                    <div className="d-flex flex-wrap mx-auto" style={{gap: '15px'}}>
-                        <div className="card mx-auto p-0" style={{minWidth: '260px', maxWidth: '260px', borderRadius: '15px'}}>
+                <div className="mt-5 mx-auto">
+                    <div className="d-flex flex-wrap mx-auto" style={{gap: '15px', justifyContent: 'space-between', width: 'fit-content'}}>
+                        <div className="card mx-auto mx-lg-0 p-0" style={{minWidth: '260px', maxWidth: '260px', borderRadius: '15px'}}>
                             <div className=" p-3 border-bottom">
                                 <p className="text-muted">Basic</p>
                                 <h3>Free</h3>
@@ -59,7 +59,7 @@ export default function AdministrationPage() {
                             </div>
                         </div>
                         
-                        <div className="card mx-auto p-0" style={{minWidth: '260px', maxWidth: '260px', borderRadius: '15px'}}>
+                        <div className="card mx-auto mx-lg-0 p-0" style={{minWidth: '260px', maxWidth: '260px', borderRadius: '15px'}}>
                             <div className=" p-3 border-bottom">
                                 <p className="text-muted">Pro</p>
                                 <h3>₦20,000 <small className="text-muted font-weight-normal" style={{fontSize: '14px', verticalAlign: 'middle'}}>per month</small></h3>
@@ -87,7 +87,7 @@ export default function AdministrationPage() {
                             </div>
                         </div>
                         
-                        <div className="card mx-auto p-0" style={{minWidth: '260px', maxWidth: '260px', borderRadius: '15px'}}>
+                        <div className="card mx-auto mx-lg-0 p-0" style={{minWidth: '260px', maxWidth: '260px', borderRadius: '15px'}}>
                             <div className=" p-3 border-bottom">
                                 <p className="text-muted">Elite</p>
                                 <h3>₦50,000 <small className="text-muted font-weight-normal" style={{fontSize: '14px', verticalAlign: 'middle'}}>per month</small></h3>
@@ -121,7 +121,7 @@ export default function AdministrationPage() {
                             </div>
                         </div>
                         
-                        <div className="card mx-auto p-0" style={{minWidth: '300px', maxWidth: '260px', borderRadius: '15px'}}>
+                        <div className="card mx-auto mx-lg-0 p-0" style={{minWidth: '260px', maxWidth: '260px', borderRadius: '15px'}}>
                             <div className=" p-3 border-bottom">
                                 <p className="text-muted">Enterprise</p>
                                 <h3>₦70,000 <small className="text-muted font-weight-normal" style={{fontSize: '14px', verticalAlign: 'middle'}}>per month</small></h3>

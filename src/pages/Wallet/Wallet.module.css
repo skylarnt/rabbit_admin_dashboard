@@ -356,6 +356,16 @@ div.percent2 small {
 .modal_body .span label input:checked ~ span {
     transform: rotateX(180deg);
 }
+.modal_content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 82vh;
+}
+.modal_content::-webkit-scrollbar,
+.modal_content::-webkit-scrollbar-track {
+    appearance: none;
+    display: none;
+}
 .modal_content .modal_header {
     display: flex;
     justify-content: space-between;

@@ -21,6 +21,7 @@
 }
 .modal_content::-webkit-scrollbar,
 .modal_content::-webkit-scrollbar-track {
+    display: none;
     appearance: none;
 }
 .wrapper .header h4 {

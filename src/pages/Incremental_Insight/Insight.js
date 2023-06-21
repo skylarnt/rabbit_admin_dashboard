@@ -212,7 +212,7 @@ export default function DashboardAppPage() {
 
     return (
         <>
-            <div className="mt-md-0 mt-4 pt-5 px-2">
+            <div className="mt-md-0 mt-4 pt-3 px-0 px-md-2">
                 <div className="header d-block d-md-none mb-4">
                     <div className={`${styles.wallet_actions} d-md-flex justify-content-between`}>
                         <div className=" ">
@@ -230,7 +230,7 @@ export default function DashboardAppPage() {
                 </div>
 
                 {/* Bounce Rate */}
-                <Card style={{ marginBottom: '20px', borderRadius: '10px', marginTop: '50px' }} className='p-0'>
+                <Card style={{ marginBottom: '20px', borderRadius: '10px', marginTop: '30px' }} className='p-0'>
                     <CardContent>
                         <div className={`${styles.insight_header} pl-md-5`}>
                             <div className="d-md-flex justify-content-between" style={{alignItems: 'center'}}>
@@ -293,13 +293,13 @@ export default function DashboardAppPage() {
                                             <div className="card  p-0 overallYearlyMonthly"  >
                                                 <div className="card-body d-flex justify-content-around  pb-0 pt-1">
                                                     <label htmlFor="ov2">
-                                                        <input type="radio" className="mt-2 mr-2" name="insight_shoppers" id="ov2" /> Overall
+                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="ov2" /> Overall
                                                     </label>
                                                     <label htmlFor="year2">
-                                                        <input type="radio" className="mt-2 mr-2" name="insight_shoppers" id="year2" /> Yearly
+                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="year2" /> Yearly
                                                     </label>
                                                     <label htmlFor="month2">
-                                                        <input type="radio" className="mt-2 mr-2" name="insight_shoppers" id="month2" /> Montly
+                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="month2" /> Montly
                                                     </label>
                                                 </div>
                                             </div>
@@ -540,13 +540,13 @@ export default function DashboardAppPage() {
                                             <div className="card  p-0 overallYearlyMonthly"  >
                                                 <div className="card-body d-flex justify-content-around  pb-0 pt-1">
                                                     <label htmlFor="ov2">
-                                                        <input type="radio" className="mt-2 mr-2" name="insight_shoppers" id="ov2" /> Overall
+                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="ov2" /> Overall
                                                     </label>
                                                     <label htmlFor="year2">
-                                                        <input type="radio" className="mt-2 mr-2" name="insight_shoppers" id="year2" /> Yearly
+                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="year2" /> Yearly
                                                     </label>
                                                     <label htmlFor="month2">
-                                                        <input type="radio" className="mt-2 mr-2" name="insight_shoppers" id="month2" /> Montly
+                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="month2" /> Montly
                                                     </label>
                                                 </div>
                                             </div>
@@ -646,13 +646,13 @@ export default function DashboardAppPage() {
                                             <div className="card  p-0 overallYearlyMonthly"  >
                                                 <div className="card-body d-flex justify-content-around  pb-0 pt-1">
                                                     <label htmlFor="ov2">
-                                                        <input type="radio" className="mt-2 mr-2" name="insight_shoppers" id="ov2" /> Overall
+                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="ov2" /> Overall
                                                     </label>
                                                     <label htmlFor="year2">
-                                                        <input type="radio" className="mt-2 mr-2" name="insight_shoppers" id="year2" /> Yearly
+                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="year2" /> Yearly
                                                     </label>
                                                     <label htmlFor="month2">
-                                                        <input type="radio" className="mt-2 mr-2" name="insight_shoppers" id="month2" /> Montly
+                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="month2" /> Montly
                                                     </label>
                                                 </div>
                                             </div>
@@ -747,13 +747,13 @@ export default function DashboardAppPage() {
                                             <div className="card  p-0 m-0 overallYearlyMonthly"  >
                                                 <div className="card-body d-flex justify-content-around  pb-0 pt-1">
                                                     <label htmlFor="ov2">
-                                                        <input type="radio" className="mt-2 mr-2" name="insight_shoppers" id="ov2" /> Overall
+                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="ov2" /> Overall
                                                     </label>
                                                     <label htmlFor="year2">
-                                                        <input type="radio" className="mt-2 mr-2" name="insight_shoppers" id="year2" /> Yearly
+                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="year2" /> Yearly
                                                     </label>
                                                     <label htmlFor="month2">
-                                                        <input type="radio" className="mt-2 mr-2" name="insight_shoppers" id="month2" /> Montly
+                                                        <input type="radio" className="mt-2 mr-1" name="insight_shoppers" id="month2" /> Montly
                                                     </label>
                                                 </div>
                                             </div>
