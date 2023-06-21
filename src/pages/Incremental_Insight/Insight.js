@@ -212,13 +212,13 @@ export default function DashboardAppPage() {
 
     return (
         <>
-            <div className="mt-md-0 mt-4 pt-3 px-0 px-md-2">
+            <div className="mt-md-5 mt-4 pt-3 px-0 px-md-2">
                 <div className="header d-block d-md-none mb-4">
                     <div className={`${styles.wallet_actions} d-md-flex justify-content-between`}>
                         <div className=" ">
-                            <h4 className={`mb-0 pb-0`}>Data Insight</h4>
+                            <h4 className={`mb-0 pb-0`}>Incremental Insight</h4>
                             <p style={{ fontSize: '14px' }} className={`mb-0 mt-2 pb-0`}>
-                                Monitor your store progress
+                                An overview of your business performance
                             </p>
 
                         </div>
@@ -230,7 +230,7 @@ export default function DashboardAppPage() {
                 </div>
 
                 {/* Bounce Rate */}
-                <Card style={{ marginBottom: '20px', borderRadius: '10px', marginTop: '30px' }} className='p-0'>
+                <Card style={{ marginBottom: '20px', borderRadius: '10px' }} className='p-0 pt-md-5 mt-md-5'>
                     <CardContent>
                         <div className={`${styles.insight_header} pl-md-5`}>
                             <div className="d-md-flex justify-content-between" style={{alignItems: 'center'}}>
@@ -477,7 +477,7 @@ export default function DashboardAppPage() {
                 </Card>
 
                 {/* Recurring revenue */}
-                <Card style={{ marginBottom: '20px', borderRadius: '10px'}} className='p-0'>
+                <Card style={{ marginBottom: '20px', borderRadius: '10px', marginTop: '40px'}} className='p-0'>
                     <CardContent>
                         <div className={`${styles.insight_header} pl-md-5`}>
                             <div className="d-md-flex justify-content-between" style={{alignItems: 'center'}}>
@@ -583,7 +583,7 @@ export default function DashboardAppPage() {
                 </Card>
 
                 {/* Recurring revenue */}
-                <Card style={{ marginBottom: '20px', borderRadius: '10px'}} className='p-0'>
+                <Card style={{ marginBottom: '20px', borderRadius: '10px', marginTop: '40px'}} className='p-0'>
                     <CardContent>
                         <div className={`${styles.insight_header} pl-md-5`}>
                             <div className="d-md-flex justify-content-between" style={{alignItems: 'center'}}>
