@@ -877,6 +877,11 @@ tbody .tr {
 
 }
 
+.review_img_wrap {
+    width: 50px;
+    border-radius: 8px;
+}
+
 table, thead, tr, tbody, td {
     white-space: nowrap;
 }
@@ -940,8 +945,10 @@ td:last-child, td:last-of-type {
 }
 
 /* Extra Small Devices, Phones */ 
-@media  screen and (max-width : 480px) {
-   
+@media  screen and (max-width: 480px) {
+    .review_img_wrap {
+        width: 70px;
+    }
     
     .product {
         background-size: cover !important;

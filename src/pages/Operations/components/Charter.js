@@ -978,7 +978,7 @@ export default function DriversDetails() {
                                 </div>
                             </div>
                         </div>
-                        <div className="mb-4">
+                        <div className="mt-4">
                             <button type="button" className={`${styles.modal_btn} btn btn-block`}>
                                 Proceed
                             </button>

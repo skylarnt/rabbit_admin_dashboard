@@ -117,7 +117,6 @@ export default function AdministrationPage() {
                                             </th>
                                             <th className="text-muted">
                                                 Date Ordered
-                                                <img className="pl-2" src="/assets/icons/down.svg" alt="" />
                                             </th>
                                             <th className="text-muted">
                                                 Action

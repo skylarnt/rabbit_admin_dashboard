@@ -39,12 +39,12 @@ export default function CustomersReview() {
                                 aria-controls="panel1a-content"
                                 id="panel1a-header"
                             >
-                                <div className='d-flex' style={{ justifyContent: 'center', alignItems: 'center' }}>
-                                    <div style={{ width: '90px' }}>
+                                <div className='d-flex' style={{ justifyContent: 'center', alignItems: 'center', gap: '6px' }}>
+                                    <div className={`${styles.review_img_wrap} border`}>
                                         <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '100%', borderRadius: '15px' }} alt="" />
                                     </div>
                                     <div className="ml-1">
-                                        <h5 className="mb-0 mb-md-2">Jane Cooper
+                                        <h6 className="mb-0 mb-md-2"><p className="d-block d-sm-inline mb-0 pb-2 pb-sm-0">Jane Cooper</p>
                                             <sup className="text-muted ml-2" style={{ fontSize: '13px' }}>01:56 PM 09/03/2023</sup>
                                             <sup className="text-muted ml-2" style={{ fontSize: '10px', verticalAlign: 'middle' }}>
                                                 <img src="/assets/icons/rateStar.png" alt="" />
@@ -54,7 +54,7 @@ export default function CustomersReview() {
                                                 <img src="/assets/icons/norateStar.png" alt="" />
                                             </sup>
                                             <sup className="text-warning ml-2" style={{ fontSize: '13px' }}>4.0</sup>
-                                        </h5>
+                                        </h6>
                                         <p className="mb-0 mt-0 mt-md-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
                                     </div>
                                 </div>
@@ -82,12 +82,12 @@ export default function CustomersReview() {
                                 aria-controls="panel1a-content"
                                 id="panel1a-header"
                             >
-                                <div className='d-flex' style={{ justifyContent: 'center', alignItems: 'center' }}>
-                                    <div style={{ width: '90px' }}>
+                                <div className='d-flex' style={{ justifyContent: 'center', alignItems: 'center', gap: '6px' }}>
+                                    <div className={`${styles.review_img_wrap} border`}>
                                         <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '100%', borderRadius: '15px' }} alt="" />
                                     </div>
                                     <div className="ml-1">
-                                        <h5 className="mb-0 mb-md-2">Jane Cooper
+                                        <h6 className="mb-0 mb-md-2"><p className="d-block d-sm-inline mb-0 pb-2 pb-sm-0">Jane Cooper</p>
                                             <sup className="text-muted ml-2" style={{ fontSize: '13px' }}>01:56 PM 09/03/2023</sup>
                                             <sup className="text-muted ml-2" style={{ fontSize: '10px', verticalAlign: 'middle' }}>
                                                 <img src="/assets/icons/rateStar.png" alt="" />
@@ -97,7 +97,7 @@ export default function CustomersReview() {
                                                 <img src="/assets/icons/norateStar.png" alt="" />
                                             </sup>
                                             <sup className="text-warning ml-2" style={{ fontSize: '13px' }}>4.0</sup>
-                                        </h5>
+                                        </h6>
                                         <p className="mb-0 mt-0 mt-md-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
                                     </div>
                                 </div>
@@ -125,12 +125,12 @@ export default function CustomersReview() {
                                 aria-controls="panel1a-content"
                                 id="panel1a-header"
                             >
-                                <div className='d-flex' style={{ justifyContent: 'center', alignItems: 'center' }}>
-                                    <div style={{ width: '90px' }}>
+                                <div className='d-flex' style={{ justifyContent: 'center', alignItems: 'center', gap: '6px' }}>
+                                    <div className={`${styles.review_img_wrap} border`}>
                                         <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '100%', borderRadius: '15px' }} alt="" />
                                     </div>
                                     <div className="ml-1">
-                                        <h5 className="mb-0 mb-md-2">Jane Cooper
+                                        <h6 className="mb-0 mb-md-2"><p className="d-block d-sm-inline mb-0 pb-2 pb-sm-0">Jane Cooper</p>
                                             <sup className="text-muted ml-2" style={{ fontSize: '13px' }}>01:56 PM 09/03/2023</sup>
                                             <sup className="text-muted ml-2" style={{ fontSize: '10px', verticalAlign: 'middle' }}>
                                                 <img src="/assets/icons/rateStar.png" alt="" />
@@ -140,7 +140,7 @@ export default function CustomersReview() {
                                                 <img src="/assets/icons/norateStar.png" alt="" />
                                             </sup>
                                             <sup className="text-warning ml-2" style={{ fontSize: '13px' }}>4.0</sup>
-                                        </h5>
+                                        </h6>
                                         <p className="mb-0 mt-0 mt-md-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
                                     </div>
                                 </div>
@@ -168,12 +168,12 @@ export default function CustomersReview() {
                                 aria-controls="panel1a-content"
                                 id="panel1a-header"
                             >
-                                <div className='d-flex' style={{ justifyContent: 'center', alignItems: 'center' }}>
-                                    <div style={{ width: '90px' }}>
+                                <div className='d-flex' style={{ justifyContent: 'center', alignItems: 'center', gap: '6px' }}>
+                                    <div className={`${styles.review_img_wrap} border`}>
                                         <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '100%', borderRadius: '15px' }} alt="" />
                                     </div>
                                     <div className="ml-1">
-                                        <h5 className="mb-0 mb-md-2">Jane Cooper
+                                        <h6 className="mb-0 mb-md-2"><p className="d-block d-sm-inline mb-0 pb-2 pb-sm-0">Jane Cooper</p>
                                             <sup className="text-muted ml-2" style={{ fontSize: '13px' }}>01:56 PM 09/03/2023</sup>
                                             <sup className="text-muted ml-2" style={{ fontSize: '10px', verticalAlign: 'middle' }}>
                                                 <img src="/assets/icons/rateStar.png" alt="" />
@@ -183,7 +183,7 @@ export default function CustomersReview() {
                                                 <img src="/assets/icons/norateStar.png" alt="" />
                                             </sup>
                                             <sup className="text-warning ml-2" style={{ fontSize: '13px' }}>4.0</sup>
-                                        </h5>
+                                        </h6>
                                         <p className="mb-0 mt-0 mt-md-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
                                     </div>
                                 </div>
@@ -211,12 +211,12 @@ export default function CustomersReview() {
                                 aria-controls="panel1a-content"
                                 id="panel1a-header"
                             >
-                                <div className='d-flex' style={{ justifyContent: 'center', alignItems: 'center' }}>
-                                    <div style={{ width: '90px' }}>
+                                <div className='d-flex' style={{ justifyContent: 'center', alignItems: 'center', gap: '6px' }}>
+                                    <div className={`${styles.review_img_wrap} border`}>
                                         <img src="/assets/illustrations/illustration_avatar.png" style={{ width: '100%', borderRadius: '15px' }} alt="" />
                                     </div>
                                     <div className="ml-1">
-                                        <h5 className="mb-0 mb-md-2">Jane Cooper
+                                        <h6 className="mb-0 mb-md-2"><p className="d-block d-sm-inline mb-0 pb-2 pb-sm-0">Jane Cooper</p>
                                             <sup className="text-muted ml-2" style={{ fontSize: '13px' }}>01:56 PM 09/03/2023</sup>
                                             <sup className="text-muted ml-2" style={{ fontSize: '10px', verticalAlign: 'middle' }}>
                                                 <img src="/assets/icons/rateStar.png" alt="" />
@@ -226,7 +226,7 @@ export default function CustomersReview() {
                                                 <img src="/assets/icons/norateStar.png" alt="" />
                                             </sup>
                                             <sup className="text-warning ml-2" style={{ fontSize: '13px' }}>4.0</sup>
-                                        </h5>
+                                        </h6>
                                         <p className="mb-0 mt-0 mt-md-2 pt-1"><span className="px-2 py-1 border rounded">Fast Logistics</span></p>
                                     </div>
                                 </div>
@@ -247,7 +247,7 @@ export default function CustomersReview() {
                     </div>
 
                     <div className="card border-0 p-0 m-0" style={{ background: 'transparent' }}>
-                        <div className="card-body pt-0 mt-0">
+                        <div className="card-body pt-0 mt-0 px-0">
                             <div className="d-flex justify-content-between">
                                 <div className=" pt-2">
                                     Page 1 of <b className="pl-1"> 10</b>
@@ -298,11 +298,11 @@ export default function CustomersReview() {
       >
         <div className={`${styles.modal_content}`}>
           <div className={`${styles.modal_header} mb-0`}>
-            <h5 style={{
+            <h6 style={{
               fontSize: '19px',
               fontWeight: '700',
 
-            }}>Filter</h5>
+            }}>Filter</h6>
             <span onClick={handleClose} style={{ cursor: 'pointer' }}>
               <img src="/assets/icons/x.svg" alt="" />
 

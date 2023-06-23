@@ -604,20 +604,7 @@ color: #FFFFFF;
   }
   
   .select_wrap {
-    margin: auto;
     width: fit-content;
-    /* position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translate(0%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70px;
-    height: 37px;
-    margin-left: auto;
-    overflow: hidden; */
-    /* border: 2px solid blue; */
   }
 
 table, thead, tr, tbody, td {

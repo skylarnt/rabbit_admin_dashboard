@@ -432,7 +432,7 @@ export default function SettingsPage() {
                                             Date
                                         </label>
                                         <div className={`${styles.row_container} row pb-4`}>
-                                            <div className="col-9">
+                                            <div className="col-sm-8">
                                                 <div className=" d-flex">
                                                     <div className="" style={{ width: '100%' }}>
                                                         <div className="mb-3">
@@ -468,8 +468,8 @@ export default function SettingsPage() {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="col-3">
-                                                <div className={`${styles.select_wrap}`}>
+                                            <div className="col-sm-4 pr-0">
+                                                <div className={`${styles.select_wrap} mr-auto ml-md-auto border`}>
                                                     <Select
                                                     labelId="s"
                                                     id="s"
