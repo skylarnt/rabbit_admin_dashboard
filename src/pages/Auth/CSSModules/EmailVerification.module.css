@@ -24,7 +24,7 @@
     width: 32em;
     max-width: 95%;
     height: fit-content;
-    padding: 0 0 11em;
+    padding: 0 0 14em;
     /* border: 2px solid blueviolet; */
 }
 
@@ -34,7 +34,7 @@
     font-style: normal;
     font-weight: 500;
     /* font-size: 64px; */
-    font-size: 4cqw;
+    font-size: 3.5cqw;
     line-height: 120%;
     color: #FFFFFF;
     padding: 0;
@@ -46,7 +46,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 19px;
     line-height: 1.5;
     color: #fff !important;
     margin-top: 1.5em;
@@ -76,12 +76,12 @@
 
 .logo_wrap {
     position: absolute;
-    top: 20px;
-    left: 10px;
+    top: 15px;
+    left: 40px;
 }
 
 .logo_wrap img {
-    width: 80px !important;
+    width: 110px !important;
 }
 
 .signin_form_wrap {
@@ -111,9 +111,8 @@
 }
 
 .input_box input {
-    font-size: 2.5em;
+    font-size: 2em;
     line-height: 0;
-    font-size: 3em;
     letter-spacing: inherit;
     color: currentColor;
     border: 0;
@@ -128,7 +127,7 @@
     animation-name: mui-auto-fill-cancel;
     -webkit-animation-duration: 10ms;
     animation-duration: 10ms;
-    padding: 0 14px;
+    padding: 10px 10px;
     text-align: center;
 }
 
@@ -148,13 +147,13 @@ input ~ fieldset, input:active ~ fieldset, input:focus ~ fieldset, input:valid ~
     text-align: center;
 }
 .forgot small {
-    font-size: 13px !important;
+    font-size: 14px !important;
 }
 
 .forgot a {
     text-decoration: none;
     color: #54B054;
-    font-size: 13px !important;
+    font-size: 14px !important;
     font-weight: 600;
 }
 
@@ -167,7 +166,7 @@ input ~ fieldset, input:active ~ fieldset, input:focus ~ fieldset, input:valid ~
     display: block;
     width: 100%;
     padding: 10px;
-    font-size: 14px;
+    font-size: 16px;
     color: white;
     font-weight: normal !important;
     margin-bottom: 20px;

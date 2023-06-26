@@ -24,7 +24,7 @@
     width: 32em;
     max-width: 95%;
     height: fit-content;
-    padding: 0 0 4em;
+    padding: 0 0 8em;
     /* border: 2px solid blueviolet; */
 }
 
@@ -34,7 +34,7 @@
     font-style: normal;
     font-weight: 500;
     /* font-size: 64px; */
-    font-size: 2.2em;
+    font-size: 2.5em;
     line-height: 1.5;
     color: #FFFFFF;
     padding: 0;
@@ -79,16 +79,16 @@
 
 .logo_wrap {
     position: absolute;
-    top: 20px;
-    left: 10px;
+    top: 15px;
+    left: 40px;
 }
 
 .logo_wrap img {
-    width: 80px !important;
+    width: 110px !important;
 }
 
 .signin_form_wrap {
-    width: 27em;
+    width: 34em;
     max-width: 100%;
 }
 
@@ -108,6 +108,7 @@
 
 .input_box {
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .input_box label {
@@ -120,11 +121,16 @@
 }
 
 .input_box input::placeholder {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .input_box small {
-    font-size: 12px;
+    font-size: 14px;
+}
+
+.input_box option, .input_box select {
+    font-size: 14px;
+    height: 40px;
 }
 
 .signin_form_wrap *,
@@ -222,6 +228,8 @@ input:valid~fieldset {
 }
 
 .StyledContent_wrap {
+    margin: 0 !important;
+    padding: 0 !important;
     overflow-y: scroll;
     overflow-x: hidden;
     max-width: 100%;
@@ -236,6 +244,45 @@ input:valid~fieldset {
     min-height: 30px !important;
 }
 
+.accordion_wrap {
+    padding: 1px; 
+    background: #ccc; 
+    border-radius: 7px; 
+    font-size: 11px
+}
+
+.first_acc_opt {
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.first_acc_opt_span {
+    cursor: pointer; 
+    margin-left: 4px; 
+    padding: 4px 0 4px;
+}
+
+.acc_details_header {
+    font-size: 14px; 
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.acc_details_span {
+    white-space: nowrap; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    display: block; 
+    width: fit-content;
+}
+
+.acc_details_box {
+    vertical-align: middle; 
+    height: 13px; 
+    width: 13px; 
+    margin-right: 4px;
+}
 @media screen and (max-width:700px) {
     .StyledContent {
         min-height: 100vh !important;

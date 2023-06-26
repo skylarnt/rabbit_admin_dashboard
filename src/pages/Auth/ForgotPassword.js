@@ -1,6 +1,20 @@
+// import { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
 // @mui
-import { Link, Stack, TextField, Container, Typography, Button } from '@mui/material';
+import { 
+  Link, 
+  Stack, 
+  TextField, 
+  Container, 
+  Typography, 
+  Button 
+  // IconButton, 
+  // InputAdornment, 
+  // Checkbox, 
+} from '@mui/material';
+// import { LoadingButton } from '@mui/lab';
 // components
+// import Iconify from '../../components/iconify';
 // Module styles
 import Styles from './CSSModules/ForgotPassword.module.css'
 import { Helmet } from 'react-helmet-async';
@@ -39,7 +53,7 @@ const StyledSection = styled('div')(({ theme, imageUrl }) => ({
   backgroundImage: `url(${imageUrl})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  minHeight: '48em',
+  minHeight: '60em',
   overflowX: 'hidden',
 }));
 
@@ -50,7 +64,7 @@ const StyledContent = styled('div')(({ theme }) => ({
   width: '100%',
   maxWidth: '100%',
   margin: '0',
-  minHeight: '48em',
+  minHeight: '60em',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -61,6 +75,7 @@ const StyledContent = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function ForgotPassword() {
+  // const navigate = useNavigate();
   const mdUp = useResponsive('up', 'md');
   const imageUrl = '/assets/img/signup-img.jpeg';
 
@@ -121,7 +136,7 @@ export default function ForgotPassword() {
               </div>
               <div>
                 <Stack spacing={2} direction="row">
-                  <Button className={`${Styles.signin_btn}`}>Sign in</Button>
+                  <Button className={`${Styles.signin_btn}`}>Send</Button>
                 </Stack>
               </div>
             </div>

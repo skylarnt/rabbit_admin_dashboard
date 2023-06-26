@@ -1,0 +1,21 @@
+
+
+* {
+    font-family: 'Roboto', sans-serif !important;
+
+}
+body{
+    font-family: 'Roboto', sans-serif !important;
+    background-color: whitesmoke;
+}
+
+form {
+    width: 100% !important;
+}
+input {
+    background-color: white !important;
+}
+
+.card_no_input input {
+    text-indent: 30px;
+}

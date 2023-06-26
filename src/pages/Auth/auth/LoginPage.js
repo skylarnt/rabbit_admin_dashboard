@@ -2,11 +2,18 @@ import { Helmet } from 'react-helmet-async';
 // @mui
 import { styled } from '@mui/material/styles';
 
-import { Link, Container, Typography, Stack, Button } from '@mui/material';
+import { 
+  Link, 
+  Container, 
+  Typography, 
+  // Divider, 
+  Stack, 
+  Button } from '@mui/material';
 // hooks
 import useResponsive from '../../../hooks/useResponsive';
 // components
 import Logo from '../../../components/logo';
+// import Iconify from '../../../components/iconify';
 // Module styles
 import Styles from '../CSSModules/LoginPage.module.css'
 
@@ -45,7 +52,7 @@ const StyledSection = styled('div')(({ theme, imageUrl }) => ({
   backgroundImage: `url(${imageUrl})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  minHeight: '55em',
+  minHeight: '60em',
   overflowX: 'hidden',
 }));
 
@@ -56,7 +63,7 @@ const StyledContent = styled('div')(({ theme }) => ({
   width: '100%',
   maxWidth: '100%',
   margin: '0',
-  minHeight: '55em',
+  minHeight: '60em',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -132,6 +139,10 @@ export default function LoginPage() {
                 >
                   <TextField fullWidth placeholder='Enter your Email' id="fullWidth" />
                 </Box>
+                <p className='text-danger m-0 mt-2'>
+                <iconify-icon style={{fontSize: '23px', verticalAlign: 'middle', marginRight: '3px', fontWeight: 'lighter'}} icon="ic:round-warning-amber"></iconify-icon> 
+                  <small className='text-danger font-weight-normal' style={{fontSize: '14px'}}>Login ID is incorrect!</small>
+                </p>
               </div>
               <div className={`${Styles.input_box}`}>
                 <label>Password*</label>
@@ -157,7 +168,7 @@ export default function LoginPage() {
                 </FormControl>
               </div>
               <div className={`${Styles.forgot}`}>
-                <Link href=''>Forgot Password?</Link>
+                <Link href='/forgot-password'>Forgot Password?</Link>
               </div>
               <div>
                 <Stack spacing={2} direction="row">

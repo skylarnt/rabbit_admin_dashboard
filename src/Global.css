@@ -2,17 +2,162 @@
     padding-top: 30px !important;
 }
 body {
-    font-family: 'Roboto', sans-serif !important;
-
+    font-family: Roboto, sans-serif !important;
 }
 
 .modal_content .modal_header {
     display: flex;
     justify-content: space-between;
     height: 30px !important;
+}
+.table-responsive::-webkit-scrollbar,
+.table-responsive::-webkit-scrollbar-track,
+.modal_content::-webkit-scrollbar,
+.modal_content::-webkit-scrollbar-track {
+    appearance: none;
+    display: none;
+}
+.slot_time_select span {
+    padding: 12px !important;
+}
+.slot_time_select span:nth-of-type(2) {
+    padding: 0px !important;
+}
+.export_btn {
+    height: 40px;
+    min-width: 130px;
+
+    /* blue/600 */
+
+    background: #00AF52;
+    /* blue/600 */
+
+    border: 1px solid #00AF52;
+    /* Shadow/xs */
+
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+
+    /* Base/White */
+
+    color: #FFFFFF;
+    padding-top: 0;
 
 
 }
+.export_btn:hover {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.css-1n2goe0-MuiPaper-root-MuiAppBar-root {
+    background-color: transparent;
+    color: #212B36;
+    -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    box-shadow: 0px 2px 4px -1px rgba(145, 158, 171, 0.2), 0px 4px 5px 0px rgba(145, 158, 171, 0.14), 0px 1px 10px 0px rgba(145, 158, 171, 0.12);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    position: fixed;
+    z-index: 1100;
+    /* top: 0;
+    left: auto;
+    right: 0; */
+    background-color: transparent;
+    color: #fff;
+    box-shadow: none;
+    border: 2px solid black;
+    height: 60px;
+}
+
+.status_badge_awaiting {
+    padding: 5px 8px;
+    line-height: 0;
+    border-radius: 5px;
+    background: #ddd;
+    color: #344054;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.status_badge_ongoing{
+    padding: 5px 8px;
+    line-height: 0;
+    border-radius: 5px;
+    background: rgba(252, 166, 8, 0.1);
+    color: rgb(235, 153, 2);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.status_badge_completed {
+    padding: 5px 8px;
+    line-height: 0;
+    border-radius: 5px;
+    background: rgba(2, 247, 2, 0.1);
+    color: green;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+
+.status_badge_failed {
+    padding: 5px 8px;
+    line-height: 0;
+    border-radius: 5px;
+    background: rgba(252, 6, 6, 0.1);
+    color: #f00;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.status_badge_pending {
+    padding: 5px 8px;
+    line-height: 0;
+    border-radius: 5px;
+    background: rgba(252, 166, 8, 0.1);
+    color: rgb(235, 153, 2);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.status_badge_success {
+    padding: 5px 8px;
+    line-height: 0;
+    border-radius: 5px;
+    background: rgba(2, 247, 2, 0.1);
+    color: green;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.overallYearlyMonthly {
+    min-width: 15em;
+    max-width: 100%;
+}
+
+.dateControl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1px;
+}
+
 img {
     display: inline !important;
 }
@@ -97,6 +242,24 @@ img {
     padding: 8px;
 }
 
+.modal_bg::-webkit-scrollbar,
+.modal_bg::-webkit-scrollbar-track,
+.mobile_modal_size::-webkit-scrollbar,
+.mobile_modal_size::-webkit-scrollbar-track {
+    appearance: none !important;
+    display: none !important;
+    overflow: hidden !important;
+}
+
+.MuiTabPanel-root {
+    padding: 0 !important;
+}
+
+.settings_tab_wrap {
+    height: 100vh; 
+    position: relative;
+}
+
 @media screen and (min-width: 1200px) {
     .style_c {
         padding: 0px 22px !important;
@@ -138,9 +301,20 @@ img {
     .wrapper {
         padding-top: 10px !important;
     }
+
+    .settings_tab_wrap {
+        max-height: 72vh; 
+        position: relative;
+    }
+    .border-right {
+        border-right: none !important;
+    }
 }
 
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width: 480px) {
+    .simple_transparent_pr {
+        font-size: 2em;
+    }
     .table-responsive-sm table {
         width: 200% !important;
 

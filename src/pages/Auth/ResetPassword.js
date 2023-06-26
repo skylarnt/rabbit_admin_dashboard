@@ -2,16 +2,22 @@ import { Helmet } from 'react-helmet-async';
 // @mui
 import { styled } from '@mui/material/styles';
 
-import { Link, Container, Typography, Stack, Button } from '@mui/material';
+import { 
+  Link, 
+  Container, 
+  Typography, 
+  // Divider, 
+  Stack, 
+  Button } from '@mui/material';
 // hooks
 import useResponsive from '../../hooks/useResponsive';
 // components
 import Logo from '../../components/logo';
+// import Iconify from '../../components/iconify';
 // Module styles
 import Styles from './CSSModules/ResetPassword.module.css'
 
 // sections
-// import { LoginForm } from '../sections/auth/login';
 import * as React from 'react';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
@@ -19,7 +25,6 @@ import FormControl from '@mui/material/FormControl';
 import IconButton from '@mui/material/IconButton';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputAdornment from '@mui/material/InputAdornment';
-
 
 // ----------------------------------------------------------------------
 
@@ -44,7 +49,7 @@ const StyledSection = styled('div')(({ theme, imageUrl }) => ({
   backgroundImage: `url(${imageUrl})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  minHeight: '52em',
+  minHeight: '60em',
   overflowX: 'hidden',
 }));
 
@@ -55,7 +60,7 @@ const StyledContent = styled('div')(({ theme }) => ({
   width: '100%',
   maxWidth: '100%',
   margin: '0',
-  minHeight: '52em',
+  minHeight: '60em',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -72,6 +77,7 @@ export default function ResetPassword() {
   const [showPassword, setShowPassword] = React.useState(false);
   const [showPassword_two, setShowPassword_two] = React.useState(false);
 
+  // const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -87,7 +93,7 @@ export default function ResetPassword() {
   return (
     <>
       <Helmet>
-        <title> Signup | Minimal UI </title>
+        <title> Reset Password | Minimal UI </title>
       </Helmet>
 
       <StyledRoot /* style={{ border: '2px solid blue' }} */>

@@ -9,7 +9,7 @@ const navConfig = [
     path: '/dashboard/app',
     icon: '/assets/icons/home.svg',
     type: 'both',
-    iconActive: '/assets/icons/home_active.svg'
+    iconActive: '/assets/icons/home_active.svg',
   },
   {
     title: 'customers',
@@ -20,7 +20,7 @@ const navConfig = [
   },
   {
     title: 'drivers',
-    path: '/dashboard/drivers',
+    path: '/dashboard/driver',
     icon: '/assets/icons/driver.svg',
     type: 'transport',
     iconActive: '/assets/icons/driver_active.svg'
@@ -55,11 +55,17 @@ const navConfig = [
 
   },
   {
+    title: 'wallet',
+    path: '/dashboard/wallet',
+    icon: '/assets/icons/credit-card.png',
+    iconActive: '/assets/icons/credit-cardActive.png'
+
+  },
+  {
     title: 'administrations',
     path: '/dashboard/administrations',
     icon: '/assets/icons/adminicon.svg',
-    iconActive: '/assets/icons/adminicon_active.svg'
-
+    iconActive: '/assets/icons/admin_panel_settings.png'
   },
   {
     title: 'settings',
@@ -71,8 +77,15 @@ const navConfig = [
   {
     title: 'incremental insight',
     path: '/dashboard/incremental_insight',
-    icon: '/assets/icons/activity.svg',
-    iconActive: '/assets/icons/activity_active.svg'
+    icon: '/assets/icons/bar-chart.png',
+    iconActive: '/assets/icons/bar-chartActive.png'
+
+  },
+  {
+    title: 'subscription',
+    path: '/dashboard/subscription',
+    icon: '/assets/icons/award.png',
+    iconActive: '/assets/icons/awardActive.png'
 
   },
 ];

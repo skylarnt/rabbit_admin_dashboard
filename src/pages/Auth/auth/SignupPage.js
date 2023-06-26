@@ -2,11 +2,18 @@ import { Helmet } from 'react-helmet-async';
 // @mui
 import { styled } from '@mui/material/styles';
 
-import { Link, Container, Typography, Stack, Button } from '@mui/material';
+import { 
+  Link, 
+  Container, 
+  Typography, 
+  // Divider, 
+  Stack, 
+  Button } from '@mui/material';
 // hooks
 import useResponsive from '../../../hooks/useResponsive';
 // components
 import Logo from '../../../components/logo';
+// import Iconify from '../../../components/iconify';
 // Module styles
 import Styles from '../CSSModules/SignupPage.module.css'
 
@@ -20,6 +27,7 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import FormControl from '@mui/material/FormControl';
 import IconButton from '@mui/material/IconButton';
 import OutlinedInput from '@mui/material/OutlinedInput';
+// import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
 import Checkbox from '@mui/material/Checkbox';
 
@@ -47,7 +55,8 @@ const StyledSection = styled('div')(({ theme, imageUrl }) => ({
   backgroundImage: `url(${imageUrl})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  minHeight: '60em',
+  // height: '100%',
+  minHeight: '65em',
   overflowX: 'hidden',
 }));
 
@@ -58,7 +67,7 @@ const StyledContent = styled('div')(({ theme }) => ({
   width: '100%',
   maxWidth: '100%',
   margin: '0',
-  minHeight: '60em',
+  minHeight: '65em',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -94,7 +103,7 @@ export default function SignupPage() {
         <title> Signup | Minimal UI </title>
       </Helmet>
 
-      <StyledRoot /* style={{ border: '2px solid blue' }} */>
+      <StyledRoot >
 
 
         {mdUp && (
@@ -104,9 +113,9 @@ export default function SignupPage() {
                 <img src='/assets/icons/Stars.svg' alt='' />
               </div>
               <Typography variant="h1">
-                Track and monitor your customers on a single dashboard
+              Control business operations and track customers on a single dashboard
               </Typography>
-              <p>Make informed sales decisions by monitoring consumer behaviours, brand acceptance and market performance.</p>
+              <p>Engage with customers, manage drivers, track income and make informed decisions based on valuable insights to improve efficiency and achieve business goals.</p>
               <div className={`${Styles.join_sect}`}>
                 <div>
                 <img src="/assets/icons/Avatar-group.svg" alt='' />
@@ -195,8 +204,9 @@ export default function SignupPage() {
               </div>
 
               <div className={`${Styles.forgot}`}>
-                <p className='d-flex' style={{justifyContent: 'flex-start', alignItems: 'flex-start'}}>
-                    <Checkbox {...label} id='agree' style={{verticalAlign: 'bottom'}} /> <label for='agree'>I agree with the <Link href=''>terms of the service and conditions</Link></label> 
+                <p className='d-flex m-0' style={{justifyContent: 'flex-start', alignItems: 'center'}}>
+                    <Checkbox {...label} id='agree' style={{verticalAlign: 'middle', margin: '0'}} /> 
+                    <label className='mt-2' for='agree'>I agree with the <Link href=''>terms of the service and conditions</Link></label> 
                 </p>
               </div>
               <div>
@@ -209,7 +219,7 @@ export default function SignupPage() {
                   <Button className={`${Styles.google_btn}`}><img src='/assets/icons/google_icon.png' alt='' /> Sign up with Google</Button>
                 </Stack>
               </div>
-              <div className={`${Styles.signup_switch}`}>Aready have an account? <Link href='/login'>Login</Link></div>
+              <div className={`${Styles.signup_switch}`}>Aready have an account? <Link href='/login'>Sign In</Link></div>
               <div></div>
             </div>
           <div className={`${Styles.signup_footer}`}>

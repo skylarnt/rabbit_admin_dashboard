@@ -7,10 +7,12 @@ import { Box, Stack, AppBar, Toolbar, IconButton } from '@mui/material';
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 
 import Iconify from '../../../components/iconify';
-//
+// import bus from "../../../bus";
+import bus from "src/bus"
 import NotificationsPopover from './NotificationsPopover';
 // ----------------------------------------------------------------------
 import { bgBlur } from '../../../utils/cssStyles';
+import '../nav/index';
 
 const NAV_WIDTH = 280;
 
@@ -44,30 +46,16 @@ Header.propTypes = {
 
 export default function Header({ onOpenNav }) {
 
-
     const LogoutUser=()=>{
       localStorage.removeItem('auth');
-
-
-    
-    
-      
       setTimeout(() => {
-
-
-        
       }, 1000);
-
-    
-
-    
-      
-    
-      
     }
+
+
   return (
     <StyledRoot  className='header_container style_cs'>
-      <StyledToolbar  className='px-0 style_c'>
+      <StyledToolbar  className='px-3 style_c'>
         <IconButton
           onClick={onOpenNav}
           sx={{
@@ -111,7 +99,12 @@ export default function Header({ onOpenNav }) {
                 
             
             <div className="dropdown-menu drop-left" aria-labelledby="dropdownMenuButton">
-              <button type="button" onClick={LogoutUser} className="rss dropdown-item btn border-0">Logout</button>
+              <button 
+                type="button" 
+                // onClick={LogoutUser} 
+                onClick={() => bus.emit("open-logout-modal")}
+                className="rss dropdown-item btn border-0"
+              >Logout</button>
             
             
             </div>

@@ -4,13 +4,27 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { Helmet } from 'react-helmet-async';
-import * as Router from 'react-router-dom';
+// import * as Router from 'react-router-dom';
 import ReactApexChart from 'react-apexcharts';
 
 import {
   Card,
   CardContent,
+  Link,
+  // Stack, 
+  // IconButton, 
+  // InputAdornment, 
+  // TextField, 
+  // Checkbox, 
+  // Container, 
+  Typography, 
+  // Button 
 } from '@mui/material';
+
+//Carousel
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { useState } from "react";
 import GlobalModal from "../../Modals/GlobalModal";
 import styles from './Page.module.css'
@@ -27,7 +41,7 @@ export default function DashboardAppPage() {
     chart: {
       type: 'bar'
     },
-    colors: ['#1570EF', '#53B1FD', '#D1E9FF'],
+    colors: ['rgba(0, 175, 82, 1)', 'rgba(0, 175, 82, .7)', 'rgba(0, 175, 82, 1.4)'],
     plotOptions: {
       bar: {
         horizontal: false,
@@ -45,8 +59,8 @@ export default function DashboardAppPage() {
     },
     tooltip: {
       y: {
-        formatter (val) {
-          return `$ ${  val}`
+        formatter(val) {
+          return `$ ${val}`
         }
       }
     },
@@ -69,22 +83,74 @@ export default function DashboardAppPage() {
     }]
   );
 
+  // for carousel
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 2000,
+    fade: true,
+    scrollBar:false
+  };
+
+
   return (
     <>
       <Helmet>
         <title> Dashboard </title>
       </Helmet>
-      <div className='wrapper mt-md-3 mt-4'>
-        <div className={`${styles.header} d-block d-md-none mb-4`}>
+      <div className='wrapper mt-md-3'>
+        <div className={`${styles.header} d-block d-md-none mb-4 mt-3 pt-2`}>
           <h4 className={`mb-0 pb-0`}>Dashboard</h4>
           <p style={{ fontSize: '14px' }} className={`mb-0 pb-0`}>
             An overview of your business performance
           </p>
 
         </div>
-        <div className={styles.landing} />
+
+        
+        {/* Banner */}
+        <div style={{ overflow: 'hidden' }}>
+          <Slider {...settings}>
+            <div>
+              <Typography variant="h3" className={`${styles.banner} border`}>
+                  <div>
+                      <h2 className='text-white font-weight-bold'>Welcome to Rabbit</h2>
+                      <h5 className='text-white font-weight-bold pl-md-4 mb-0'>Stress free . Commute . Delivery</h5>
+                  </div>
+                  <div className={`${styles.banner_img}`}>
+                    <img src='/assets/dashboard_img.png' alt='' />
+                  </div>
+                  {/* <img src="/assets/icons/bannerImageOne.png" className={`${styles.banner_img1}`} alt="" /> */}
+              </Typography>
+            </div>
+            <div>
+              <Typography variant="h3" className={`${styles.banner_sec} border bg-primary`}>
+                  <div className='px-5'>
+                    <img src='/assets/rabbit_white.png' className='img-fluid img-responsive' alt='' />
+                      {/* <h2 className='text-white font-weight-bold'>Welcome to Logistics</h2>
+                      <h5 className='text-white font-weight-bold pl-md-4 mb-0'>Stress free . Commute . Delivery</h5> */}
+                  </div>
+                  {/* <div className={`${styles.banner_img}`}>
+                    <img src='/assets/dashboard_img.png' alt='' />
+                  </div> */}
+                  {/* <img src="/assets/icons/bannerImageOne.png" className={`${styles.banner_img1}`} alt="" /> */}
+              </Typography>
+            </div>
+            {/* <div>
+              <Typography variant="h3" className={`${styles.banner}`}>
+                <img src="/assets/icons/bannerImageTwo.png" alt="logo" className={`${styles.banner_img1}`}/>
+              </Typography>
+            </div> */}
+          </Slider>
+        </div>
+
+        {/* <div className={styles.landing} /> */}
         <div className="row mt-4">
-          <div className="col-md-8 mb-2">
+          <div className="col-md-7 mb-2">
             <Filter1 width='100%' />
 
             <div className="row">
@@ -228,13 +294,11 @@ export default function DashboardAppPage() {
             </div>
 
           </div>
-          <div className="col-md-4 mb-2">
-            <div className="card">
+          <div className="col-md-5 mb-2">
+            {/* <div className="card">
               <div className="card-body">
                 <div className={`${styles.card2} card primary_color_bg    `} style={{ padding: '' }}>
-                  {/* <div>
-
-                </div> */}
+                  
                   <div className={`${styles.wallet}`}  >
                     <div className={`${styles.content}`}>
                       <div className={`${styles.content_header}`}>
@@ -297,6 +361,80 @@ export default function DashboardAppPage() {
                 </div>
 
               </div>
+            </div> */}
+            <div  >
+              <div className={`${styles.card2} card pt-2 h-100`} style={{ borderRadius: '6px' }}>
+                {/* <div>
+
+                </div> */}
+                <div className={`${styles.wallet} h-100`}  >
+                  <div className='mx-auto' style={{position: 'relative', width: '24em', maxWidth: '100%'}}>
+                    <img className={`${styles.img} ${styles.img1}`} style={{position: 'absolute', inset: '0', top: '0', left: '0', right: '0', bottom: '0'}} src="/assets/crc.png" alt="" />
+                    <div className={`${styles.content}`}>
+                      <div className={`${styles.content_header}`}>
+                        <div>
+                          ₦‎ 26,500,853
+                        </div>
+                        <div>
+                          <img src="/assets/icons/Vector.svg" alt="" />
+                        </div>
+
+                      </div>
+                      <p className={`${styles.sub_text}`}>
+                        Your Balance
+                      </p>
+                      <div className={`${styles.content_body} ${styles.content_body2}`}>
+                        <p className={`${styles.sub_text} m-0 mb-1`}>
+                          Account Details
+                        </p>
+
+                        <div className={`${styles.bank_info} `}>
+                          <div >
+                            <p className={`${styles.name} m-0`}>
+                              NESTLE INTERNATIONAL PLC.
+
+                            </p>
+                            <p className={`${styles.account_number} m-0`}>
+                              0231609769
+                            </p>
+
+                          </div>
+                          <img className="" src="/assets/logo.svg" alt="" />
+                          {/* <span style={{
+                              fontSize:'14px', 
+                              fontWeight:'700', 
+                              color:'#FFFFFF'
+                            }}>
+                              {dashboardData?.wallet_info?.brand_id?.bank_name}
+                          </span> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={`${styles.footer} ${styles.footer2}`}>
+                    <div className="">
+                      <p className="mb-0 pb-0">
+                        <Link 
+                          // href="/app/wallets"
+                          href="/admin"
+                        >
+                          Manage Wallet
+                          <iconify-icon icon="ph:arrow-right" style={{ fontSize: '1.5em', lineHeight: '0', marginLeft: '5px', verticalAlign: 'middle' }}></iconify-icon>
+                          {/* <img src="/assets/icons/arrow-right.svg" alt="" /> */}
+                          &nbsp;
+
+                        </Link>
+
+
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
             </div>
 
           </div>
@@ -304,13 +442,14 @@ export default function DashboardAppPage() {
         <Card style={{ marginTop: '50px', marginBottom: '20px', borderRadius: '10px' }} className='p-0'>
           <CardContent>
             <div className={`${styles.insight_header} pl-md-5`}>
-              <h5>
-                Store Orders, Depletion and in-stock Stats
+              <h5 className='mb-2'>
+                Customers, Bookings and Income stats
 
               </h5>
               <div className="d-md-flex justify-content-between">
                 <p>
-                Compare your orders against the depletion rate and <br /> what is left in stock in your Stores.
+                  Compare insights from activities ranging from <br /> customers bookings to income statements.
+                  {/* Compare your orders against the depletion rate and <br /> what is left in stock in your Stores. */}
                 </p>
                 <div className="d-flex">
                   <div className="dropleft ">
@@ -321,7 +460,7 @@ export default function DashboardAppPage() {
                         boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
                         borderRadius: '4px'
                       }}>
-                      <img className="" style={{ display: 'inline', width: '28%' }} src="/assets/icons/filterlines.svg" alt="" />
+                      <img className="" style={{ display: 'inline', width: '20px' }} src="/assets/icons/filterlines.svg" alt="" />
                       &nbsp;
                       <small className="d-none d-md-inline-block">
                         Filters
@@ -332,7 +471,7 @@ export default function DashboardAppPage() {
                   &nbsp;
                   &nbsp;
                   <div className="dropleft ">
-                    <button  type='button' id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className={`${styles.export_btn} btn m-0 py-0`}>
+                    <button type='button' id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className={`${styles.export_btn} btn m-0 py-0`}>
                       <span style={{
                         paddingTop: '8px',
 
@@ -368,28 +507,52 @@ export default function DashboardAppPage() {
 
               </div>
               <div className="row mt-md-0 mt-4">
-                <div className="col-md-6 mb-2">
+                <div className="col-md-8 mb-2" 
+                  // style={{border: '2px solid blue'}}
+                >
                   <div className="row">
-                    <div className="col-md-9">
-                      <div className="card  p-0"  >
-                        <div className="card-body d-flex justify-content-around  py-1">
-                          <label htmlFor="ov">
-                            <input type="radio" name="insight" id="ov" /> Overall
-                          </label>
-                          <label htmlFor="year">
-                            <input type="radio" name="insight" id="year" /> Yearly
-                          </label>
-                          <label htmlFor="month">
-                            <input type="radio" name="insight" id="month" /> Monthly
-                          </label>
+                    <div className="col-md-12 mb-2">
+                      <div className="d-lg-flex d-block" style={{gap: '20px'}}>
+                        <div className="d-block">
+                          <div className="card p-0" style={{minWidth: '17em', height: '40px'}}  >
+                            <div className="card-body d-flex justify-content-around  py-1" style={{whiteSpace: 'nowrap'}}>
+                              <label htmlFor="ov1">
+                                <input className="mt-2 mr-1" type="radio" name="insight_depletion" id="ov1" /> Overall
+                              </label>
+                              <label htmlFor="year1">
+                                <input className="mt-2 mr-1" type="radio" name="insight_depletion" id="year1" /> Yearly
+                              </label>
+                              <label htmlFor="month1">
+                                <input className="mt-2 mr-1" type="radio" name="insight_depletion" id="month1" /> Monthly
+                              </label>
+                            </div>
+
+                          </div>
+
                         </div>
-
+                        <div className="d-block">
+                          <div className="m-0">
+                            <div className="mt-2">
+                              <div className="p-0 mx-auto mt-3 mt-lg-0" style={{width: 'fit-content'}}>
+                                <span>
+                                  <span className={`${styles.arrowSpan}`}>
+                                    <img width={'20px'} src="/assets/icons/left_arrow.svg" alt="arrow" className={`${styles.newStyle} mr-2`} />
+                                  </span>
+                                  <span className={`${styles.year_styles}`}>2023</span>
+                                  <span className={`${styles.arrowSpan}`}>
+                                    <img width={'20px'} src="/assets/icons/right_arrow.svg" alt="arrow" className={`${styles.newStyle} ml-2`} />
+                                  </span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-
                     </div>
+
                   </div>
                 </div>
-                <div className="col-md-6  text-md-right">
+                <div className="col-md-3  text-md-right" style={{whiteSpace: 'nowrap'}}>
                   <span>
                     <img src="/assets/icons/ordercolor.svg" alt="" />
                     &nbsp;
@@ -418,6 +581,7 @@ export default function DashboardAppPage() {
           </CardContent>
 
         </Card>
+
         <GlobalModal
           open={modalOpen}
           onClose={handleClose}
@@ -425,10 +589,11 @@ export default function DashboardAppPage() {
           top='50%'
           left='50%'
           transform='translate(-50%, -50%)'
-          width='740px !important'
-          height='auto !important'
-          maxHeight='50vh !important'
-          overflow='scroll'
+          width='800px !important'
+          // height='970px'
+          // maxHeight='50vh !important'
+          // overflowY='scroll'
+          overflow='hidden'
           bgcolor='#fff'
           border='1px solid #F5F5F5'
           borderRadius='5px'
