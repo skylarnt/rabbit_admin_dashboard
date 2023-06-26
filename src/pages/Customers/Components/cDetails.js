@@ -43,7 +43,7 @@ export default function CustomerDetails() {
                         <button className="btn  border"
                             style={{
                                 backgroundColor: '#fff',
-                                border: '1px solid #00AF52',
+                                border: '1px solid #D0D5DD',
                                 boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
                                 borderRadius: '4px'
                             }}>
